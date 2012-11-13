@@ -17,16 +17,13 @@ BuildRequires:  pkgconfig(glib-2.0) >= 2.31.0
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(libpng)
 BuildRequires:  pkgconfig(x11)
+Requires(post): gdk-pixbuf-query-loaders
+Recommends:     %{name}-lang = %{version}
 
 %description
 gdk-pixbuf is an image loading library that can be extended by loadable
 modules for new image formats. It is used by toolkits such as GTK+ or
 Clutter.
-
-Summary:        An image loading library
-Group:          System/Libraries
-Requires(post): gdk-pixbuf-query-loaders
-Recommends:     %{name}-lang = %{version}
 
 %package -n typelib-GdkPixbuf
 Summary:        An image loading library -- Introspection bindings
