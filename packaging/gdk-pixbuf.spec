@@ -1,4 +1,5 @@
 %define gdk_pixbuf_binary_version 2.10.0
+%bcond_with introspection
 
 Name:           gdk-pixbuf
 Version:        2.26.4
@@ -14,7 +15,9 @@ BuildRequires:  libjasper-devel
 BuildRequires:  libjpeg-devel
 BuildRequires:  libtiff-devel
 BuildRequires:  pkgconfig(glib-2.0) >= 2.31.0
+%if %{with introspection}
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
+%endif
 BuildRequires:  pkgconfig(libpng)
 BuildRequires:  pkgconfig(x11)
 Requires(post): gdk-pixbuf-query-loaders
@@ -65,9 +68,12 @@ This package contains development files for gdk-pixbuf.
 %setup -q
 
 %build
+export CFLAGS=`echo $RPM_OPT_FLAGS |sed -e 's/atom/i686/g'`
 %configure \
         --disable-static \
+%if %{with introspection}
         --enable-introspection \
+%endif
         --with-libjasper \
         --with-x11
 %{__make} %{?_smp_mflags}
@@ -143,9 +149,11 @@ fi
 %{_libdir}/gdk-pixbuf-2.0/%{gdk_pixbuf_binary_version}/loaders/*.so
 %ghost %{_libdir}/gdk-pixbuf-2.0/%{gdk_pixbuf_binary_version}/loaders.cache
 
+%if %{with introspection}
 %files -n typelib-GdkPixbuf
 %defattr(-,root,root)
 %{_libdir}/girepository-1.0/GdkPixbuf-2.0.typelib
+%endif
 
 %files query-loaders
 %defattr(-, root, root)
@@ -160,6 +168,8 @@ fi
 %{_includedir}/gdk-pixbuf-2.0
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/*.so
+%if %{with introspection}
 %{_datadir}/gir-1.0/GdkPixbuf-2.0.gir
+%endif
 %doc %{_datadir}/gtk-doc/html/gdk-pixbuf
 %{_sysconfdir}/rpm/macros.gdk-pixbuf
