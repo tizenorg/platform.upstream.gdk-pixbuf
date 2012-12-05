@@ -54,7 +54,9 @@ loadable modules.
 Summary:        An image loading library - Development Files
 Group:          Development/Languages/C and C++
 Requires:       gdk-pixbuf = %{version}
+%if %{with introspection}
 Requires:       typelib-GdkPixbuf = %{version}
+%endif
 
 %description devel
 gdk-pixbuf is an image loading library that can be extended by loadable
