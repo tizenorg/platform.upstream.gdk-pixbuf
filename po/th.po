@@ -1,16 +1,16 @@
 # Thai translation for gtk+.
-# Copyright (C) 2003-2010 Free Software Foundation, Inc.
+# Copyright (C) 2003-2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gtk+ package.
 # Paisa Seeluangsawat <paisa@users.sf.net>, 2003, 2004.
-# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2005-2010.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2005-2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gtk+\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2012-09-17 20:55-0400\n"
-"PO-Revision-Date: 2010-11-23 22:10+0700\n"
+"POT-Creation-Date: 2012-11-09 23:30-0500\n"
+"PO-Revision-Date: 2012-09-20 21:25+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:147 gdk-pixbuf/gdk-pixbuf-io.c:1088
-#: gdk-pixbuf/gdk-pixbuf-io.c:1354
+#: gdk-pixbuf/gdk-pixbuf-animation.c:147 gdk-pixbuf/gdk-pixbuf-io.c:1092
+#: gdk-pixbuf/gdk-pixbuf-io.c:1358
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "เปิดแฟ้ม '%s' ไม่สำเร็จ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1100
+#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1104
 #, c-format
 msgid "Image file '%s' contains no data"
 msgstr "แฟ้มรูปภาพ '%s' ไม่มีข้อมูล"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:202 gdk-pixbuf/gdk-pixbuf-io.c:1136
-#: gdk-pixbuf/gdk-pixbuf-io.c:1406
+#: gdk-pixbuf/gdk-pixbuf-animation.c:202 gdk-pixbuf/gdk-pixbuf-io.c:1140
+#: gdk-pixbuf/gdk-pixbuf-io.c:1410
 #, c-format
 msgid ""
 "Failed to load image '%s': reason not known, probably a corrupt image file"
@@ -45,12 +45,12 @@ msgid ""
 msgstr ""
 "เปิดแฟ้มภาพเคลื่อนไหว '%s' ไม่สำเร็จ: ไม่แน่ใจว่าเพราะอะไร แต่อาจเป็นเพราะแฟ้มเสียหาย"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:809
+#: gdk-pixbuf/gdk-pixbuf-io.c:813
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "ไม่สามารถเปิดมอดูลสำหรับอ่านรูปภาพ: %s: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:824
+#: gdk-pixbuf/gdk-pixbuf-io.c:828
 #, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
@@ -59,64 +59,64 @@ msgstr ""
 "มอดูล %s ซึ่งใช้สำหรับอ่านรูปภาพ ไม่ได้ส่งออกอินเทอร์เฟซที่ต้องการ เป็นไปได้ว่ามาจาก gdk-"
 "pixbuf ที่ต่างรุ่นกัน"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:833 gdk-pixbuf/gdk-pixbuf-io.c:884
+#: gdk-pixbuf/gdk-pixbuf-io.c:837 gdk-pixbuf/gdk-pixbuf-io.c:888
 #, c-format
 msgid "Image type '%s' is not supported"
 msgstr "ไม่รองรับรูปภาพชนิด '%s'"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:969
+#: gdk-pixbuf/gdk-pixbuf-io.c:973
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
 msgstr "ไม่รู้จักชนิดรูปภาพของแฟ้ม '%s'"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:977
+#: gdk-pixbuf/gdk-pixbuf-io.c:981
 msgid "Unrecognized image file format"
 msgstr "ไม่รู้จักชนิดของแฟ้มรูปภาพ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1145
+#: gdk-pixbuf/gdk-pixbuf-io.c:1149
 #, c-format
 msgid "Failed to load image '%s': %s"
 msgstr "อ่านรูปภาพ '%s' ไม่สำเร็จ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2033 gdk-pixbuf/io-gdip-utils.c:888
+#: gdk-pixbuf/gdk-pixbuf-io.c:2037 gdk-pixbuf/io-gdip-utils.c:887
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "เกิดข้อผิดพลาดขณะเขียนแฟ้มรูปภาพ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2078 gdk-pixbuf/gdk-pixbuf-io.c:2208
+#: gdk-pixbuf/gdk-pixbuf-io.c:2082 gdk-pixbuf/gdk-pixbuf-io.c:2212
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr "คนคอมไพล์ gdk-pixbuf ไม่ได้เลือกรองรับการบันทึกแฟ้มชนิด: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2112
+#: gdk-pixbuf/gdk-pixbuf-io.c:2116
 msgid "Insufficient memory to save image to callback"
 msgstr "หน่วยความจำไม่พอสำหรับบันทึกข้อมูลภาพผ่านฟังก์ชันเรียกกลับ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2125
+#: gdk-pixbuf/gdk-pixbuf-io.c:2129
 msgid "Failed to open temporary file"
 msgstr "เปิดแฟ้มชั่วคราวไม่สำเร็จ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2151
+#: gdk-pixbuf/gdk-pixbuf-io.c:2155
 msgid "Failed to read from temporary file"
 msgstr "อ่านแฟ้มชั่วคราวไม่สำเร็จ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2404
+#: gdk-pixbuf/gdk-pixbuf-io.c:2408
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
 msgstr "เปิดเขียน '%s' ไม่สำเร็จ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2430
+#: gdk-pixbuf/gdk-pixbuf-io.c:2434
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
 "%s"
 msgstr "ไม่สามารถปิดแฟ้ม '%s' ขณะเขียนรูปภาพ ข้อมูลอาจจะไม่ถูกบันทึก: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2651 gdk-pixbuf/gdk-pixbuf-io.c:2703
+#: gdk-pixbuf/gdk-pixbuf-io.c:2655 gdk-pixbuf/gdk-pixbuf-io.c:2707
 msgid "Insufficient memory to save image into a buffer"
 msgstr "หน่วยความจำไม่พอที่จะบันทึกรูปภาพลงในบัฟเฟอร์"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2749
+#: gdk-pixbuf/gdk-pixbuf-io.c:2753
 msgid "Error writing to image stream"
 msgstr "เกิดข้อผิดพลาดขณะเขียนสตรีมรูปภาพ"
 
@@ -256,19 +256,19 @@ msgstr "ไม่สามารถเลื่อนตำแหน่งใน
 msgid "Could not read from stream: %s"
 msgstr "ไม่สามารถอ่านข้อมูลจากสตรีม: %s"
 
-#: gdk-pixbuf/io-gdip-utils.c:617 gdk-pixbuf/io-gdip-utils.c:752
+#: gdk-pixbuf/io-gdip-utils.c:617
 msgid "Couldn't load bitmap"
 msgstr "โหลดบิตแมปไม่สำเร็จ"
 
-#: gdk-pixbuf/io-gdip-utils.c:774
+#: gdk-pixbuf/io-gdip-utils.c:773
 msgid "Couldn't load metafile"
 msgstr "โหลด metafile ไม่สำเร็จ"
 
-#: gdk-pixbuf/io-gdip-utils.c:933
+#: gdk-pixbuf/io-gdip-utils.c:932
 msgid "Unsupported image format for GDI+"
 msgstr "พบชนิดรูปภาพที่ GDI+ ไม่รองรับ"
 
-#: gdk-pixbuf/io-gdip-utils.c:940
+#: gdk-pixbuf/io-gdip-utils.c:939
 msgid "Couldn't save"
 msgstr "บันทึกไม่สำเร็จ"
 
@@ -329,9 +329,8 @@ msgid "Version %s of the GIF file format is not supported"
 msgstr "ไม่รองรับแฟ้ม GIF รุ่น %s"
 
 #: gdk-pixbuf/io-gif.c:1241
-#, fuzzy
 msgid "Resulting GIF image has zero size"
-msgstr "รูปภาพมีความกว้างเป็นศูนย์"
+msgstr "รูปภาพ GIF ผลลัพธ์มีขนาดเป็นศูนย์"
 
 #: gdk-pixbuf/io-gif.c:1320
 msgid ""
@@ -457,9 +456,9 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "รูปภาพ JPEG ที่แปลงมามีความกว้างหรือความสูงเป็นศูนย์"
 
 #: gdk-pixbuf/io-jpeg.c:1281
-#, fuzzy, c-format
+#, c-format
 msgid "Color profile has invalid length '%d'."
-msgstr "โพรไฟล์สีมีความยาว %d ซึ่งไม่ถูกต้อง"
+msgstr "โพรไฟล์สีมีความยาว '%d' ซึ่งไม่ถูกต้อง"
 
 #: gdk-pixbuf/io-pcx.c:186
 msgid "Couldn't allocate memory for header"
@@ -507,14 +506,12 @@ msgid "The PCX image format"
 msgstr "แฟ้มรูปภาพชนิด PCX"
 
 #: gdk-pixbuf/io-pixdata.c:148
-#, fuzzy
 msgid "Transformed pixbuf has zero width or height."
-msgstr "รูปภาพ PNG ที่แปลงมามีความกว้างหรือความสูงเป็นศูนย์"
+msgstr "พิกซ์บัฟที่แปลงมามีความกว้างหรือความสูงเป็นศูนย์"
 
 #: gdk-pixbuf/io-pixdata.c:186
-#, fuzzy
 msgid "The GdkPixdata format"
-msgstr "แฟ้มรูปภาพชนิด GIF"
+msgstr "รูปแบบ GdkPixdata"
 
 #: gdk-pixbuf/io-png.c:54
 msgid "Bits per channel of PNG image is invalid."
@@ -546,12 +543,12 @@ msgid "Insufficient memory to load PNG file"
 msgstr "หน่วยความจำไม่พอที่จะอ่านแฟ้ม PNG"
 
 #: gdk-pixbuf/io-png.c:656
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Insufficient memory to store a %lu by %lu image; try exiting some "
 "applications to reduce memory usage"
 msgstr ""
-"หน่วยความจำไม่พอที่จะโหลดรูปภาพขนาด %ldx%ld กรุณาปิดโปรแกรมที่ไม่ใช้แล้ว "
+"หน่วยความจำไม่พอที่จะเก็บรูปภาพขนาด %lux%lu กรุณาปิดโปรแกรมที่ไม่ใช้แล้ว "
 "เพื่อจะได้มีหน่วยความจำว่างเพิ่มขึ้น"
 
 #: gdk-pixbuf/io-png.c:719
@@ -669,13 +666,13 @@ msgid "Failed to read QTIF header"
 msgstr "อ่านข้อมูลส่วนหัว QTIF ไม่สำเร็จ"
 
 #: gdk-pixbuf/io-qtif.c:152 gdk-pixbuf/io-qtif.c:189 gdk-pixbuf/io-qtif.c:459
-#, fuzzy, c-format
+#, c-format
 msgid "QTIF atom size too large (%d byte)"
 msgid_plural "QTIF atom size too large (%d bytes)"
 msgstr[0] "ขนาดอะตอม QTIF ใหญ่เกินไป (%d ไบต์)"
 
 #: gdk-pixbuf/io-qtif.c:175
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to allocate %d byte for file read buffer"
 msgid_plural "Failed to allocate %d bytes for file read buffer"
 msgstr[0] "จัดสรรเนื้อที่ %d ไบต์เพื่อเป็นบัฟเฟอร์สำหรับอ่านแฟ้มไม่สำเร็จ"
@@ -686,7 +683,7 @@ msgid "File error when reading QTIF atom: %s"
 msgstr "เกิดข้อผิดพลาดขณะอ่านอะตอม QTIF: %s"
 
 #: gdk-pixbuf/io-qtif.c:243
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to skip the next %d byte with seek()."
 msgid_plural "Failed to skip the next %d bytes with seek()."
 msgstr[0] "ข้าม %d ไบต์ถัดไปด้วย seek() ไม่สำเร็จ"

@@ -15,8 +15,8 @@ AC_PREREQ([2.63])
 
 m4_define([gdk_pixbuf_major_version], [2])
 m4_define([gdk_pixbuf_minor_version], [26])
-m4_define([gdk_pixbuf_micro_version], [4])
-m4_define([gdk_pixbuf_interface_age], [4])
+m4_define([gdk_pixbuf_micro_version], [5])
+m4_define([gdk_pixbuf_interface_age], [5])
 m4_define([gdk_pixbuf_binary_age],
           [m4_eval(100 * gdk_pixbuf_minor_version + gdk_pixbuf_micro_version)])
 m4_define([gdk_pixbuf_version],
@@ -26,7 +26,7 @@ m4_define([gdk_pixbuf_binary_version], [2.10.0])
 
 
 # required versions of other packages
-m4_define([glib_required_version], [2.31.0])
+m4_define([glib_required_version], [2.34.0])
 
 AC_INIT([gdk-pixbuf], [gdk_pixbuf_version],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-pixbuf],
@@ -152,7 +152,7 @@ LT_OUTPUT
 AC_SYS_LARGEFILE
 
 AM_PROG_AS
-AC_PATH_PROG(NM, nm, nm)
+AC_CHECK_TOOLS(NM, nm, nm)
 
 AC_MSG_CHECKING([for some Win32 platform])
 AS_CASE(["$host"],

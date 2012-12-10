@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gdk-pixbuf.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2012-09-17 20:55-0400\n"
+"POT-Creation-Date: 2012-11-09 23:30-0500\n"
 "PO-Revision-Date: 2012-02-15 11:52+0700\n"
 "Last-Translator: Seng Sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <supprot@khmeros.info>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "X-Generator: WordForge 0.8 RC1\n"
 "X-Language: km-KH\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:147 gdk-pixbuf/gdk-pixbuf-io.c:1088
-#: gdk-pixbuf/gdk-pixbuf-io.c:1354
+#: gdk-pixbuf/gdk-pixbuf-animation.c:147 gdk-pixbuf/gdk-pixbuf-io.c:1092
+#: gdk-pixbuf/gdk-pixbuf-io.c:1358
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​បើក​ឯកសារ '%s' ៖ %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1100
+#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1104
 #, c-format
 msgid "Image file '%s' contains no data"
 msgstr "គ្មាន​ទិន្នន័យ​ឯកសារ​រូបភាព '%s' ឡើយ"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:202 gdk-pixbuf/gdk-pixbuf-io.c:1136
-#: gdk-pixbuf/gdk-pixbuf-io.c:1406
+#: gdk-pixbuf/gdk-pixbuf-animation.c:202 gdk-pixbuf/gdk-pixbuf-io.c:1140
+#: gdk-pixbuf/gdk-pixbuf-io.c:1410
 #, c-format
 msgid ""
 "Failed to load image '%s': reason not known, probably a corrupt image file"
@@ -45,12 +45,12 @@ msgid ""
 "animation file"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ផ្ទុក​ចលនា '%s' ៖ មិន​ដឹង​ហេតុផល ប្រហែល​ជា​ឯកសារ​​របស់​ចលនា​ខូច"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:809
+#: gdk-pixbuf/gdk-pixbuf-io.c:813
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "មិន​អាច​ផ្ទុក​រូបភាព ម៉ូឌុល​ដែល​​ផ្ទុក​ឡើយ ៖ %s: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:824
+#: gdk-pixbuf/gdk-pixbuf-io.c:828
 #, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
@@ -59,53 +59,53 @@ msgstr ""
 "ម៉ូឌុល​រូបភាព​ដែល​ផ្ទុក %s មិន​នាំចេញ​ចំណុច​ប្រទាក់​ត្រឹមត្រូវ​ឡើយ ប្រហែល​ជា​​មក​ពី​​កំណែ​របស់ gdk-pixbuf ខុស​គ្នា​"
 "ឬ ?"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:833 gdk-pixbuf/gdk-pixbuf-io.c:884
+#: gdk-pixbuf/gdk-pixbuf-io.c:837 gdk-pixbuf/gdk-pixbuf-io.c:888
 #, c-format
 msgid "Image type '%s' is not supported"
 msgstr "មិន​គាំទ្រ​ប្រភេទ​រូបភាព '%s' ឡើយ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:969
+#: gdk-pixbuf/gdk-pixbuf-io.c:973
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
 msgstr "មិន​អាច​ទទួល​ស្គាល់​ទ្រង់ទ្រាយ​ឯកសារ​រូបភាព​​សម្រាប់​ឯកសារ '%s' ឡើយ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:977
+#: gdk-pixbuf/gdk-pixbuf-io.c:981
 msgid "Unrecognized image file format"
 msgstr "ទ្រង់ទ្រាយ​ឯកសារ​រូបភាព​ដែល​មិន​ទទួលស្គាល់"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1145
+#: gdk-pixbuf/gdk-pixbuf-io.c:1149
 #, c-format
 msgid "Failed to load image '%s': %s"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ផ្ទុក​រូបភាព '%s' ៖ %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2033 gdk-pixbuf/io-gdip-utils.c:888
+#: gdk-pixbuf/gdk-pixbuf-io.c:2037 gdk-pixbuf/io-gdip-utils.c:887
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "កំហុស​ក្នុង​ការ​សរសេរ​ទៅកាន់​ឯកសារ​រូបភាព ៖ %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2078 gdk-pixbuf/gdk-pixbuf-io.c:2208
+#: gdk-pixbuf/gdk-pixbuf-io.c:2082 gdk-pixbuf/gdk-pixbuf-io.c:2212
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr "ស្ថាបនា gdk-pixbuf ​នេះ​មិន​គាំទ្រ​ការ​រក្សាទុក​ទ្រង់ទ្រាយ​ឯកសារ​ឡើយ ៖ %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2112
+#: gdk-pixbuf/gdk-pixbuf-io.c:2116
 msgid "Insufficient memory to save image to callback"
 msgstr "អង្គ​ចងចាំ​មិន​គ្រប់គ្រាន់​ក្នុង​ការ​រក្សាទុក​រូបភាព ដើម្បី​​ហៅ​​ទៅ​វិញ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2125
+#: gdk-pixbuf/gdk-pixbuf-io.c:2129
 msgid "Failed to open temporary file"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​បើក​ឯកសារ​បណ្ដោះ​អាសន្ន"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2151
+#: gdk-pixbuf/gdk-pixbuf-io.c:2155
 msgid "Failed to read from temporary file"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​អាន​ពី​ឯកសារ​បណ្ដោះ​អាសន្ន"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2404
+#: gdk-pixbuf/gdk-pixbuf-io.c:2408
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​បើក '%s' សម្រាប់​សរសេរ ៖ %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2430
+#: gdk-pixbuf/gdk-pixbuf-io.c:2434
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
@@ -113,11 +113,11 @@ msgid ""
 msgstr ""
 "បាន​បរាជ័យ​ក្នុង​ការ​បិទ '%s' ខណៈ​ពេល​គូរ​រូបភាព ទិន្នន័យ​ទាំងអស់​​អាច​​មិន​ត្រូវ​បាន​រក្សាទុក​ឡើយ ៖ %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2651 gdk-pixbuf/gdk-pixbuf-io.c:2703
+#: gdk-pixbuf/gdk-pixbuf-io.c:2655 gdk-pixbuf/gdk-pixbuf-io.c:2707
 msgid "Insufficient memory to save image into a buffer"
 msgstr "អង្គ​ចងចាំ​មិន​គ្រប់គ្រាន់​ក្នុង​ការ​រក្សាទុក​រូបភាព​​ក្នុង​អង្គ​ចងចាំ​បណ្ដោះ​អាសន្ន​ឡើយ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2749
+#: gdk-pixbuf/gdk-pixbuf-io.c:2753
 msgid "Error writing to image stream"
 msgstr "កំហុស​ក្នុង​ការ​សរសេរ​អំពី​ស្ទ្រីម"
 
@@ -260,19 +260,19 @@ msgstr "មិន​អាច​ស្វែងរក​ស្ទ្រីម​
 msgid "Could not read from stream: %s"
 msgstr "មិន​អាច​អាន​ពី​ស្ទ្រីម​បាន​ទេ ៖ %s"
 
-#: gdk-pixbuf/io-gdip-utils.c:617 gdk-pixbuf/io-gdip-utils.c:752
+#: gdk-pixbuf/io-gdip-utils.c:617
 msgid "Couldn't load bitmap"
 msgstr "មិន​អាច​ផ្ទុក​រូបភាព​បាន​ទេ"
 
-#: gdk-pixbuf/io-gdip-utils.c:774
+#: gdk-pixbuf/io-gdip-utils.c:773
 msgid "Couldn't load metafile"
 msgstr "មិន​អាច​ផ្ទុក​ឯកសារ​មេតា​បាន​ទេ"
 
-#: gdk-pixbuf/io-gdip-utils.c:933
+#: gdk-pixbuf/io-gdip-utils.c:932
 msgid "Unsupported image format for GDI+"
 msgstr "ទ្រង់ទ្រាយ​រូបភាព​ដែល​មិន​បាន​គាំទ្រ​សម្រាប់ GDI+"
 
-#: gdk-pixbuf/io-gdip-utils.c:940
+#: gdk-pixbuf/io-gdip-utils.c:939
 msgid "Couldn't save"
 msgstr "មិន​អាច​រក្សាទុក​បាន​ទេ"
 
