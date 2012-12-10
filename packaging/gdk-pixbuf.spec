@@ -20,7 +20,6 @@ BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(libpng)
 BuildRequires:  pkgconfig(x11)
 Requires(post): gdk-pixbuf-query-loaders
-Recommends:     %{name}-lang = %{version}
 
 %description
 gdk-pixbuf is an image loading library that can be extended by loadable
