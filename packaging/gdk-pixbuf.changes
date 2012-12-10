@@ -1,0 +1,5 @@
+* Sun Dec 09 2012 Anas Nashif <anas.nashif@intel.com> upstream/2.26.5@413bb7a
+- Update to 2.26.5
+- conditionally require typelib
+- make introspection conditional
+
