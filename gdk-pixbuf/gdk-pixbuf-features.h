@@ -44,9 +44,9 @@ Library version numbers.
  */
 
 #define GDK_PIXBUF_MAJOR (2)
-#define GDK_PIXBUF_MINOR (26)
-#define GDK_PIXBUF_MICRO (5)
-#define GDK_PIXBUF_VERSION "2.26.5"
+#define GDK_PIXBUF_MINOR (27)
+#define GDK_PIXBUF_MICRO (0)
+#define GDK_PIXBUF_VERSION "2.27.0"
 
 /* We prefix variable declarations so they can
  * properly get exported/imported from Windows DLLs.

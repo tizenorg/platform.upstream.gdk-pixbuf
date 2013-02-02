@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>File Loading</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
 <link rel="home" href="index.html" title="GDK-PixBuf Reference Manual">
 <link rel="up" href="rn01.html" title="API Reference">
 <link rel="prev" href="gdk-pixbuf-Reference-Counting-and-Memory-Mangement.html" title="Reference Counting and Memory Mangement">
 <link rel="next" href="gdk-pixbuf-File-saving.html" title="File saving">
-<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -111,7 +111,7 @@ loading can use the <a class="link" href="GdkPixbufLoader.html" title="GdkPixbuf
                                                          <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>
 Creates a new pixbuf by loading an image from a file.  The file format is
-detected automatically. If <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned, then <em class="parameter"><code>error</code></em> will be set.
+detected automatically. If <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> is returned, then <em class="parameter"><code>error</code></em> will be set.
 Possible errors are in the <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Structure.html#GDK-PIXBUF-ERROR:CAPS" title="GDK_PIXBUF_ERROR"><span class="type">GDK_PIXBUF_ERROR</span></a> and <span class="type">G_FILE_ERROR</span> domains.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -130,7 +130,7 @@ Possible errors are in the <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Struct
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A newly-created pixbuf with a reference count of 1, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> if
+<td>A newly-created pixbuf with a reference count of 1, or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> if
 any of several error conditions occurred:  the file could not be opened,
 there was no loader for the file's format, there was not enough memory to
 allocate the image buffer, or the image file contained invalid data.</td>
@@ -147,7 +147,7 @@ allocate the image buffer, or the image file contained invalid data.</td>
                                                          <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>
 Creates a new pixbuf by loading an image from a file.  
-The file format is detected automatically. If <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned, then 
+The file format is detected automatically. If <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> is returned, then 
 <em class="parameter"><code>error</code></em> will be set. Possible errors are in the <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Structure.html#GDK-PIXBUF-ERROR:CAPS" title="GDK_PIXBUF_ERROR"><span class="type">GDK_PIXBUF_ERROR</span></a> and 
 <span class="type">G_FILE_ERROR</span> domains.
 </p>
@@ -183,7 +183,7 @@ and image at the requested size, regardless of aspect ratio, use
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>A newly-created pixbuf with a reference count of 1, or
-<a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> if any of several error conditions occurred:  the file could not
+<a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> if any of several error conditions occurred:  the file could not
 be opened, there was no loader for the file's format, there was not
 enough memory to allocate the image buffer, or the image file contained
 invalid data.</td>
@@ -202,7 +202,7 @@ invalid data.</td>
                                                          <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>
 Creates a new pixbuf by loading an image from a file.  The file format is
-detected automatically. If <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned, then <em class="parameter"><code>error</code></em> will be set.
+detected automatically. If <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> is returned, then <em class="parameter"><code>error</code></em> will be set.
 Possible errors are in the <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Structure.html#GDK-PIXBUF-ERROR:CAPS" title="GDK_PIXBUF_ERROR"><span class="type">GDK_PIXBUF_ERROR</span></a> and <span class="type">G_FILE_ERROR</span> domains.
 The image will be scaled to fit in the requested size, optionally preserving
 the image's aspect ratio. 
@@ -244,7 +244,7 @@ allowed since 2.8.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A newly-created pixbuf with a reference count of 1, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>
+<td>A newly-created pixbuf with a reference count of 1, or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>
 if any of several error conditions occurred:  the file could not be opened,
 there was no loader for the file's format, there was not enough memory to
 allocate the image buffer, or the image file contained invalid data.</td>
@@ -274,18 +274,18 @@ Parses an image file far enough to determine its format and size.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
-<td>Return location for the width of the image, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
+<td>Return location for the width of the image, or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
-<td>Return location for the height of the image, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
+<td>Return location for the height of the image, or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
 <td>A <a class="link" href="gdk-pixbuf-Module-Interface.html#GdkPixbufFormat" title="struct GdkPixbufFormat"><span class="type">GdkPixbufFormat</span></a> describing the image
-format of the file or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> if the image format wasn't
+format of the file or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> if the image format wasn't
 recognized. The return value is owned by GdkPixbuf and should
 not be freed. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
 </td>
@@ -303,7 +303,7 @@ not be freed. <span class="annotation">[<acronym title="Don't free data after th
 Creates a new pixbuf by loading an image from an resource.
 </p>
 <p>
-The file format is detected automatically. If <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned, then
+The file format is detected automatically. If <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> is returned, then
 <em class="parameter"><code>error</code></em> will be set.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
@@ -322,7 +322,7 @@ The file format is detected automatically. If <a href="/usr/share/gtk-doc/html/l
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A newly-created pixbuf, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> if any of several error
+<td>A newly-created pixbuf, or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> if any of several error
 conditions occurred: the file could not be opened, the image format is
 not supported, there was not enough memory to allocate the image buffer,
 the stream contained invalid data, or the operation was cancelled.</td>
@@ -344,7 +344,7 @@ the stream contained invalid data, or the operation was cancelled.</td>
 Creates a new pixbuf by loading an image from an resource.
 </p>
 <p>
-The file format is detected automatically. If <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned, then
+The file format is detected automatically. If <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> is returned, then
 <em class="parameter"><code>error</code></em> will be set.
 </p>
 <p>
@@ -387,7 +387,7 @@ The stream is not closed.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A newly-created pixbuf, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> if any of several error
+<td>A newly-created pixbuf, or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> if any of several error
 conditions occurred: the file could not be opened, the image format is
 not supported, there was not enough memory to allocate the image buffer,
 the stream contained invalid data, or the operation was cancelled.</td>
@@ -406,7 +406,7 @@ the stream contained invalid data, or the operation was cancelled.</td>
 Creates a new pixbuf by loading an image from an input stream.  
 </p>
 <p>
-The file format is detected automatically. If <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned, then 
+The file format is detected automatically. If <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> is returned, then 
 <em class="parameter"><code>error</code></em> will be set. The <em class="parameter"><code>cancellable</code></em> can be used to abort the operation
 from another thread. If the operation was cancelled, the error 
 <code class="literal">G_IO_ERROR_CANCELLED</code> will be returned. Other possible errors are in 
@@ -427,7 +427,7 @@ The stream is not closed.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
-<td>optional <span class="type">GCancellable</span> object, <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>optional <span class="type">GCancellable</span> object, <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -436,7 +436,7 @@ The stream is not closed.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A newly-created pixbuf, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> if any of several error
+<td>A newly-created pixbuf, or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> if any of several error
 conditions occurred: the file could not be opened, the image format is
 not supported, there was not enough memory to allocate the image buffer,
 the stream contained invalid data, or the operation was cancelled.</td>
@@ -475,7 +475,7 @@ You can then call <a class="link" href="gdk-pixbuf-File-Loading.html#gdk-pixbuf-
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
-<td>optional <span class="type">GCancellable</span> object, <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>optional <span class="type">GCancellable</span> object, <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -512,12 +512,12 @@ Finishes an asynchronous pixbuf creation operation started with
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
-<td>a <span class="type">GError</span>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>
+<td>a <span class="type">GError</span>, or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> on error. Free the returned
+<td>a <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> on error. Free the returned
 object with <code class="function">g_object_unref()</code>.</td>
 </tr>
 </tbody>
@@ -537,7 +537,7 @@ object with <code class="function">g_object_unref()</code>.</td>
 Creates a new pixbuf by loading an image from an input stream.  
 </p>
 <p>
-The file format is detected automatically. If <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned, then 
+The file format is detected automatically. If <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> is returned, then 
 <em class="parameter"><code>error</code></em> will be set. The <em class="parameter"><code>cancellable</code></em> can be used to abort the operation
 from another thread. If the operation was cancelled, the error 
 <code class="literal">G_IO_ERROR_CANCELLED</code> will be returned. Other possible errors are in 
@@ -579,7 +579,7 @@ The stream is not closed.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
-<td>optional <span class="type">GCancellable</span> object, <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>optional <span class="type">GCancellable</span> object, <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -588,7 +588,7 @@ The stream is not closed.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A newly-created pixbuf, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> if any of several error
+<td>A newly-created pixbuf, or <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> if any of several error
 conditions occurred: the file could not be opened, the image format is
 not supported, there was not enough memory to allocate the image buffer,
 the stream contained invalid data, or the operation was cancelled.</td>
@@ -644,7 +644,7 @@ You can then call <a class="link" href="gdk-pixbuf-File-Loading.html#gdk-pixbuf-
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
-<td>optional <span class="type">GCancellable</span> object, <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>optional <span class="type">GCancellable</span> object, <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -667,6 +667,6 @@ You can then call <a class="link" href="gdk-pixbuf-File-Loading.html#gdk-pixbuf-
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.18</div>
+          Generated by GTK-Doc V1.18.1</div>
 </body>
 </html>

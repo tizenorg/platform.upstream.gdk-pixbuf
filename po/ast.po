@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: ast\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2012-11-09 23:30-0500\n"
+"POT-Creation-Date: 2013-01-10 07:53-0500\n"
 "PO-Revision-Date: 2011-02-15 18:33+0200\n"
 "Last-Translator: Xandru Armesto <xandru@softastur.org>\n"
 "Language-Team: Softastur alministradores@softastur.org\n"
@@ -23,19 +23,19 @@ msgstr ""
 "X-Launchpad-Export-Date: 2010-01-11 12:44+0000\n"
 "X-Poedit-Language: asturian\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:147 gdk-pixbuf/gdk-pixbuf-io.c:1092
-#: gdk-pixbuf/gdk-pixbuf-io.c:1358
+#: gdk-pixbuf/gdk-pixbuf-animation.c:146 gdk-pixbuf/gdk-pixbuf-io.c:1065
+#: gdk-pixbuf/gdk-pixbuf-io.c:1331
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "Falló al abrir el ficheru '%s': %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1104
+#: gdk-pixbuf/gdk-pixbuf-animation.c:159 gdk-pixbuf/gdk-pixbuf-io.c:1077
 #, c-format
 msgid "Image file '%s' contains no data"
 msgstr "El ficheru d'imaxe '%s' nun tien datos"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:202 gdk-pixbuf/gdk-pixbuf-io.c:1140
-#: gdk-pixbuf/gdk-pixbuf-io.c:1410
+#: gdk-pixbuf/gdk-pixbuf-animation.c:201 gdk-pixbuf/gdk-pixbuf-io.c:1113
+#: gdk-pixbuf/gdk-pixbuf-io.c:1383
 #, c-format
 msgid ""
 "Failed to load image '%s': reason not known, probably a corrupt image file"
@@ -43,7 +43,7 @@ msgstr ""
 "Falló al cargar la imaxe '%s': nun se sabe la razón, pue que'l ficheru de la "
 "imaxe tea frayáu"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:235
+#: gdk-pixbuf/gdk-pixbuf-animation.c:232
 #, c-format
 msgid ""
 "Failed to load animation '%s': reason not known, probably a corrupt "
@@ -52,12 +52,12 @@ msgstr ""
 "Falló al cargar l'animación '%s': nun se sabe la razón, pue que'l ficheru "
 "d'animación tea frayáu"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:813
+#: gdk-pixbuf/gdk-pixbuf-io.c:791
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "Incapaz de cargar el módulu de carga d'imaxe: %s: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:828
+#: gdk-pixbuf/gdk-pixbuf-io.c:806
 #, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
@@ -66,53 +66,53 @@ msgstr ""
 "El módulu de carga d'imaxe %s nun exporta la interfaz afayadiza; ¿pue que "
 "seya d'una versióngdk-pixbuf distinta?"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:837 gdk-pixbuf/gdk-pixbuf-io.c:888
+#: gdk-pixbuf/gdk-pixbuf-io.c:815 gdk-pixbuf/gdk-pixbuf-io.c:866
 #, c-format
 msgid "Image type '%s' is not supported"
 msgstr "El tipu d'imaxe '%s' nun ta soportáu"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:973
+#: gdk-pixbuf/gdk-pixbuf-io.c:951
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
 msgstr "Nun pudo reconocese'l formatu del ficheru d'imaxe pal ficheru '%s'"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:981
+#: gdk-pixbuf/gdk-pixbuf-io.c:959
 msgid "Unrecognized image file format"
 msgstr "Formatu de ficheru d'imaxe irreconocible"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1149
+#: gdk-pixbuf/gdk-pixbuf-io.c:1122
 #, c-format
 msgid "Failed to load image '%s': %s"
 msgstr "Falló al cargar la imaxe '%s': %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2037 gdk-pixbuf/io-gdip-utils.c:887
+#: gdk-pixbuf/gdk-pixbuf-io.c:2005 gdk-pixbuf/io-gdip-utils.c:887
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "Error al escribir al ficheru d'imaxe: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2082 gdk-pixbuf/gdk-pixbuf-io.c:2212
+#: gdk-pixbuf/gdk-pixbuf-io.c:2047 gdk-pixbuf/gdk-pixbuf-io.c:2168
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr "Esti bloque de gdk-pixbuf nun soporta guardar el formatu d'imaxe: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2116
+#: gdk-pixbuf/gdk-pixbuf-io.c:2078
 msgid "Insufficient memory to save image to callback"
 msgstr "Memoria insuficiente pa guardar imaxe pa rellamada"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2129
+#: gdk-pixbuf/gdk-pixbuf-io.c:2091
 msgid "Failed to open temporary file"
 msgstr "Falló l'apertura del ficheru temporal"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2155
+#: gdk-pixbuf/gdk-pixbuf-io.c:2114
 msgid "Failed to read from temporary file"
 msgstr "Falló la llectura del ficheru temporal"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2408
+#: gdk-pixbuf/gdk-pixbuf-io.c:2362
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
 msgstr "Falló l'apertura de '%s' pa escribir: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2434
+#: gdk-pixbuf/gdk-pixbuf-io.c:2388
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
@@ -121,15 +121,15 @@ msgstr ""
 "Falló al zarrar '%s' mentanto s'escribía la imaxe, pue que nun se guardaren "
 "tolos datos: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2655 gdk-pixbuf/gdk-pixbuf-io.c:2707
+#: gdk-pixbuf/gdk-pixbuf-io.c:2609 gdk-pixbuf/gdk-pixbuf-io.c:2661
 msgid "Insufficient memory to save image into a buffer"
 msgstr "Memoria insuficiente pa guardar la imaxe nun búfer"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2753
+#: gdk-pixbuf/gdk-pixbuf-io.c:2707
 msgid "Error writing to image stream"
 msgstr "Error al escribir nel fluxu d'imaxe"
 
-#: gdk-pixbuf/gdk-pixbuf-loader.c:397
+#: gdk-pixbuf/gdk-pixbuf-loader.c:393
 #, c-format
 msgid ""
 "Internal error: Image loader module '%s' failed to complete an operation, "
@@ -138,7 +138,7 @@ msgstr ""
 "Error internu: El módulu de carga d'imaxe '%s' falló al completar una "
 "operación, pero nun dio un motivu del fallu"
 
-#: gdk-pixbuf/gdk-pixbuf-loader.c:439
+#: gdk-pixbuf/gdk-pixbuf-loader.c:435
 #, c-format
 msgid "Incremental loading of image type '%s' is not supported"
 msgstr "Nun ta soportao la carga creciente del tipu d'imaxe '%s'"
@@ -221,7 +221,7 @@ msgstr "El formatu d'imaxe BMP"
 msgid "The EMF image format"
 msgstr "El formatu d'imaxe EMF"
 
-#: gdk-pixbuf/io-gdip-gif.c:80 gdk-pixbuf/io-gif.c:1719
+#: gdk-pixbuf/io-gdip-gif.c:80 gdk-pixbuf/io-gif.c:1720
 msgid "The GIF image format"
 msgstr "El formatu d'imaxe GIF"
 
@@ -229,7 +229,7 @@ msgstr "El formatu d'imaxe GIF"
 msgid "The ICO image format"
 msgstr "El formatu d'imaxe ICO"
 
-#: gdk-pixbuf/io-gdip-jpeg.c:53 gdk-pixbuf/io-jpeg.c:1251
+#: gdk-pixbuf/io-gdip-jpeg.c:53 gdk-pixbuf/io-jpeg.c:1249
 #, c-format
 msgid ""
 "JPEG quality must be a value between 0 and 100; value '%s' could not be "
@@ -238,7 +238,7 @@ msgstr ""
 "La calidá JPEG tien de ser un valor d'ente 0 y 100; el valor '%s' nun pue "
 "procesase."
 
-#: gdk-pixbuf/io-gdip-jpeg.c:68 gdk-pixbuf/io-jpeg.c:1267
+#: gdk-pixbuf/io-gdip-jpeg.c:68 gdk-pixbuf/io-jpeg.c:1265
 #, c-format
 msgid ""
 "JPEG quality must be a value between 0 and 100; value '%d' is not allowed."
@@ -246,7 +246,7 @@ msgstr ""
 "La calidá JPEG tien de ser un valor d'ente 0 y 100; el valor '%d' nun ye un "
 "valor válidu."
 
-#: gdk-pixbuf/io-gdip-jpeg.c:136 gdk-pixbuf/io-jpeg.c:1480
+#: gdk-pixbuf/io-gdip-jpeg.c:136 gdk-pixbuf/io-jpeg.c:1478
 msgid "The JPEG image format"
 msgstr "El formatu d'imaxe JPEG"
 
@@ -296,7 +296,7 @@ msgstr "El formatu d'imaxe WMF"
 msgid "Failure reading GIF: %s"
 msgstr "Fallu al lleer GIF: %s"
 
-#: gdk-pixbuf/io-gif.c:496 gdk-pixbuf/io-gif.c:1501 gdk-pixbuf/io-gif.c:1668
+#: gdk-pixbuf/io-gif.c:496 gdk-pixbuf/io-gif.c:1502 gdk-pixbuf/io-gif.c:1669
 msgid "GIF file was missing some data (perhaps it was truncated somehow?)"
 msgstr "Falta-y dalgún datu al ficheru GIF (¿pue que se frayare?)"
 
@@ -321,8 +321,8 @@ msgstr "Atopóse un códigu fallíu"
 msgid "Circular table entry in GIF file"
 msgstr "Entrada de tabla circular nel ficheru GIF"
 
-#: gdk-pixbuf/io-gif.c:866 gdk-pixbuf/io-gif.c:1487 gdk-pixbuf/io-gif.c:1540
-#: gdk-pixbuf/io-gif.c:1656
+#: gdk-pixbuf/io-gif.c:866 gdk-pixbuf/io-gif.c:1488 gdk-pixbuf/io-gif.c:1541
+#: gdk-pixbuf/io-gif.c:1657
 msgid "Not enough memory to load GIF file"
 msgstr "Nun hai memoria suficiente pa cargar ficheru GIF"
 
@@ -356,7 +356,7 @@ msgstr ""
 "La imaxe GIF nun tien mapa de colores global, y un cuadru en dientro d'ella "
 "nun tien mapa de colores llocal."
 
-#: gdk-pixbuf/io-gif.c:1563
+#: gdk-pixbuf/io-gif.c:1564
 msgid "GIF image was truncated or incomplete."
 msgstr "La imaxe GIF taba frayada o incompleta."
 
@@ -453,7 +453,7 @@ msgstr "El formatu d'imaxe JPEG 2000"
 msgid "Error interpreting JPEG image file (%s)"
 msgstr "Error al interpretar el ficheru d'imaxe JPEG (%s)"
 
-#: gdk-pixbuf/io-jpeg.c:606
+#: gdk-pixbuf/io-jpeg.c:604
 msgid ""
 "Insufficient memory to load image, try exiting some applications to free "
 "memory"
@@ -461,21 +461,21 @@ msgstr ""
 "Memoria insuficiente pa cargar imaxe, intente colar d'otros programes pa "
 "lliberar memoria"
 
-#: gdk-pixbuf/io-jpeg.c:653 gdk-pixbuf/io-jpeg.c:867
+#: gdk-pixbuf/io-jpeg.c:651 gdk-pixbuf/io-jpeg.c:865
 #, c-format
 msgid "Unsupported JPEG color space (%s)"
 msgstr "Espaciu de color JPEG non soportáu (%s)"
 
-#: gdk-pixbuf/io-jpeg.c:766 gdk-pixbuf/io-jpeg.c:1046
-#: gdk-pixbuf/io-jpeg.c:1310 gdk-pixbuf/io-jpeg.c:1320
+#: gdk-pixbuf/io-jpeg.c:764 gdk-pixbuf/io-jpeg.c:1044
+#: gdk-pixbuf/io-jpeg.c:1308 gdk-pixbuf/io-jpeg.c:1318
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Nun pudo atopase memoria pa cargar ficheru JPEG"
 
-#: gdk-pixbuf/io-jpeg.c:1020
+#: gdk-pixbuf/io-jpeg.c:1018
 msgid "Transformed JPEG has zero width or height."
 msgstr "El JPEG tresformáu tien un anchor o altor igual a cero."
 
-#: gdk-pixbuf/io-jpeg.c:1281
+#: gdk-pixbuf/io-jpeg.c:1279
 #, fuzzy, c-format
 msgid "Color profile has invalid length '%d'."
 msgstr "El perfil de color tien una llonxitú inválida %d."

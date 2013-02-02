@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gtk+.master.kn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2012-11-09 23:30-0500\n"
+"POT-Creation-Date: 2013-01-10 07:53-0500\n"
 "PO-Revision-Date: 2010-04-21 22:38+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -21,19 +21,19 @@ msgstr ""
 "\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:147 gdk-pixbuf/gdk-pixbuf-io.c:1092
-#: gdk-pixbuf/gdk-pixbuf-io.c:1358
+#: gdk-pixbuf/gdk-pixbuf-animation.c:146 gdk-pixbuf/gdk-pixbuf-io.c:1065
+#: gdk-pixbuf/gdk-pixbuf-io.c:1331
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "'%s' ಕಡತವನ್ನು ತೆರೆಯುವಲ್ಲಿ ವಿಫಲತೆ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1104
+#: gdk-pixbuf/gdk-pixbuf-animation.c:159 gdk-pixbuf/gdk-pixbuf-io.c:1077
 #, c-format
 msgid "Image file '%s' contains no data"
 msgstr "ಚಿತ್ರ ಕಡತ '%s' ದಲ್ಲಿ ಯಾವುದೇ ದತ್ತಾಂಶವಿಲ್ಲ"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:202 gdk-pixbuf/gdk-pixbuf-io.c:1140
-#: gdk-pixbuf/gdk-pixbuf-io.c:1410
+#: gdk-pixbuf/gdk-pixbuf-animation.c:201 gdk-pixbuf/gdk-pixbuf-io.c:1113
+#: gdk-pixbuf/gdk-pixbuf-io.c:1383
 #, c-format
 msgid ""
 "Failed to load image '%s': reason not known, probably a corrupt image file"
@@ -41,7 +41,7 @@ msgstr ""
 "ಚಿತ್ರ '%s'ವನ್ನು ಲೋಡ್ ಮಾಡುವಲ್ಲಿ ವಿಫಲತೆ: ಕಾರಣ ತಿಳಿದಿಲ್ಲ, ಬಹುಷಃ ಒಂದು ಭ್ರಷ್ಟಗೊಂಡ ಚಿತ್ರ "
 "ಕಡತದಿಂದಾಗಿರಬಹುದು"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:235
+#: gdk-pixbuf/gdk-pixbuf-animation.c:232
 #, c-format
 msgid ""
 "Failed to load animation '%s': reason not known, probably a corrupt "
@@ -50,12 +50,12 @@ msgstr ""
 "ಸಜೀವನ (animation) '%s'ಯನ್ನು ಲೋಡ್ ಮಾಡುವಲ್ಲಿ ವಿಫಲತೆ: ಕಾರಣ ತಿಳಿದಿಲ್ಲ, ಬಹುಷಃ ಒಂದು "
 "ಭ್ರಷ್ಟಗೊಂಡ ಸಜೀವನ (animation) ಕಡತದಿಂದಾಗಿರಬಹುದು"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:813
+#: gdk-pixbuf/gdk-pixbuf-io.c:791
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "ಚಿತ್ರವನ್ನು ಲೋಡ್ ಮಾಡುವ ಘಟಕವನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಿಲ್ಲ: %s: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:828
+#: gdk-pixbuf/gdk-pixbuf-io.c:806
 #, fuzzy, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
@@ -64,54 +64,54 @@ msgstr ""
 "ಚಿತ್ರ-ಲೋಡ್ ಮಾಡುವ ಘಟಕ %s ವು ಸರಿಯಾದ ಸಂಪರ್ಕಸಾಧನವನ್ನು ರವಾನಿಸುವುದಿಲ್ಲ; ಬಹುಷಃ ಅದು "
 "ಬೇರೊಂದು GTK ಆವೃತ್ತಿಯದ್ದಾಗಿರಬೇಕು?"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:837 gdk-pixbuf/gdk-pixbuf-io.c:888
+#: gdk-pixbuf/gdk-pixbuf-io.c:815 gdk-pixbuf/gdk-pixbuf-io.c:866
 #, c-format
 msgid "Image type '%s' is not supported"
 msgstr "ಚಿತ್ರ '%s'ವು ರೀತಿಯು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:973
+#: gdk-pixbuf/gdk-pixbuf-io.c:951
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
 msgstr "ಕಡತ '%s'ಕ್ಕಾಗಿನ ಚಿತ್ರ ಕಡತ ವಿನ್ಯಾಸವನ್ನು ಗುರುತಿಸಲಾಗಿಲ್ಲ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:981
+#: gdk-pixbuf/gdk-pixbuf-io.c:959
 msgid "Unrecognized image file format"
 msgstr "ಗುರುತಿಸಲಾಗದ ಚಿತ್ರ ಕಡತ ರಚನೆ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1149
+#: gdk-pixbuf/gdk-pixbuf-io.c:1122
 #, c-format
 msgid "Failed to load image '%s': %s"
 msgstr "ಚಿತ್ರ '%s'ವನ್ನು ಲೋಡ್ ಮಾಡುವಲ್ಲಿ ವಿಫಲತೆ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2037 gdk-pixbuf/io-gdip-utils.c:887
+#: gdk-pixbuf/gdk-pixbuf-io.c:2005 gdk-pixbuf/io-gdip-utils.c:887
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "ಚಿತ್ರ ಕಡತಕ್ಕೆ ಬರೆಯುವಲ್ಲಿ ವಿಫಲತೆ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2082 gdk-pixbuf/gdk-pixbuf-io.c:2212
+#: gdk-pixbuf/gdk-pixbuf-io.c:2047 gdk-pixbuf/gdk-pixbuf-io.c:2168
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr ""
 "gdk-pixbuf ನ ಈ ನಿರ್ಮಿತಿಯು ಚಿತ್ರ ವಿನ್ಯಾಸವನ್ನು ಉಳಿಸುವುದನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2116
+#: gdk-pixbuf/gdk-pixbuf-io.c:2078
 msgid "Insufficient memory to save image to callback"
 msgstr "ಚಿತ್ರವನ್ನು ಕಾಲ್-ಬ್ಯಾಕಿಗೆ ಉಳಿಸಲು ಸಾಕಷ್ತು ಮೆಮೊರಿ ಇಲ್ಲ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2129
+#: gdk-pixbuf/gdk-pixbuf-io.c:2091
 msgid "Failed to open temporary file"
 msgstr "ತಾತ್ಕಾಲಿಕ ಕಡತವನ್ನು ತೆಗೆಯುವಲ್ಲಿ ವಿಫಲತೆ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2155
+#: gdk-pixbuf/gdk-pixbuf-io.c:2114
 msgid "Failed to read from temporary file"
 msgstr "ತಾತ್ಕಾಲಿಕ ಕಡತದಿಂದ ಓದುವಲ್ಲಿ ವಿಫಲತೆ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2408
+#: gdk-pixbuf/gdk-pixbuf-io.c:2362
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
 msgstr "'%s' ಅನ್ನು ಬರೆಯಲು ತೆರೆಯುವಲ್ಲಿ ವಿಫಲತೆ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2434
+#: gdk-pixbuf/gdk-pixbuf-io.c:2388
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
@@ -120,15 +120,15 @@ msgstr ""
 "ಚಿತ್ರವನ್ನು ಬರೆಯುವಾಗ '%s' ಅನ್ನ್ನು ಮುಚ್ಚುವಲ್ಲಿ ವಿಫಲತೆ, ಎಲ್ಲಾ ದತ್ತಾಂಶಗಳು ಉಳಿಸಲ್ಪಡದೆ "
 "ಇರಬಹುದು: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2655 gdk-pixbuf/gdk-pixbuf-io.c:2707
+#: gdk-pixbuf/gdk-pixbuf-io.c:2609 gdk-pixbuf/gdk-pixbuf-io.c:2661
 msgid "Insufficient memory to save image into a buffer"
 msgstr "ಚಿತ್ರವನ್ನು ಬಫರಿಗೆ ಉಳಿಸಲು ಸಾಕಷ್ಟು ಮೆಮೊರಿ ಇಲ್ಲ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2753
+#: gdk-pixbuf/gdk-pixbuf-io.c:2707
 msgid "Error writing to image stream"
 msgstr "ಚಿತ್ರ ಸ್ಟ್ರೀಮ್‍ಗೆ ಬರೆಯುವಲ್ಲಿ ವಿಫಲತೆ:"
 
-#: gdk-pixbuf/gdk-pixbuf-loader.c:397
+#: gdk-pixbuf/gdk-pixbuf-loader.c:393
 #, c-format
 msgid ""
 "Internal error: Image loader module '%s' failed to complete an operation, "
@@ -137,7 +137,7 @@ msgstr ""
 "ಆಂತರಿಕ ದೋಷ: ಚಿತ್ರ ಲೋಡ್ ಮಾಡುವ ಘಟಕ '%s'ವು ಒಂದು ಕಾರ್ಯಾಚರಣೆಯನ್ನು ಪೂರ್ಣಗೊಳಿಸುವಲ್ಲಿ "
 "ವಿಫಲತೆ ಎದುರಾಗಿದೆ, ಆದರೆ ಯಾವುದೆ ಕಾರಣವನ್ನು ನೀಡಲಾಗಿಲ್ಲ"
 
-#: gdk-pixbuf/gdk-pixbuf-loader.c:439
+#: gdk-pixbuf/gdk-pixbuf-loader.c:435
 #, c-format
 msgid "Incremental loading of image type '%s' is not supported"
 msgstr "'%s' ಪ್ರಕಾರದ ಚಿತ್ರವನ್ನು ಏರಿಕೆ ಕ್ರಮದಲ್ಲಿ ಲೋಡ್ ಮಾಡುವುದು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ"
@@ -220,7 +220,7 @@ msgstr "BMP ಚಿತ್ರ ವಿನ್ಯಾಸ"
 msgid "The EMF image format"
 msgstr "EMF ಚಿತ್ರ ವಿನ್ಯಾಸ"
 
-#: gdk-pixbuf/io-gdip-gif.c:80 gdk-pixbuf/io-gif.c:1719
+#: gdk-pixbuf/io-gdip-gif.c:80 gdk-pixbuf/io-gif.c:1720
 msgid "The GIF image format"
 msgstr "GIF ಚಿತ್ರ ವಿನ್ಯಾಸ"
 
@@ -228,20 +228,20 @@ msgstr "GIF ಚಿತ್ರ ವಿನ್ಯಾಸ"
 msgid "The ICO image format"
 msgstr "ICO ಚಿತ್ರ ವಿನ್ಯಾಸ"
 
-#: gdk-pixbuf/io-gdip-jpeg.c:53 gdk-pixbuf/io-jpeg.c:1251
+#: gdk-pixbuf/io-gdip-jpeg.c:53 gdk-pixbuf/io-jpeg.c:1249
 #, c-format
 msgid ""
 "JPEG quality must be a value between 0 and 100; value '%s' could not be "
 "parsed."
 msgstr "JPEG ಗುಣ ಮಟ್ಟವು ೦ ಹಾಗು ೧೦೦; ಮೌಲ್ಯ '%s' ವನ್ನು ಬಿಡಿಸಲಾಗಿಲ್ಲ(parse)."
 
-#: gdk-pixbuf/io-gdip-jpeg.c:68 gdk-pixbuf/io-jpeg.c:1267
+#: gdk-pixbuf/io-gdip-jpeg.c:68 gdk-pixbuf/io-jpeg.c:1265
 #, c-format
 msgid ""
 "JPEG quality must be a value between 0 and 100; value '%d' is not allowed."
 msgstr "JPEG ಗುಣ ಮಟ್ತವು ೦ ಹಾಗು ೧೦೦; ಮಾಲ್ಯ '%d' ವು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ."
 
-#: gdk-pixbuf/io-gdip-jpeg.c:136 gdk-pixbuf/io-jpeg.c:1480
+#: gdk-pixbuf/io-gdip-jpeg.c:136 gdk-pixbuf/io-jpeg.c:1478
 msgid "The JPEG image format"
 msgstr "JPEG ಚಿತ್ರ ವಿನ್ಯಾಸ"
 
@@ -291,7 +291,7 @@ msgstr "WMF ಚಿತ್ರ ವಿನ್ಯಾಸ"
 msgid "Failure reading GIF: %s"
 msgstr "GIF ಅನ್ನು ಓದುವಲ್ಲಿ ವಿಫಲತೆ: %s"
 
-#: gdk-pixbuf/io-gif.c:496 gdk-pixbuf/io-gif.c:1501 gdk-pixbuf/io-gif.c:1668
+#: gdk-pixbuf/io-gif.c:496 gdk-pixbuf/io-gif.c:1502 gdk-pixbuf/io-gif.c:1669
 msgid "GIF file was missing some data (perhaps it was truncated somehow?)"
 msgstr ""
 "GIF ಕಡತದಿಂದ ಕೆಲವೊಂದು ದತ್ತಾಂಶಗಳು ಕಾಣೆಯಾಗಿವೆ (ಬಹುಷಃ ಯಾವುದಾದರೂ ಬಗೆಯಲ್ಲಿ ಅದು "
@@ -318,8 +318,8 @@ msgstr "ಸರಿಯಲ್ಲದ ಸಂಕೇತ ಎದುರಾಗಿದೆ"
 msgid "Circular table entry in GIF file"
 msgstr "GIF ಕಡತದಲ್ಲಿನ ವೃತ್ತಾಕಾರದ ಟೇಬಲ್ ನಮೂದು"
 
-#: gdk-pixbuf/io-gif.c:866 gdk-pixbuf/io-gif.c:1487 gdk-pixbuf/io-gif.c:1540
-#: gdk-pixbuf/io-gif.c:1656
+#: gdk-pixbuf/io-gif.c:866 gdk-pixbuf/io-gif.c:1488 gdk-pixbuf/io-gif.c:1541
+#: gdk-pixbuf/io-gif.c:1657
 msgid "Not enough memory to load GIF file"
 msgstr "GIF ಕಡತವನ್ನು ಲೋಡ್ ಮಾಡಲು ಸಾಕಷ್ಟು ಮೆಮೊರಿ ಲಭ್ಯವಿಲ್ಲ"
 
@@ -354,7 +354,7 @@ msgstr ""
 "GIF ಚಿತ್ರವು ಜಾಗತಿಕ ಕಲರ್-ಮ್ಯಾಪ್ ಹೊಂದಿಲ್ಲ, ಹಾಗು ಅದರಲ್ಲಿನ ಒಂದು ಚೌಕಟ್ಟು ಸ್ಥಳೀಯ ಕಲರ್-"
 "ಮ್ಯಾಪನ್ನು ಹೊಂದಿಲ್ಲ."
 
-#: gdk-pixbuf/io-gif.c:1563
+#: gdk-pixbuf/io-gif.c:1564
 msgid "GIF image was truncated or incomplete."
 msgstr "GIF ಚಿತ್ರವು ತುಂಡರಿಸಲ್ಪಟ್ಟಿದೆ ಅಥವ ಅಪೂರ್ಣಗೊಂಡಿದೆ"
 
@@ -451,7 +451,7 @@ msgstr "JPEG 2000 ಚಿತ್ರ ವಿನ್ಯಾಸ"
 msgid "Error interpreting JPEG image file (%s)"
 msgstr "JPEG ಚಿತ್ರ ಕಡತವನ್ನು ವಿವರಿಸುವಲ್ಲಿ ದೋಷ (%s)"
 
-#: gdk-pixbuf/io-jpeg.c:606
+#: gdk-pixbuf/io-jpeg.c:604
 msgid ""
 "Insufficient memory to load image, try exiting some applications to free "
 "memory"
@@ -459,21 +459,21 @@ msgstr ""
 "ಚಿತ್ರವನ್ನು ಲೋಡ್ ಮಾಡಲು ಸಾಕಷ್ಟು ಮೆಮೊರಿ ಇಲ್ಲ, ಮೆಮೊರಿಯನ್ನು ತೆರವುಗೊಳಿಸಲು ಕೆಲವೊಂದು "
 "ಅನ್ವಯಗಳಿಂದ ನಿರ್ಗಮಿಸುವ ಮೂಲಕ ಪ್ರಯತ್ನಿಸಿ"
 
-#: gdk-pixbuf/io-jpeg.c:653 gdk-pixbuf/io-jpeg.c:867
+#: gdk-pixbuf/io-jpeg.c:651 gdk-pixbuf/io-jpeg.c:865
 #, c-format
 msgid "Unsupported JPEG color space (%s)"
 msgstr "ಬೆಂಬಲವಿಲ್ಲದ JPEG ವರ್ಣ ಸ್ಥಳ (%s)"
 
-#: gdk-pixbuf/io-jpeg.c:766 gdk-pixbuf/io-jpeg.c:1046
-#: gdk-pixbuf/io-jpeg.c:1310 gdk-pixbuf/io-jpeg.c:1320
+#: gdk-pixbuf/io-jpeg.c:764 gdk-pixbuf/io-jpeg.c:1044
+#: gdk-pixbuf/io-jpeg.c:1308 gdk-pixbuf/io-jpeg.c:1318
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG ಕಡತವನ್ನು ಲೋಡ್ ಮಾಡಲು ಮೆಮೊರಿಯನ್ನು ನಿಯೋಜಿಸಲಾಗಿಲ್ಲ"
 
-#: gdk-pixbuf/io-jpeg.c:1020
+#: gdk-pixbuf/io-jpeg.c:1018
 msgid "Transformed JPEG has zero width or height."
 msgstr "ರೂಪಾಂತರಗೊಂಡ JPEGಯು ಶೂನ್ಯ ಅಗಲ ಅಥವ ಎತ್ತರವನ್ನು ಹೊಂದಿದೆ"
 
-#: gdk-pixbuf/io-jpeg.c:1281
+#: gdk-pixbuf/io-jpeg.c:1279
 #, c-format
 msgid "Color profile has invalid length '%d'."
 msgstr ""

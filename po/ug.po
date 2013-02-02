@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gdk-pixbuf\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2012-11-09 23:30-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2013-01-10 07:53-0500\n"
+"PO-Revision-Date: 2011-11-09 16:10+0900\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
@@ -18,41 +18,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:147 gdk-pixbuf/gdk-pixbuf-io.c:1092
-#: gdk-pixbuf/gdk-pixbuf-io.c:1358
+#: gdk-pixbuf/gdk-pixbuf-animation.c:146 gdk-pixbuf/gdk-pixbuf-io.c:1065
+#: gdk-pixbuf/gdk-pixbuf-io.c:1331
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "ھۆججەت «%s» نى ئاچالمىدى: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1104
+#: gdk-pixbuf/gdk-pixbuf-animation.c:159 gdk-pixbuf/gdk-pixbuf-io.c:1077
 #, c-format
 msgid "Image file '%s' contains no data"
-msgstr "'%s' سۈرەت ھۆججەتتە ھېچقانداق سانلىق-مەلۇمات يوق"
+msgstr "‹%s› سۈرەت ھۆججەتتە ھېچقانداق سانلىق-مەلۇمات يوق"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:202 gdk-pixbuf/gdk-pixbuf-io.c:1140
-#: gdk-pixbuf/gdk-pixbuf-io.c:1410
+#: gdk-pixbuf/gdk-pixbuf-animation.c:201 gdk-pixbuf/gdk-pixbuf-io.c:1113
+#: gdk-pixbuf/gdk-pixbuf-io.c:1383
 #, c-format
 msgid ""
 "Failed to load image '%s': reason not known, probably a corrupt image file"
 msgstr ""
-"'%s' سۈرەتنى يۈكلىيەلمىدى. سەۋەبى  ئېنىق ئەمەس بۇ ھۆججەت بۇزۇلۇپ كەتكەن "
+"‹%s› سۈرەتنى يۈكلىيەلمىدى. سەۋەبى  ئېنىق ئەمەس بۇ ھۆججەت بۇزۇلۇپ كەتكەن "
 "بولۇشى مۇمكىن"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:235
+#: gdk-pixbuf/gdk-pixbuf-animation.c:232
 #, c-format
 msgid ""
 "Failed to load animation '%s': reason not known, probably a corrupt "
 "animation file"
 msgstr ""
-"'%s' جانلاندۇرۇمنى يۈكلىيەلمىدى: سەۋەبى ئېنىق ئەمەس ياكى جانلاندۇرۇم ھۆججەت "
+"‹%s› جانلاندۇرۇمنى يۈكلىيەلمىدى: سەۋەبى ئېنىق ئەمەس ياكى جانلاندۇرۇم ھۆججەت "
 "بۇزۇلۇپ كەتكەن بولۇشى مۇمكىن"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:813
+#: gdk-pixbuf/gdk-pixbuf-io.c:791
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "سۈرەت يۈكلەش بۆلىكىنى يۈكلىيەلمىدى: %s : %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:828
+#: gdk-pixbuf/gdk-pixbuf-io.c:806
 #, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
@@ -61,82 +61,82 @@ msgstr ""
 "%s سۈرەت يۈكلەش بۆلىكى توغرا ئېغىزنى چىقىرالمىدى: ئۇ باشقا بىر gdk-pixbuf "
 "نەشرىگە تەۋەمۇ؟"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:837 gdk-pixbuf/gdk-pixbuf-io.c:888
+#: gdk-pixbuf/gdk-pixbuf-io.c:815 gdk-pixbuf/gdk-pixbuf-io.c:866
 #, c-format
 msgid "Image type '%s' is not supported"
-msgstr "بۇ '%s' خىلدىكى سۈرەت تىپىنى قوللىمايدۇ"
+msgstr "بۇ ‹%s› خىلدىكى سۈرەت تىپىنى قوللىمايدۇ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:973
+#: gdk-pixbuf/gdk-pixbuf-io.c:951
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
-msgstr "'%s' نىڭ سۈرەت فورماتىنى پەرقلەندۈرەلمىدى"
+msgstr "‹%s› نىڭ سۈرەت فورماتىنى پەرقلەندۈرەلمىدى"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:981
+#: gdk-pixbuf/gdk-pixbuf-io.c:959
 msgid "Unrecognized image file format"
 msgstr "پەرقلەندۈرگىلى بولمايدىغان سۈرەت ھۆججەت فورماتى"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1149
+#: gdk-pixbuf/gdk-pixbuf-io.c:1122
 #, c-format
 msgid "Failed to load image '%s': %s"
-msgstr "'%s' سۈرەت يۈكلىيەلمىدى: %s"
+msgstr "‹%s› سۈرەت يۈكلىيەلمىدى: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2037 gdk-pixbuf/io-gdip-utils.c:887
+#: gdk-pixbuf/gdk-pixbuf-io.c:2005 gdk-pixbuf/io-gdip-utils.c:887
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "سۈرەت ھۆججەتكە يېزىشتا خاتالىق كۆرۈلدى: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2082 gdk-pixbuf/gdk-pixbuf-io.c:2212
+#: gdk-pixbuf/gdk-pixbuf-io.c:2047 gdk-pixbuf/gdk-pixbuf-io.c:2168
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr "بۇ gdk-pixbuf ساقلايدىغان بۇ خىل ھۆججەت شەكلىنى قوللىمايدۇ ：%s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2116
+#: gdk-pixbuf/gdk-pixbuf-io.c:2078
 msgid "Insufficient memory to save image to callback"
 msgstr "بۇ سۈرەتنى ساقلاشقا يېتەرلىك ئەسلەك يوق"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2129
+#: gdk-pixbuf/gdk-pixbuf-io.c:2091
 msgid "Failed to open temporary file"
 msgstr "ۋاقىتلىق ھۆججەتنى ئاچالمىدى"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2155
+#: gdk-pixbuf/gdk-pixbuf-io.c:2114
 msgid "Failed to read from temporary file"
 msgstr "ۋاقىتلىق ھۆججەتتىن ئوقۇيالمىدى"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2408
+#: gdk-pixbuf/gdk-pixbuf-io.c:2362
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
-msgstr "'%s' نى ئېچىپ يازالمىدى: %s"
+msgstr "‹%s› نى ئېچىپ يازالمىدى: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2434
+#: gdk-pixbuf/gdk-pixbuf-io.c:2388
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
 "%s"
 msgstr ""
-"سۈرەتكە يازغاندا '%s' نى ياپالمىدى، ھەممە سانلىق-مەلۇمات ساقلانمىغان بولۇشى "
+"سۈرەتكە يازغاندا ‹%s› نى ياپالمىدى، ھەممە سانلىق-مەلۇمات ساقلانمىغان بولۇشى "
 "مۇمكىن: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2655 gdk-pixbuf/gdk-pixbuf-io.c:2707
+#: gdk-pixbuf/gdk-pixbuf-io.c:2609 gdk-pixbuf/gdk-pixbuf-io.c:2661
 msgid "Insufficient memory to save image into a buffer"
 msgstr "بۇ سۈرەتنى يىغلەككە ساقلاشقا ئەسلەك يېتىشمەيدۇ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2753
+#: gdk-pixbuf/gdk-pixbuf-io.c:2707
 msgid "Error writing to image stream"
 msgstr "سۈرەت ئېقىمىنى ساقلاۋاتقاندا خاتالىق كۆرۈلدى"
 
-#: gdk-pixbuf/gdk-pixbuf-loader.c:397
+#: gdk-pixbuf/gdk-pixbuf-loader.c:393
 #, c-format
 msgid ""
 "Internal error: Image loader module '%s' failed to complete an operation, "
 "but didn't give a reason for the failure"
 msgstr ""
-"ئىچكى خاتالىق: سۈرەت يۈكلەش بۆلىكى '%s' مەلۇم مەشغۇلاتنى تاماملىيالمىدى، "
+"ئىچكى خاتالىق: سۈرەت يۈكلەش بۆلىكى ‹%s› مەلۇم مەشغۇلاتنى تاماملىيالمىدى، "
 "لېكىن ھېچقانداق خاتالىق سەۋەبى بېرىلمىدى"
 
-#: gdk-pixbuf/gdk-pixbuf-loader.c:439
+#: gdk-pixbuf/gdk-pixbuf-loader.c:435
 #, c-format
 msgid "Incremental loading of image type '%s' is not supported"
-msgstr "'%s' سۈرەت تىپى تەدرىجىي يۈكلەشنى قوللىمايدۇ"
+msgstr "‹%s› سۈرەت تىپى تەدرىجىي يۈكلەشنى قوللىمايدۇ"
 
 #: gdk-pixbuf/gdk-pixdata.c:160
 msgid "Image header corrupt"
@@ -215,7 +215,7 @@ msgstr "BMP سۈرەت فورماتى"
 msgid "The EMF image format"
 msgstr "EMF سۈرەت فورماتى"
 
-#: gdk-pixbuf/io-gdip-gif.c:80 gdk-pixbuf/io-gif.c:1719
+#: gdk-pixbuf/io-gdip-gif.c:80 gdk-pixbuf/io-gif.c:1720
 msgid "The GIF image format"
 msgstr "GIF سۈرەت فورماتى"
 
@@ -223,16 +223,16 @@ msgstr "GIF سۈرەت فورماتى"
 msgid "The ICO image format"
 msgstr "ICO سۈرەت فورماتى"
 
-#: gdk-pixbuf/io-gdip-jpeg.c:53 gdk-pixbuf/io-jpeg.c:1251
+#: gdk-pixbuf/io-gdip-jpeg.c:53 gdk-pixbuf/io-jpeg.c:1249
 #, c-format
 msgid ""
 "JPEG quality must be a value between 0 and 100; value '%s' could not be "
 "parsed."
 msgstr ""
-"JPEG نىڭ سۈپىتى چوقۇم 0 دىن 100 گىچە بولۇشى كېرەك. '%s' قىممەتنى تەھلىل "
+"JPEG نىڭ سۈپىتى چوقۇم 0 دىن 100 گىچە بولۇشى كېرەك. ‹%s› قىممەتنى تەھلىل "
 "قىلالمىدى"
 
-#: gdk-pixbuf/io-gdip-jpeg.c:68 gdk-pixbuf/io-jpeg.c:1267
+#: gdk-pixbuf/io-gdip-jpeg.c:68 gdk-pixbuf/io-jpeg.c:1265
 #, c-format
 msgid ""
 "JPEG quality must be a value between 0 and 100; value '%d' is not allowed."
@@ -240,7 +240,7 @@ msgstr ""
 "JPEG نىڭ سۈپىتى چوقۇم 0 دىن 100 گىچە بولۇشى كېرەك. '%d' قىممەتنى ئىشلىتىشكە "
 "يول قويۇلمايدۇ."
 
-#: gdk-pixbuf/io-gdip-jpeg.c:136 gdk-pixbuf/io-jpeg.c:1480
+#: gdk-pixbuf/io-gdip-jpeg.c:136 gdk-pixbuf/io-jpeg.c:1478
 msgid "The JPEG image format"
 msgstr "JPEG سۈرەت فورماتى"
 
@@ -290,7 +290,7 @@ msgstr "WMF سۈرەت فورماتى"
 msgid "Failure reading GIF: %s"
 msgstr "GIF ھۆججەتنى ئوقۇيالمىدى:%s"
 
-#: gdk-pixbuf/io-gif.c:496 gdk-pixbuf/io-gif.c:1501 gdk-pixbuf/io-gif.c:1668
+#: gdk-pixbuf/io-gif.c:496 gdk-pixbuf/io-gif.c:1502 gdk-pixbuf/io-gif.c:1669
 msgid "GIF file was missing some data (perhaps it was truncated somehow?)"
 msgstr ""
 "GIF ھۆججەتتە بەزى سانلىق-مەلۇماتلار كەم(ھۆججەت كېسىپ قىسقارتىلغان بولۇشى "
@@ -317,8 +317,8 @@ msgstr "خاتا كود كۆرۈلدى"
 msgid "Circular table entry in GIF file"
 msgstr "GIF سۈرەتتىكى جەدۋەل تۈرى دەۋرىيلىكى"
 
-#: gdk-pixbuf/io-gif.c:866 gdk-pixbuf/io-gif.c:1487 gdk-pixbuf/io-gif.c:1540
-#: gdk-pixbuf/io-gif.c:1656
+#: gdk-pixbuf/io-gif.c:866 gdk-pixbuf/io-gif.c:1488 gdk-pixbuf/io-gif.c:1541
+#: gdk-pixbuf/io-gif.c:1657
 msgid "Not enough memory to load GIF file"
 msgstr "GIF ھۆججەتنى يۈكلەشكە يېتەرلىك ئەسلەك يوق"
 
@@ -340,9 +340,8 @@ msgid "Version %s of the GIF file format is not supported"
 msgstr "قوللىمايدىغان %s نەشرىدىكى GIF سۈرەت ھۆججەت فورماتى"
 
 #: gdk-pixbuf/io-gif.c:1241
-#, fuzzy
 msgid "Resulting GIF image has zero size"
-msgstr "سۈرەت كەڭلىكى 0"
+msgstr "ھاسىل بولغان GIF سۈرەتنىڭ چوڭلۇقى نۆل"
 
 #: gdk-pixbuf/io-gif.c:1320
 msgid ""
@@ -352,7 +351,7 @@ msgstr ""
 "GIF سۈرەتنىڭ ئومۇمىيەت رەڭ خەرىتىسى يوق، ئۇنىڭ ئىچىدىكى بىر بۆلەكنىڭمۇ رەڭ "
 "خەرىتىسى يوق"
 
-#: gdk-pixbuf/io-gif.c:1563
+#: gdk-pixbuf/io-gif.c:1564
 msgid "GIF image was truncated or incomplete."
 msgstr "GIF سۈرەت كېسىپ قىسقارتىلغان ياكى چالا"
 
@@ -449,7 +448,7 @@ msgstr "JPEG 2000 سۈرەت فورماتى"
 msgid "Error interpreting JPEG image file (%s)"
 msgstr "JPEG سۈرەتنى تەھلىل قىلغاندا خاتالىق كۆرۈلدى (%s)"
 
-#: gdk-pixbuf/io-jpeg.c:606
+#: gdk-pixbuf/io-jpeg.c:604
 msgid ""
 "Insufficient memory to load image, try exiting some applications to free "
 "memory"
@@ -457,24 +456,24 @@ msgstr ""
 "سۈرەت يۈكلەشكە ئەسلەك يېتىشمەيدۇ، بەزى پروگراممىلارنى يېپىپ ئەسلەكنى "
 "بىكارلاپ سىناپ بېقىڭ"
 
-#: gdk-pixbuf/io-jpeg.c:653 gdk-pixbuf/io-jpeg.c:867
+#: gdk-pixbuf/io-jpeg.c:651 gdk-pixbuf/io-jpeg.c:865
 #, c-format
 msgid "Unsupported JPEG color space (%s)"
 msgstr "قوللىمايدىغان JPEG رەڭ بوشلۇقى  (%s)"
 
-#: gdk-pixbuf/io-jpeg.c:766 gdk-pixbuf/io-jpeg.c:1046
-#: gdk-pixbuf/io-jpeg.c:1310 gdk-pixbuf/io-jpeg.c:1320
+#: gdk-pixbuf/io-jpeg.c:764 gdk-pixbuf/io-jpeg.c:1044
+#: gdk-pixbuf/io-jpeg.c:1308 gdk-pixbuf/io-jpeg.c:1318
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG ھۆججەتنى يۈكلەشكە ئەسلەك تەقسىملىيەلمىدى"
 
-#: gdk-pixbuf/io-jpeg.c:1020
+#: gdk-pixbuf/io-jpeg.c:1018
 msgid "Transformed JPEG has zero width or height."
-msgstr "ئۆزگەرتىلگەن JPEG نىڭ كەڭلىكى ياكى ئۇزۇنلۇقى نۆل"
+msgstr "ئايلاندۇرۇلغان JPEG نىڭ كەڭلىكى ياكى ئۇزۇنلۇقى نۆل"
 
-#: gdk-pixbuf/io-jpeg.c:1281
-#, fuzzy, c-format
+#: gdk-pixbuf/io-jpeg.c:1279
+#, c-format
 msgid "Color profile has invalid length '%d'."
-msgstr "رەڭ سەپلىمە ھۆججىتىنىڭ ئۇزۇنلۇقى %d ئىناۋەتسىز."
+msgstr "رەڭ سەپلىمە ھۆججىتىنىڭ ئۇزۇنلۇقى ‹%d› ئىناۋەتسىز."
 
 #: gdk-pixbuf/io-pcx.c:186
 msgid "Couldn't allocate memory for header"
@@ -522,14 +521,12 @@ msgid "The PCX image format"
 msgstr "PCX سۈرەت فورماتى"
 
 #: gdk-pixbuf/io-pixdata.c:148
-#, fuzzy
 msgid "Transformed pixbuf has zero width or height."
-msgstr "ئۆزگىرىشچان PNG نىڭ كەڭلىكى ياكى ئېگىزلىكى نۆل."
+msgstr "ئايلاندۇرۇلغان pixbuf نىڭ كەڭلىكى ياكى ئېگىزلىكى نۆل."
 
 #: gdk-pixbuf/io-pixdata.c:186
-#, fuzzy
 msgid "The GdkPixdata format"
-msgstr "GIF سۈرەت فورماتى"
+msgstr "BMP سۈرەت پىچىمى"
 
 #: gdk-pixbuf/io-png.c:54
 msgid "Bits per channel of PNG image is invalid."
@@ -537,21 +534,21 @@ msgstr "PNG سۈرەتنىڭ ھەر بىر قانىلىنىڭ بىت سانى ئ
 
 #: gdk-pixbuf/io-png.c:135 gdk-pixbuf/io-png.c:641
 msgid "Transformed PNG has zero width or height."
-msgstr "ئۆزگىرىشچان PNG نىڭ كەڭلىكى ياكى ئېگىزلىكى نۆل."
+msgstr "ئايلاندۇرۇلغان PNG نىڭ كەڭلىكى ياكى ئېگىزلىكى نۆل."
 
 #: gdk-pixbuf/io-png.c:143
 msgid "Bits per channel of transformed PNG is not 8."
-msgstr "ئۆزگىرىشچان PNG نىڭ بىت سانى 8 ئەمەس"
+msgstr "ئايلاندۇرۇلغان PNG نىڭ بىت سانى 8 ئەمەس"
 
 #: gdk-pixbuf/io-png.c:152
 msgid "Transformed PNG not RGB or RGBA."
-msgstr "ئۆزگىرىشچان PNG بولسا  RGB ياكى RGBA ئەمەس."
+msgstr "ئايلاندۇرۇلغان PNG بولسا  RGB ياكى RGBA ئەمەس."
 
 #: gdk-pixbuf/io-png.c:161
 msgid "Transformed PNG has unsupported number of channels, must be 3 or 4."
 msgstr ""
-"ئۆزگىرىشچان PNG قوللىمايدىغان قانال سانىنى ئۆز ئىچىگە ئالغان. چوقۇم 3 ياكى 4 "
-"بولۇشى لازىم"
+"ئايلاندۇرۇلغان PNG قوللىمايدىغان قانال سانىنى ئۆز ئىچىگە ئالغان. چوقۇم 3 "
+"ياكى 4 بولۇشى لازىم"
 
 #: gdk-pixbuf/io-png.c:182
 #, c-format
@@ -563,12 +560,12 @@ msgid "Insufficient memory to load PNG file"
 msgstr "PNG يۈكلەشكە يېتەرلىك ئەسلەك يوق"
 
 #: gdk-pixbuf/io-png.c:656
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Insufficient memory to store a %lu by %lu image; try exiting some "
 "applications to reduce memory usage"
 msgstr ""
-"چوڭلۇقى %ld x %ld بولغان سۈرەتنى يۈكلەشكە يېتەرلىك ئەسلەك يوق؛ باشقا "
+"چوڭلۇقى %lu x %lu بولغان سۈرەتنى يۈكلەشكە يېتەرلىك ئەسلەك يوق؛ باشقا "
 "پروگراممىلارنى يېپىپ ئەسلەك ئىشلىتىش مىقدارىنى ئازايتىڭ."
 
 #: gdk-pixbuf/io-png.c:719
@@ -690,13 +687,13 @@ msgid "Failed to read QTIF header"
 msgstr "QTIF بېشىنى ئوقۇيالمىدى"
 
 #: gdk-pixbuf/io-qtif.c:152 gdk-pixbuf/io-qtif.c:189 gdk-pixbuf/io-qtif.c:459
-#, fuzzy, c-format
+#, c-format
 msgid "QTIF atom size too large (%d byte)"
 msgid_plural "QTIF atom size too large (%d bytes)"
 msgstr[0] "QTIF ئاتوم چوڭلۇقى بەك چوڭ (%d بايت)"
 
 #: gdk-pixbuf/io-qtif.c:175
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to allocate %d byte for file read buffer"
 msgid_plural "Failed to allocate %d bytes for file read buffer"
 msgstr[0] "%d بايتلىق ھۆججەت ئوقۇش يىغلەكنى تەقسىملىيەلمىدى"
@@ -707,7 +704,7 @@ msgid "File error when reading QTIF atom: %s"
 msgstr "QTIF ئاتوم ئوقۇشتىكى ھۆججەت خاتالىقى: %s"
 
 #: gdk-pixbuf/io-qtif.c:243
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to skip the next %d byte with seek()."
 msgid_plural "Failed to skip the next %d bytes with seek()."
 msgstr[0] "كېيىنكى %d بايت seek() تىن ئاتلىيالمىدى."

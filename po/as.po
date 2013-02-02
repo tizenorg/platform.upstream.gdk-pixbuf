@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: as\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2012-11-09 23:30-0500\n"
+"POT-Creation-Date: 2013-01-10 07:53-0500\n"
 "PO-Revision-Date: 2012-09-11 18:51+0530\n"
 "Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
 "Language-Team: as_IN <kde-i18n-doc@kde.org>\n"
@@ -23,25 +23,25 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n!=1)\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:147 gdk-pixbuf/gdk-pixbuf-io.c:1092
-#: gdk-pixbuf/gdk-pixbuf-io.c:1358
+#: gdk-pixbuf/gdk-pixbuf-animation.c:146 gdk-pixbuf/gdk-pixbuf-io.c:1065
+#: gdk-pixbuf/gdk-pixbuf-io.c:1331
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "'%s' ফাইল খুলিবলৈ ব্যৰ্থ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1104
+#: gdk-pixbuf/gdk-pixbuf-animation.c:159 gdk-pixbuf/gdk-pixbuf-io.c:1077
 #, c-format
 msgid "Image file '%s' contains no data"
 msgstr "ছবিৰ ফাইল '%s' ত কোনো তথ্য নাই"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:202 gdk-pixbuf/gdk-pixbuf-io.c:1140
-#: gdk-pixbuf/gdk-pixbuf-io.c:1410
+#: gdk-pixbuf/gdk-pixbuf-animation.c:201 gdk-pixbuf/gdk-pixbuf-io.c:1113
+#: gdk-pixbuf/gdk-pixbuf-io.c:1383
 #, c-format
 msgid ""
 "Failed to load image '%s': reason not known, probably a corrupt image file"
 msgstr "'%s' ছবি ল'ড কৰিবলে অক্ষম: কাৰণ অজ্ঞাত, খুব সম্ভৱ এটা ক্ষতিগ্ৰস্থ ছবিৰ ফাইল"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:235
+#: gdk-pixbuf/gdk-pixbuf-animation.c:232
 #, c-format
 msgid ""
 "Failed to load animation '%s': reason not known, probably a corrupt "
@@ -49,12 +49,12 @@ msgid ""
 msgstr ""
 "'%s' এনিমেষণ ল'ড কৰিবলে অক্ষম: কাৰণ অজ্ঞাত, খুব সম্ভৱ এটা ক্ষতিগ্ৰস্থ এনিমেষণ ফাইল"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:813
+#: gdk-pixbuf/gdk-pixbuf-io.c:791
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "ছবিল'ড কৰা অংশ ল'ড কৰিবলে ভুল: %s: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:828
+#: gdk-pixbuf/gdk-pixbuf-io.c:806
 #, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
@@ -63,68 +63,68 @@ msgstr ""
 "ছবিল'ড কৰা মডিউল %s এ সঠিক আন্তঃপৃষ্ঠ ৰপ্তানি নকৰে; এইটো সম্ভৱতঃ এটা বেলেগ gdk-"
 "pixbuf সংস্কৰণৰ ?"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:837 gdk-pixbuf/gdk-pixbuf-io.c:888
+#: gdk-pixbuf/gdk-pixbuf-io.c:815 gdk-pixbuf/gdk-pixbuf-io.c:866
 #, c-format
 msgid "Image type '%s' is not supported"
 msgstr "ছবিৰ ধৰণ '%s' অসমৰ্থিত"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:973
+#: gdk-pixbuf/gdk-pixbuf-io.c:951
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
 msgstr "'%s' ফাইলৰ বাবে ছবি ফাইলৰ বিন্যাস চিনিব নোৱাৰিলো"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:981
+#: gdk-pixbuf/gdk-pixbuf-io.c:959
 msgid "Unrecognized image file format"
 msgstr "অচিনাক্ত ছবি ফাইলৰ বিন্যাস"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1149
+#: gdk-pixbuf/gdk-pixbuf-io.c:1122
 #, c-format
 msgid "Failed to load image '%s': %s"
 msgstr "'%s' ছবি ল'ড কৰিবলে অক্ষম: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2037 gdk-pixbuf/io-gdip-utils.c:887
+#: gdk-pixbuf/gdk-pixbuf-io.c:2005 gdk-pixbuf/io-gdip-utils.c:887
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "ছবি ফাইললৈ লিখোঁতে ভুল: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2082 gdk-pixbuf/gdk-pixbuf-io.c:2212
+#: gdk-pixbuf/gdk-pixbuf-io.c:2047 gdk-pixbuf/gdk-pixbuf-io.c:2168
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr "gdk-pixbuf ৰ এই নিৰ্মাণে ছবিৰ বিন্যাস সংৰক্ষণ কৰাৰ সমৰ্থন নিদিয়ে: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2116
+#: gdk-pixbuf/gdk-pixbuf-io.c:2078
 msgid "Insufficient memory to save image to callback"
 msgstr "পুনৰাহ্বানৰ বাবে ছবি সংৰক্ষণ কৰিব'লৈ অপৰ্য্যাপ্ত মেমৰি"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2129
+#: gdk-pixbuf/gdk-pixbuf-io.c:2091
 msgid "Failed to open temporary file"
 msgstr "অস্থায়ী ফাইল খোলাত অক্ষম"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2155
+#: gdk-pixbuf/gdk-pixbuf-io.c:2114
 msgid "Failed to read from temporary file"
 msgstr "অস্থায়ী ফাইলৰ পৰা পঢ়াত অক্ষম"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2408
+#: gdk-pixbuf/gdk-pixbuf-io.c:2362
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
 msgstr "লিখিবৰ বাবে '%s' খুলিব নোৱাৰিলো: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2434
+#: gdk-pixbuf/gdk-pixbuf-io.c:2388
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
 "%s"
 msgstr "ছবি লিখোঁতে '%s' বন্ধ কৰাত অক্ষম, সকলো তথ্য সংৰক্ষণ কৰা ন'হ'বও পাৰে: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2655 gdk-pixbuf/gdk-pixbuf-io.c:2707
+#: gdk-pixbuf/gdk-pixbuf-io.c:2609 gdk-pixbuf/gdk-pixbuf-io.c:2661
 msgid "Insufficient memory to save image into a buffer"
 msgstr "উপশমকত ছবি সংৰক্ষণ কৰিব'লৈ অপৰ্য্যাপ্ত মেমৰি"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2753
+#: gdk-pixbuf/gdk-pixbuf-io.c:2707
 msgid "Error writing to image stream"
 msgstr "ছবি ধাৰালৈ লিখোঁতে ভুল"
 
-#: gdk-pixbuf/gdk-pixbuf-loader.c:397
+#: gdk-pixbuf/gdk-pixbuf-loader.c:393
 #, c-format
 msgid ""
 "Internal error: Image loader module '%s' failed to complete an operation, "
@@ -133,7 +133,7 @@ msgstr ""
 "ভিতৰুৱা ভুল: ছবি ল'ড কৰা অংশ '%s' এটা কাৰ্য্য সম্পূৰ্ণ কৰাত অক্ষম, কিন্তু বিফলতাৰ কোনো "
 "কাৰণ নিদিলে"
 
-#: gdk-pixbuf/gdk-pixbuf-loader.c:439
+#: gdk-pixbuf/gdk-pixbuf-loader.c:435
 #, c-format
 msgid "Incremental loading of image type '%s' is not supported"
 msgstr "ছবিৰ ধৰণ '%s' ৰ ক্ৰমবৰ্দ্ধিত ভাবে তুলি লোৱা সমৰ্থিত নহয়"
@@ -216,7 +216,7 @@ msgstr "BMP ছবিৰ বিন্যাস"
 msgid "The EMF image format"
 msgstr "EMF ছবিৰ বিন্যাস"
 
-#: gdk-pixbuf/io-gdip-gif.c:80 gdk-pixbuf/io-gif.c:1719
+#: gdk-pixbuf/io-gdip-gif.c:80 gdk-pixbuf/io-gif.c:1720
 msgid "The GIF image format"
 msgstr "GIF ছবিৰ বিন্যাস"
 
@@ -224,7 +224,7 @@ msgstr "GIF ছবিৰ বিন্যাস"
 msgid "The ICO image format"
 msgstr "ICO ছবিৰ বিন্যাস"
 
-#: gdk-pixbuf/io-gdip-jpeg.c:53 gdk-pixbuf/io-jpeg.c:1251
+#: gdk-pixbuf/io-gdip-jpeg.c:53 gdk-pixbuf/io-jpeg.c:1249
 #, c-format
 msgid ""
 "JPEG quality must be a value between 0 and 100; value '%s' could not be "
@@ -232,13 +232,13 @@ msgid ""
 msgstr ""
 "JPEG গুণৰ মান ০ আৰু ১০০ ৰ মাজৰ হ'ব লাগিব; '%s' মানৰ বিশ্লেষণ কৰিব পৰা ন'গ'ল।"
 
-#: gdk-pixbuf/io-gdip-jpeg.c:68 gdk-pixbuf/io-jpeg.c:1267
+#: gdk-pixbuf/io-gdip-jpeg.c:68 gdk-pixbuf/io-jpeg.c:1265
 #, c-format
 msgid ""
 "JPEG quality must be a value between 0 and 100; value '%d' is not allowed."
 msgstr "JPEG গুণৰ মান ০ আৰু ১০০ ৰ মাজৰ হ'ব লাগিব; '%d' মান অনুমতি নাই।"
 
-#: gdk-pixbuf/io-gdip-jpeg.c:136 gdk-pixbuf/io-jpeg.c:1480
+#: gdk-pixbuf/io-gdip-jpeg.c:136 gdk-pixbuf/io-jpeg.c:1478
 msgid "The JPEG image format"
 msgstr "JPEG ছবিৰ বিন্যাস"
 
@@ -288,7 +288,7 @@ msgstr "WMF ছবিৰ বিন্যাস"
 msgid "Failure reading GIF: %s"
 msgstr "GIF পঢ়োঁতে বিফল: %s"
 
-#: gdk-pixbuf/io-gif.c:496 gdk-pixbuf/io-gif.c:1501 gdk-pixbuf/io-gif.c:1668
+#: gdk-pixbuf/io-gif.c:496 gdk-pixbuf/io-gif.c:1502 gdk-pixbuf/io-gif.c:1669
 msgid "GIF file was missing some data (perhaps it was truncated somehow?)"
 msgstr "GIF ফাইলত কিছুমান তথ্য সন্ধানহীন (সম্ভৱতঃ ছেদন কৰা হৈছিল কোনোৰকমে ?)"
 
@@ -313,8 +313,8 @@ msgstr "বেয়া ক'ড পোৱা গৈছে"
 msgid "Circular table entry in GIF file"
 msgstr "GIF ফাইলত বৃত্তাকাৰ তালিকা প্ৰৱেশ"
 
-#: gdk-pixbuf/io-gif.c:866 gdk-pixbuf/io-gif.c:1487 gdk-pixbuf/io-gif.c:1540
-#: gdk-pixbuf/io-gif.c:1656
+#: gdk-pixbuf/io-gif.c:866 gdk-pixbuf/io-gif.c:1488 gdk-pixbuf/io-gif.c:1541
+#: gdk-pixbuf/io-gif.c:1657
 msgid "Not enough memory to load GIF file"
 msgstr "GIF ফাইল তুলিব'লৈ অপৰ্য্যাপ্ত মেমৰি"
 
@@ -346,7 +346,7 @@ msgid ""
 msgstr ""
 "GIF ছবিত কোনো সৰ্বব্যাপ্ত ৰঙৰনক্সা নাই, আৰু ভিতৰৰ বৃতিত কোনো স্থানিক ৰঙৰনক্সা নাই।"
 
-#: gdk-pixbuf/io-gif.c:1563
+#: gdk-pixbuf/io-gif.c:1564
 msgid "GIF image was truncated or incomplete."
 msgstr "GIF ছবি ছেদিত বা অসম্পূৰ্ণ।"
 
@@ -443,7 +443,7 @@ msgstr "JPEG 2000 ছবিৰ বিন্যাস"
 msgid "Error interpreting JPEG image file (%s)"
 msgstr "JPEG ছবি ফাইল (%s) ব্যাখ্যা কৰোঁতে ভুল"
 
-#: gdk-pixbuf/io-jpeg.c:606
+#: gdk-pixbuf/io-jpeg.c:604
 msgid ""
 "Insufficient memory to load image, try exiting some applications to free "
 "memory"
@@ -451,21 +451,21 @@ msgstr ""
 "ছবি তুলিব'লৈ অপৰ্য্যাপ্ত মেমৰি, কিছুমান এপ্লিকেচনৰ পৰা প্ৰস্থান কৰিব'লৈ চেষ্টা কৰক "
 "মেমৰি মুক্ত কৰিব'লৈ"
 
-#: gdk-pixbuf/io-jpeg.c:653 gdk-pixbuf/io-jpeg.c:867
+#: gdk-pixbuf/io-jpeg.c:651 gdk-pixbuf/io-jpeg.c:865
 #, c-format
 msgid "Unsupported JPEG color space (%s)"
 msgstr "অসমৰ্থিত JPEG ৰঙৰ স্থান (%s)"
 
-#: gdk-pixbuf/io-jpeg.c:766 gdk-pixbuf/io-jpeg.c:1046
-#: gdk-pixbuf/io-jpeg.c:1310 gdk-pixbuf/io-jpeg.c:1320
+#: gdk-pixbuf/io-jpeg.c:764 gdk-pixbuf/io-jpeg.c:1044
+#: gdk-pixbuf/io-jpeg.c:1308 gdk-pixbuf/io-jpeg.c:1318
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG ফাইল তুলিব'লৈ মেমৰি বিতৰণ কৰিবলে ব্যৰ্থ"
 
-#: gdk-pixbuf/io-jpeg.c:1020
+#: gdk-pixbuf/io-jpeg.c:1018
 msgid "Transformed JPEG has zero width or height."
 msgstr "পৰিবৰ্ত্তিত JPEG ৰ শুণ্য বহল বা উচ্চতা।"
 
-#: gdk-pixbuf/io-jpeg.c:1281
+#: gdk-pixbuf/io-jpeg.c:1279
 #, c-format
 msgid "Color profile has invalid length '%d'."
 msgstr "ৰংগৰ আলেখ্যত অবৈধ দৈৰ্ঘ্য '%d'।"
