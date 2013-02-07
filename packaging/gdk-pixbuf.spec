@@ -1,7 +1,7 @@
 %define gdk_pixbuf_binary_version 2.10.0
 %bcond_with introspection
 Name:           gdk-pixbuf
-Version:        2.27.0
+Version:        2.27.1
 Release:        0
 Summary:        An image loading library
 License:        LGPL-2.1+
@@ -10,6 +10,7 @@ Source:         http://download.gnome.org/sources/gdk-pixbuf/2.27/%{name}-%{vers
 Source1:        macros.gdk-pixbuf
 Source98:       baselibs.conf
 BuildRequires:  gettext-tools
+Url:            http://developer.gnome.org/
 BuildRequires:  libjasper-devel
 BuildRequires:  libjpeg-devel
 BuildRequires:  libtiff-devel
@@ -51,7 +52,7 @@ loadable modules.
 
 %package devel
 Summary:        An image loading library - Development Files
-Group:          Development/Languages/C and C++
+Group:          Development/Libraries
 Requires:       gdk-pixbuf = %{version}
 %if %{with introspection}
 Requires:       typelib-GdkPixbuf = %{version}
@@ -94,7 +95,7 @@ cp %{S:1} %{buildroot}%{_sysconfdir}/rpm
 # Note: when updating scriptlets, don't forget to also update baselibs.conf
 ###########################################################################
 
-# Convenient %define for the scriplets
+# Convenient define for the scriplets
 %if "%_lib" == "lib64"
 %define _gdk_pixbuf_query_loaders %{_bindir}/gdk-pixbuf-query-loaders-64
 %else
@@ -106,23 +107,11 @@ cp %{S:1} %{buildroot}%{_sysconfdir}/rpm
 
 %post -n gdk-pixbuf
 /sbin/ldconfig
-%if 0
-# In case gdk-pixbuf gets installed before gdk-pixbuf-query-loaders,
-# we don't want to fail. So we make the call to gdk-pixbuf-query-loaders
-# dependent on the existence of the binary. This is why we also have a %post
-# for gdk-pixbuf-query-loaders.
-%endif
 if test -f %{_gdk_pixbuf_query_loaders}; then
   %{_gdk_pixbuf_query_loaders_update_cache}
 fi
 
 %post query-loaders
-%if 0
-# If we install gdk-pixbuf-query-loaders for the first time, then we should run
-# it in case gdk-pixbuf was installed first (ie, if
-# %{_libdir}/gdk-pixbuf-2.0/%{gdk_pixbuf_binary_version} already exists) which
-# means gdk-pixbuf-query-loaders couldn't run there.
-%endif
 if [ $1 == 1 ]; then
   test -d %{_libdir}/gdk-pixbuf-2.0/%{gdk_pixbuf_binary_version}
   if test $? -eq 0; then
@@ -130,17 +119,11 @@ if [ $1 == 1 ]; then
   fi
 fi
 
-%if 0
-# No need to call gdk-pixbuf-query-loaders in postun:
-# - if it's an upgrade, it will have been called in post
-# - if it's an uninstall, we don't care about this anymore
-%endif
-
 %postun -n gdk-pixbuf -p /sbin/ldconfig
 
 %files -n gdk-pixbuf
 %defattr(-, root, root)
-%doc AUTHORS COPYING NEWS README
+%license COPYING
 %{_libdir}/libgdk_pixbuf-2.0.so.0*
 %{_libdir}/libgdk_pixbuf_xlib-2.0.so.0*
 %dir %{_libdir}/gdk-pixbuf-2.0
