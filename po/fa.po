@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gtk+ 2.6\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-01-10 07:53-0500\n"
+"POT-Creation-Date: 2013-02-02 01:06-0500\n"
 "PO-Revision-Date: 2005-02-14 18:03+0330\n"
 "Last-Translator: Roozbeh Pournader <roozbeh@farsiweb.info>\n"
 "Language-Team: Persian <farsi@lists.sharif.edu>\n"
@@ -18,27 +18,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:146 gdk-pixbuf/gdk-pixbuf-io.c:1065
-#: gdk-pixbuf/gdk-pixbuf-io.c:1331
+#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1064
+#: gdk-pixbuf/gdk-pixbuf-io.c:1330
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "باز کردن پرونده‌ی «%s» شکست خورد: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:159 gdk-pixbuf/gdk-pixbuf-io.c:1077
+#: gdk-pixbuf/gdk-pixbuf-animation.c:173 gdk-pixbuf/gdk-pixbuf-io.c:1076
 #, c-format
 msgid "Image file '%s' contains no data"
 msgstr "پرونده‌ی تصویری «%s» هیچ داده‌ای ندارد"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:201 gdk-pixbuf/gdk-pixbuf-io.c:1113
-#: gdk-pixbuf/gdk-pixbuf-io.c:1383
-#, c-format
-msgid ""
-"Failed to load image '%s': reason not known, probably a corrupt image file"
-msgstr ""
-"بار کردن تصویر «%s» شکست خورد: دلیل آن معلوم نیست، احتمالاً پرونده‌ی تصویری "
-"خراب است"
-
-#: gdk-pixbuf/gdk-pixbuf-animation.c:232
+#: gdk-pixbuf/gdk-pixbuf-animation.c:212
 #, c-format
 msgid ""
 "Failed to load animation '%s': reason not known, probably a corrupt "
@@ -47,12 +38,21 @@ msgstr ""
 "بار کردن پویانمایی «%s» شکست خورد: دلیل آن معلوم نیست، احتمالاً پرونده‌ی "
 "پویانمایی خراب است"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:791
+#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-io.c:1382
+#, c-format
+msgid ""
+"Failed to load image '%s': reason not known, probably a corrupt image file"
+msgstr ""
+"بار کردن تصویر «%s» شکست خورد: دلیل آن معلوم نیست، احتمالاً پرونده‌ی تصویری "
+"خراب است"
+
+#: gdk-pixbuf/gdk-pixbuf-io.c:790
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "نمی‌توان پیمانه‌ی تصویربارکن را بار کرد: %s: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:806
+#: gdk-pixbuf/gdk-pixbuf-io.c:805
 #, fuzzy, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
@@ -61,53 +61,53 @@ msgstr ""
 "پیمانه‌ی بار کردن پرونده %s رابط مناسب را صادر نمی‌کند؛ شاید از نسخه‌ی دیگری از "
 "GTK است؟"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:815 gdk-pixbuf/gdk-pixbuf-io.c:866
+#: gdk-pixbuf/gdk-pixbuf-io.c:814 gdk-pixbuf/gdk-pixbuf-io.c:865
 #, c-format
 msgid "Image type '%s' is not supported"
 msgstr "تصویر نوع «%s» پشتیبانی نمی‌شود"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:951
+#: gdk-pixbuf/gdk-pixbuf-io.c:950
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
 msgstr "قالب پرونده‌ی تصویر برای پرونده‌ی «%s» تشخیص داده نشد"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:959
+#: gdk-pixbuf/gdk-pixbuf-io.c:958
 msgid "Unrecognized image file format"
 msgstr "قالب پرونده‌ی تصویری ناشناخته"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1122
+#: gdk-pixbuf/gdk-pixbuf-io.c:1121
 #, c-format
 msgid "Failed to load image '%s': %s"
 msgstr "بار کردن تصویر «%s» شکست خورد: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2005 gdk-pixbuf/io-gdip-utils.c:887
+#: gdk-pixbuf/gdk-pixbuf-io.c:2015 gdk-pixbuf/io-gdip-utils.c:837
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "خطا در نوشتن در پرونده‌ی تصویر: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2047 gdk-pixbuf/gdk-pixbuf-io.c:2168
+#: gdk-pixbuf/gdk-pixbuf-io.c:2057 gdk-pixbuf/gdk-pixbuf-io.c:2178
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr "این ساخت gdk-pixbuf از ذخیره‌ی این قالب تصویری پشتیبانی نمی‌کند: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2078
+#: gdk-pixbuf/gdk-pixbuf-io.c:2088
 msgid "Insufficient memory to save image to callback"
 msgstr ""
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2091
+#: gdk-pixbuf/gdk-pixbuf-io.c:2101
 msgid "Failed to open temporary file"
 msgstr "باز کردن پرونده‌ی موقت شکست خورد"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2114
+#: gdk-pixbuf/gdk-pixbuf-io.c:2124
 msgid "Failed to read from temporary file"
 msgstr "خواندن از پرونده‌ی موقت شکست خورد"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2362
+#: gdk-pixbuf/gdk-pixbuf-io.c:2372
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
 msgstr "نمی‌توان «%s» را برای نوشتن باز کرد: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2388
+#: gdk-pixbuf/gdk-pixbuf-io.c:2398
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
@@ -116,11 +116,11 @@ msgstr ""
 "بستن «%s» هنگام نوشتن تصویر شکست خورد، ممکن است همه‌ی داده‌ها ذخیره نشده "
 "باشند: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2609 gdk-pixbuf/gdk-pixbuf-io.c:2661
+#: gdk-pixbuf/gdk-pixbuf-io.c:2619 gdk-pixbuf/gdk-pixbuf-io.c:2671
 msgid "Insufficient memory to save image into a buffer"
 msgstr "حافظه برای ذخیره کردن تصویر در میان‌گیر کافی نیست"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2707
+#: gdk-pixbuf/gdk-pixbuf-io.c:2717
 #, fuzzy
 msgid "Error writing to image stream"
 msgstr "خطا در نوشتن در پرونده‌ی تصویر: %s"
@@ -175,7 +175,7 @@ msgstr "حافظه برای بار کردن پویانمایی کافی نیست
 msgid "Malformed chunk in animation"
 msgstr "تکه‌ی معیوب در پویانمایی"
 
-#: gdk-pixbuf/io-ani.c:705
+#: gdk-pixbuf/io-ani.c:660
 msgid "The ANI image format"
 msgstr "قالب تصویر ANI"
 
@@ -275,12 +275,12 @@ msgstr "نمی‌توان نام پرونده را تبدیل کرد"
 msgid "Couldn't load metafile"
 msgstr "نمی‌توان نام پرونده را تبدیل کرد"
 
-#: gdk-pixbuf/io-gdip-utils.c:932
+#: gdk-pixbuf/io-gdip-utils.c:878
 #, fuzzy
 msgid "Unsupported image format for GDI+"
 msgstr "این شکل از تصاویر RAS پشتیبانی نمی‌شوند"
 
-#: gdk-pixbuf/io-gdip-utils.c:939
+#: gdk-pixbuf/io-gdip-utils.c:885
 #, fuzzy
 msgid "Couldn't save"
 msgstr "نمی‌توان بقیه را ذخیره کرد"
@@ -488,8 +488,7 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "عرض یا ارتفاع PNG تبدیل‌شده صفر است."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, c-format
-msgid "Color profile has invalid length '%d'."
+msgid "Color profile has invalid length '%"
 msgstr ""
 
 #: gdk-pixbuf/io-pcx.c:186

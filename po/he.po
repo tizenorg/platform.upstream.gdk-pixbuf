@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gtk+.HEAD.he\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-01-10 07:53-0500\n"
+"POT-Creation-Date: 2013-02-02 01:06-0500\n"
 "PO-Revision-Date: 2012-09-07 16:05+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -21,37 +21,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:146 gdk-pixbuf/gdk-pixbuf-io.c:1065
-#: gdk-pixbuf/gdk-pixbuf-io.c:1331
+#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1064
+#: gdk-pixbuf/gdk-pixbuf-io.c:1330
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "ארע כשל בפתיחת הקובץ '%s':‏ %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:159 gdk-pixbuf/gdk-pixbuf-io.c:1077
+#: gdk-pixbuf/gdk-pixbuf-animation.c:173 gdk-pixbuf/gdk-pixbuf-io.c:1076
 #, c-format
 msgid "Image file '%s' contains no data"
 msgstr "התמונה '%s' לא מכילה מידע"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:201 gdk-pixbuf/gdk-pixbuf-io.c:1113
-#: gdk-pixbuf/gdk-pixbuf-io.c:1383
-#, c-format
-msgid ""
-"Failed to load image '%s': reason not known, probably a corrupt image file"
-msgstr "נכשל בפתיחת התמונה '%s': הסיבה איננה ידועה, כנראה קובץ תמונה פגום"
-
-#: gdk-pixbuf/gdk-pixbuf-animation.c:232
+#: gdk-pixbuf/gdk-pixbuf-animation.c:212
 #, c-format
 msgid ""
 "Failed to load animation '%s': reason not known, probably a corrupt "
 "animation file"
 msgstr "נכשל בפתיחת ההנפשה '%s': הסיבה איננה ידועה, כנראה קובץ הנפשה פגום"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:791
+#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-io.c:1382
+#, c-format
+msgid ""
+"Failed to load image '%s': reason not known, probably a corrupt image file"
+msgstr "נכשל בפתיחת התמונה '%s': הסיבה איננה ידועה, כנראה קובץ תמונה פגום"
+
+#: gdk-pixbuf/gdk-pixbuf-io.c:790
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "לא ניתן לטעון את המודול לטעינת תמונה: %s:‏ %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:806
+#: gdk-pixbuf/gdk-pixbuf-io.c:805
 #, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
@@ -59,64 +59,64 @@ msgid ""
 msgstr ""
 "המודול %s אינו מייצא את המנשק המתאים; יתכן שהוא מגרסה אחרת של gdk-pixbuf?"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:815 gdk-pixbuf/gdk-pixbuf-io.c:866
+#: gdk-pixbuf/gdk-pixbuf-io.c:814 gdk-pixbuf/gdk-pixbuf-io.c:865
 #, c-format
 msgid "Image type '%s' is not supported"
 msgstr "סוג התמונה '%s' אינו נתמך"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:951
+#: gdk-pixbuf/gdk-pixbuf-io.c:950
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
 msgstr "לא ניתן לזהות את פורמט התמונה בקובץ '%s'"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:959
+#: gdk-pixbuf/gdk-pixbuf-io.c:958
 msgid "Unrecognized image file format"
 msgstr "פורמט קובץ תמונה לא מזוהה"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1122
+#: gdk-pixbuf/gdk-pixbuf-io.c:1121
 #, c-format
 msgid "Failed to load image '%s': %s"
 msgstr "ארע כשל בטעינת התמונה '%s':‏ %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2005 gdk-pixbuf/io-gdip-utils.c:887
+#: gdk-pixbuf/gdk-pixbuf-io.c:2015 gdk-pixbuf/io-gdip-utils.c:837
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "שגיאה בכתיבה לקובץ תמונה: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2047 gdk-pixbuf/gdk-pixbuf-io.c:2168
+#: gdk-pixbuf/gdk-pixbuf-io.c:2057 gdk-pixbuf/gdk-pixbuf-io.c:2178
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr "בניה זו של gdk-pixbuf לא תומכת בשמירת התמונה בפורמט: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2078
+#: gdk-pixbuf/gdk-pixbuf-io.c:2088
 msgid "Insufficient memory to save image to callback"
 msgstr "Insufficient memory to save image to callback"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2091
+#: gdk-pixbuf/gdk-pixbuf-io.c:2101
 msgid "Failed to open temporary file"
 msgstr "נכשל בפתיחת קובץ זמני"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2114
+#: gdk-pixbuf/gdk-pixbuf-io.c:2124
 msgid "Failed to read from temporary file"
 msgstr "נכשל בקריאה מקובץ זמני"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2362
+#: gdk-pixbuf/gdk-pixbuf-io.c:2372
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
 msgstr "נכשל בפתיחת '%s' לכתיבה: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2388
+#: gdk-pixbuf/gdk-pixbuf-io.c:2398
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
 "%s"
 msgstr "נכשל בסגירת '%s' בזמן כתיבת תמונה, ייתכן וכל המידע לא נשמר: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2609 gdk-pixbuf/gdk-pixbuf-io.c:2661
+#: gdk-pixbuf/gdk-pixbuf-io.c:2619 gdk-pixbuf/gdk-pixbuf-io.c:2671
 msgid "Insufficient memory to save image into a buffer"
 msgstr "אין מספיק זיכרון לשמירת התמונה לחוצץ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2707
+#: gdk-pixbuf/gdk-pixbuf-io.c:2717
 msgid "Error writing to image stream"
 msgstr "שגיאה בכתיבה לזרימת תמונה"
 
@@ -171,7 +171,7 @@ msgstr "אין מספיק זיכרון לטעינת ההנפשה"
 msgid "Malformed chunk in animation"
 msgstr "נתח פגום בהנפשה"
 
-#: gdk-pixbuf/io-ani.c:705
+#: gdk-pixbuf/io-ani.c:660
 msgid "The ANI image format"
 msgstr "פורמט תמונת ANI"
 
@@ -267,11 +267,11 @@ msgstr "לא ניתן לטעון מפת סיביות"
 msgid "Couldn't load metafile"
 msgstr "לא ניתן לטעון מטה־קובץ"
 
-#: gdk-pixbuf/io-gdip-utils.c:932
+#: gdk-pixbuf/io-gdip-utils.c:878
 msgid "Unsupported image format for GDI+"
 msgstr "פורמט הקובץ אינו נתמך עבור GDI+‎"
 
-#: gdk-pixbuf/io-gdip-utils.c:939
+#: gdk-pixbuf/io-gdip-utils.c:885
 msgid "Couldn't save"
 msgstr "לא ניתן לשמור"
 
@@ -462,8 +462,8 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Transformed JPEG has zero width or height."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, c-format
-msgid "Color profile has invalid length '%d'."
+#, fuzzy
+msgid "Color profile has invalid length '%"
 msgstr "אורך פרופיל הצבע '%d' אינו תקני."
 
 #: gdk-pixbuf/io-pcx.c:186

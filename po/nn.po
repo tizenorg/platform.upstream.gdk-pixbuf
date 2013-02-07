@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-01-10 07:53-0500\n"
+"POT-Creation-Date: 2013-02-02 01:06-0500\n"
 "PO-Revision-Date: 2009-01-22 11:03+0100\n"
 "Last-Translator: Åsmund Skjæveland <aasmunds@ulrik.uio.no>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -23,27 +23,18 @@ msgstr ""
 "X-Generator: Lokalize 0.2\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:146 gdk-pixbuf/gdk-pixbuf-io.c:1065
-#: gdk-pixbuf/gdk-pixbuf-io.c:1331
+#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1064
+#: gdk-pixbuf/gdk-pixbuf-io.c:1330
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "Klarte ikkje å opna fila «%s»: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:159 gdk-pixbuf/gdk-pixbuf-io.c:1077
+#: gdk-pixbuf/gdk-pixbuf-animation.c:173 gdk-pixbuf/gdk-pixbuf-io.c:1076
 #, c-format
 msgid "Image file '%s' contains no data"
 msgstr "Biletefila «%s» inneheld ikkje data"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:201 gdk-pixbuf/gdk-pixbuf-io.c:1113
-#: gdk-pixbuf/gdk-pixbuf-io.c:1383
-#, c-format
-msgid ""
-"Failed to load image '%s': reason not known, probably a corrupt image file"
-msgstr ""
-"Klarte ikkje å lasta biletet «%s». Årsaken er ukjent, men truleg ei øydelagt "
-"biletefil"
-
-#: gdk-pixbuf/gdk-pixbuf-animation.c:232
+#: gdk-pixbuf/gdk-pixbuf-animation.c:212
 #, c-format
 msgid ""
 "Failed to load animation '%s': reason not known, probably a corrupt "
@@ -52,12 +43,21 @@ msgstr ""
 "Klarte ikkje å lasta animasjonen «%s». Årsaken er ukjent, men truleg ei "
 "øydelagt animasjonsfil"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:791
+#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-io.c:1382
+#, c-format
+msgid ""
+"Failed to load image '%s': reason not known, probably a corrupt image file"
+msgstr ""
+"Klarte ikkje å lasta biletet «%s». Årsaken er ukjent, men truleg ei øydelagt "
+"biletefil"
+
+#: gdk-pixbuf/gdk-pixbuf-io.c:790
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "Ikkje i stand til å lasta biletelastingsmodul: %s: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:806
+#: gdk-pixbuf/gdk-pixbuf-io.c:805
 #, fuzzy, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
@@ -66,53 +66,53 @@ msgstr ""
 "Biletelastingsmodulen %s eksporterer ikkje rett grensesnitt. Kanskje han er "
 "frå ein annan GTK+-versjon?"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:815 gdk-pixbuf/gdk-pixbuf-io.c:866
+#: gdk-pixbuf/gdk-pixbuf-io.c:814 gdk-pixbuf/gdk-pixbuf-io.c:865
 #, c-format
 msgid "Image type '%s' is not supported"
 msgstr "Biletetypen «%s» er ikkje støtta"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:951
+#: gdk-pixbuf/gdk-pixbuf-io.c:950
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
 msgstr "Klarte ikkje å kjenna att biletefilformatet på fila «%s»"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:959
+#: gdk-pixbuf/gdk-pixbuf-io.c:958
 msgid "Unrecognized image file format"
 msgstr "Ukjent biletefilformat"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1122
+#: gdk-pixbuf/gdk-pixbuf-io.c:1121
 #, c-format
 msgid "Failed to load image '%s': %s"
 msgstr "Klarte ikkje å lasta biletet «%s»: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2005 gdk-pixbuf/io-gdip-utils.c:887
+#: gdk-pixbuf/gdk-pixbuf-io.c:2015 gdk-pixbuf/io-gdip-utils.c:837
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "Feil under skriving av biletefil: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2047 gdk-pixbuf/gdk-pixbuf-io.c:2168
+#: gdk-pixbuf/gdk-pixbuf-io.c:2057 gdk-pixbuf/gdk-pixbuf-io.c:2178
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr "Denne utgåva av gdk-pixbuf kan ikkje lagra bileteformatet: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2078
+#: gdk-pixbuf/gdk-pixbuf-io.c:2088
 msgid "Insufficient memory to save image to callback"
 msgstr "Ikkje nok minne til å lagra bilete til tilbakekall"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2091
+#: gdk-pixbuf/gdk-pixbuf-io.c:2101
 msgid "Failed to open temporary file"
 msgstr "Klarte ikkje opna mellombels fil"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2114
+#: gdk-pixbuf/gdk-pixbuf-io.c:2124
 msgid "Failed to read from temporary file"
 msgstr "Klarte ikkje å lesa frå mellombels fil"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2362
+#: gdk-pixbuf/gdk-pixbuf-io.c:2372
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
 msgstr "Klarte ikkje å opna «%s» for å skriva: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2388
+#: gdk-pixbuf/gdk-pixbuf-io.c:2398
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
@@ -121,11 +121,11 @@ msgstr ""
 "Klarte ikkje å lukka «%s» medan biletet vart skrive. Det er ikkje sikkert at "
 "alle data vart lagra: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2609 gdk-pixbuf/gdk-pixbuf-io.c:2661
+#: gdk-pixbuf/gdk-pixbuf-io.c:2619 gdk-pixbuf/gdk-pixbuf-io.c:2671
 msgid "Insufficient memory to save image into a buffer"
 msgstr "Ikkje nok minne til å lagra biletet til eit buffer"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2707
+#: gdk-pixbuf/gdk-pixbuf-io.c:2717
 msgid "Error writing to image stream"
 msgstr "Feil under skriving av biletefil"
 
@@ -180,7 +180,7 @@ msgstr "Ikkje nok minne til å lasta animasjon"
 msgid "Malformed chunk in animation"
 msgstr "Feil i ein del av animasjonen"
 
-#: gdk-pixbuf/io-ani.c:705
+#: gdk-pixbuf/io-ani.c:660
 msgid "The ANI image format"
 msgstr "Bileteformatet ANI"
 
@@ -278,11 +278,11 @@ msgstr "Klarte ikkje lasta punktbilete"
 msgid "Couldn't load metafile"
 msgstr "Klarte ikkje lasta metafil"
 
-#: gdk-pixbuf/io-gdip-utils.c:932
+#: gdk-pixbuf/io-gdip-utils.c:878
 msgid "Unsupported image format for GDI+"
 msgstr "Ikkje støtta bileteformat for GDI+"
 
-#: gdk-pixbuf/io-gdip-utils.c:939
+#: gdk-pixbuf/io-gdip-utils.c:885
 msgid "Couldn't save"
 msgstr "Klarte ikkje lagra"
 
@@ -475,8 +475,7 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Transformert JPEG har breidd eller storleik lik null."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, c-format
-msgid "Color profile has invalid length '%d'."
+msgid "Color profile has invalid length '%"
 msgstr ""
 
 #: gdk-pixbuf/io-pcx.c:186

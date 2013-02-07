@@ -178,6 +178,10 @@
 <ANCHOR id="GdkPixbufAnimation-struct" href="gdk-pixbuf/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">
 <ANCHOR id="GdkPixbufAnimationIter-struct" href="gdk-pixbuf/gdk-pixbuf-Animations.html#GdkPixbufAnimationIter-struct">
 <ANCHOR id="gdk-pixbuf-animation-new-from-file" href="gdk-pixbuf/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-file">
+<ANCHOR id="gdk-pixbuf-animation-new-from-resource" href="gdk-pixbuf/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-resource">
+<ANCHOR id="gdk-pixbuf-animation-new-from-stream" href="gdk-pixbuf/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-stream">
+<ANCHOR id="gdk-pixbuf-animation-new-from-stream-async" href="gdk-pixbuf/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-stream-async">
+<ANCHOR id="gdk-pixbuf-animation-new-from-stream-finish" href="gdk-pixbuf/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-stream-finish">
 <ANCHOR id="gdk-pixbuf-animation-ref" href="gdk-pixbuf/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-ref">
 <ANCHOR id="gdk-pixbuf-animation-unref" href="gdk-pixbuf/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-unref">
 <ANCHOR id="gdk-pixbuf-animation-get-width" href="gdk-pixbuf/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-get-width">

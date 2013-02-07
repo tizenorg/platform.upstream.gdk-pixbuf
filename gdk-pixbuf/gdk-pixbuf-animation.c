@@ -26,6 +26,7 @@
 #include <errno.h>
 #include "gdk-pixbuf-private.h"
 #include "gdk-pixbuf-animation.h"
+#include "gdk-pixbuf-loader.h"
 
 #include <glib/gstdio.h>
 
@@ -107,6 +108,19 @@ gdk_pixbuf_animation_init (GdkPixbufAnimation *animation)
 {
 }
 
+static void
+prepared_notify (GdkPixbuf *pixbuf, 
+                 GdkPixbufAnimation *anim, 
+                 gpointer user_data)
+{
+        if (anim != NULL)
+                g_object_ref (anim);
+        else
+                anim = gdk_pixbuf_non_anim_new (pixbuf);
+
+        *((GdkPixbufAnimation **)user_data) = anim;
+}
+
 /**
  * gdk_pixbuf_animation_new_from_file:
  * @filename: Name of file to load, in the GLib file name encoding
@@ -177,7 +191,64 @@ gdk_pixbuf_animation_new_from_file (const char *filename,
                         return NULL;
                 }
 
-	if (image_module->load_animation == NULL) {
+	if (image_module->load_animation != NULL) {
+		fseek (f, 0, SEEK_SET);
+		animation = (* image_module->load_animation) (f, error);
+
+                if (animation == NULL && error != NULL && *error == NULL) {
+                        /* I don't trust these crufty longjmp()'ing
+                         * image libs to maintain proper error
+                         * invariants, and I don't want user code to
+                         * segfault as a result. We need to maintain
+                         * the invariant that error gets set if NULL
+                         * is returned.
+                         */
+                        
+                        g_warning ("Bug! gdk-pixbuf loader '%s' didn't set an error on failure.",
+                                   image_module->module_name);
+                        g_set_error (error,
+                                     GDK_PIXBUF_ERROR,
+                                     GDK_PIXBUF_ERROR_FAILED,
+                                     _("Failed to load animation '%s': reason not known, probably a corrupt animation file"),
+                                     display_name);
+                }
+                
+		fclose (f);
+        } else if (image_module->begin_load != NULL) {
+                guchar buffer[4096];
+                size_t length;
+                gpointer context;
+
+                animation = NULL;
+		fseek (f, 0, SEEK_SET);
+
+                context = image_module->begin_load (NULL, prepared_notify, NULL, &animation, error);
+                
+                if (!context || !animation) {
+                        error = NULL;
+                        goto fail_progressive_load;
+                }
+                
+                while (!feof (f) && !ferror (f)) {
+                        length = fread (buffer, 1, sizeof (buffer), f);
+                        if (length > 0) {
+                                if (!image_module->load_increment (context, buffer, length, error)) {
+                                        error = NULL;
+                                        goto fail_progressive_load;
+                                }
+                        }
+                }
+
+fail_progressive_load:
+		fclose (f);
+
+                if (context && !image_module->stop_load (context, error)) {
+                        if (animation)
+                                g_object_unref (animation);
+                        g_free (display_name);
+                        return NULL;
+                }
+	} else {
 		GdkPixbuf *pixbuf;
 
 		/* Keep this logic in sync with gdk_pixbuf_new_from_file() */
@@ -211,29 +282,6 @@ gdk_pixbuf_animation_new_from_file (const char *filename,
                 animation = gdk_pixbuf_non_anim_new (pixbuf);
 
                 g_object_unref (pixbuf);
-	} else {
-		fseek (f, 0, SEEK_SET);
-		animation = (* image_module->load_animation) (f, error);
-
-                if (animation == NULL && error != NULL && *error == NULL) {
-                        /* I don't trust these crufty longjmp()'ing
-                         * image libs to maintain proper error
-                         * invariants, and I don't want user code to
-                         * segfault as a result. We need to maintain
-                         * the invariant that error gets set if NULL
-                         * is returned.
-                         */
-                        
-                        g_warning ("Bug! gdk-pixbuf loader '%s' didn't set an error on failure.",
-                                   image_module->module_name);
-                        g_set_error (error,
-                                     GDK_PIXBUF_ERROR,
-                                     GDK_PIXBUF_ERROR_FAILED,
-                                     _("Failed to load animation '%s': reason not known, probably a corrupt animation file"),
-                                     display_name);
-                }
-                
-		fclose (f);
 	}
 
         g_free (display_name);
@@ -265,6 +313,213 @@ gdk_pixbuf_animation_new_from_file (const char *filename,
 }
 
 #endif
+
+/**
+ * gdk_pixbuf_animation_new_from_stream:
+ * @stream:  a #GInputStream to load the pixbuf from
+ * @cancellable: (allow-none): optional #GCancellable object, %NULL to ignore
+ * @error: Return location for an error
+ *
+ * Creates a new animation by loading it from an input stream.
+ *
+ * The file format is detected automatically. If %NULL is returned, then 
+ * @error will be set. The @cancellable can be used to abort the operation
+ * from another thread. If the operation was cancelled, the error 
+ * %G_IO_ERROR_CANCELLED will be returned. Other possible errors are in 
+ * the #GDK_PIXBUF_ERROR and %G_IO_ERROR domains. 
+ *
+ * The stream is not closed.
+ *
+ * Return value: A newly-created pixbuf, or %NULL if any of several error 
+ * conditions occurred: the file could not be opened, the image format is 
+ * not supported, there was not enough memory to allocate the image buffer, 
+ * the stream contained invalid data, or the operation was cancelled.
+ *
+ * Since: 2.28
+ **/
+GdkPixbufAnimation *
+gdk_pixbuf_animation_new_from_stream  (GInputStream  *stream,
+                                       GCancellable  *cancellable,
+                                       GError       **error)
+{
+        GdkPixbufAnimation *animation;
+        GdkPixbufLoader *loader;
+        gssize n_read;
+        guchar buffer[LOAD_BUFFER_SIZE];
+        gboolean res;
+
+        g_return_val_if_fail (G_IS_INPUT_STREAM (stream), NULL);
+        g_return_val_if_fail (cancellable == NULL || G_IS_CANCELLABLE (cancellable), NULL);
+        g_return_val_if_fail (error == NULL || *error == NULL, NULL);
+
+        loader = gdk_pixbuf_loader_new ();
+
+        res = TRUE;
+        while (1) { 
+                n_read = g_input_stream_read (stream, 
+                                              buffer, 
+                                              sizeof (buffer), 
+                                              cancellable, 
+                                              error);
+                if (n_read < 0) {
+                        res = FALSE;
+                        error = NULL; /* Ignore further errors */
+                        break;
+                }
+
+                if (n_read == 0)
+                        break;
+
+                if (!gdk_pixbuf_loader_write (loader, 
+                                              buffer, 
+                                              n_read, 
+                                              error)) {
+                        res = FALSE;
+                        error = NULL;
+                        break;
+                }
+        }
+
+        if (!gdk_pixbuf_loader_close (loader, error)) {
+                res = FALSE;
+                error = NULL;
+        }
+
+        if (res) {
+                animation = gdk_pixbuf_loader_get_animation (loader);
+                if (animation)
+                        g_object_ref (animation);
+        } else {
+                animation = NULL;
+        }
+
+        g_object_unref (loader);
+
+        return animation;
+}
+
+static void
+animation_new_from_stream_thread (GSimpleAsyncResult *result,
+                                  GInputStream       *stream,
+                                  GCancellable       *cancellable)
+{
+	GdkPixbufAnimation *animation;
+	GError *error = NULL;
+
+	animation = gdk_pixbuf_animation_new_from_stream (stream, cancellable, &error);
+
+	/* Set the new pixbuf as the result, or error out */
+	if (animation == NULL) {
+		g_simple_async_result_take_error (result, error);
+	} else {
+		g_simple_async_result_set_op_res_gpointer (result, g_object_ref (animation), g_object_unref);
+	}
+}
+
+/**
+ * gdk_pixbuf_animation_new_from_stream_async:
+ * @stream: a #GInputStream from which to load the animation
+ * @cancellable: (allow-none): optional #GCancellable object, %NULL to ignore
+ * @callback: a #GAsyncReadyCallback to call when the the pixbuf is loaded
+ * @user_data: the data to pass to the callback function
+ *
+ * Creates a new animation by asynchronously loading an image from an input stream.
+ *
+ * For more details see gdk_pixbuf_new_from_stream(), which is the synchronous
+ * version of this function.
+ *
+ * When the operation is finished, @callback will be called in the main thread.
+ * You can then call gdk_pixbuf_animation_new_from_stream_finish() to get the
+ * result of the operation.
+ *
+ * Since: 2.28
+ **/
+void
+gdk_pixbuf_animation_new_from_stream_async (GInputStream        *stream,
+                                            GCancellable        *cancellable,
+                                            GAsyncReadyCallback  callback,
+                                            gpointer             user_data)
+{
+	GSimpleAsyncResult *result;
+
+	g_return_if_fail (G_IS_INPUT_STREAM (stream));
+	g_return_if_fail (callback != NULL);
+	g_return_if_fail (!cancellable || G_IS_CANCELLABLE (cancellable));
+
+	result = g_simple_async_result_new (G_OBJECT (stream), callback, user_data, gdk_pixbuf_animation_new_from_stream_async);
+	g_simple_async_result_run_in_thread (result, (GSimpleAsyncThreadFunc) animation_new_from_stream_thread, G_PRIORITY_DEFAULT, cancellable);
+	g_object_unref (result);
+}
+
+/**
+ * gdk_pixbuf_animation_new_from_stream_finish:
+ * @async_result: a #GAsyncResult
+ * @error: a #GError, or %NULL
+ *
+ * Finishes an asynchronous pixbuf animation creation operation started with
+ * gdk_pixbuf_animation_new_from_stream_async().
+ *
+ * Return value: a #GdkPixbufAnimation or %NULL on error. Free the returned
+ * object with g_object_unref().
+ *
+ * Since: 2.28
+ **/
+GdkPixbufAnimation *
+gdk_pixbuf_animation_new_from_stream_finish (GAsyncResult  *async_result,
+			              	     GError       **error)
+{
+	GSimpleAsyncResult *result = G_SIMPLE_ASYNC_RESULT (async_result);
+
+	g_return_val_if_fail (G_IS_ASYNC_RESULT (async_result), NULL);
+	g_return_val_if_fail (!error || (error && !*error), NULL);
+	g_warn_if_fail (g_simple_async_result_get_source_tag (result) == gdk_pixbuf_animation_new_from_stream_async);
+
+	if (g_simple_async_result_propagate_error (result, error))
+		return NULL;
+
+	return g_simple_async_result_get_op_res_gpointer (result);
+}
+
+/**
+ * gdk_pixbuf_animation_new_from_resource:
+ * @resource_path: the path of the resource file
+ * @error: Return location for an error
+ *
+ * Creates a new pixbuf animation by loading an image from an resource.
+ *
+ * The file format is detected automatically. If %NULL is returned, then
+ * @error will be set.
+ *
+ * Return value: A newly-created animation, or %NULL if any of several error
+ * conditions occurred: the file could not be opened, the image format is
+ * not supported, there was not enough memory to allocate the image buffer,
+ * the stream contained invalid data, or the operation was cancelled.
+ *
+ * Since: 2.28
+ **/
+GdkPixbufAnimation *
+gdk_pixbuf_animation_new_from_resource (const char *resource_path,
+                                        GError    **error)
+{
+	GInputStream *stream;
+	GdkPixbufAnimation *anim;
+	GdkPixbuf *pixbuf;
+
+        pixbuf = _gdk_pixbuf_new_from_resource_try_mmap (resource_path);
+        if (pixbuf) {
+                anim = gdk_pixbuf_non_anim_new (pixbuf);
+                g_object_unref (pixbuf);
+                return anim;
+        }
+
+	stream = g_resources_open_stream (resource_path, 0, error);
+	if (stream == NULL)
+		return NULL;
+
+	anim = gdk_pixbuf_animation_new_from_stream (stream, NULL, error);
+	g_object_unref (stream);
+	return anim;
+}
 
 /**
  * gdk_pixbuf_animation_ref: (skip)

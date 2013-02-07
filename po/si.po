@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: si\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-01-10 07:53-0500\n"
+"POT-Creation-Date: 2013-02-02 01:06-0500\n"
 "PO-Revision-Date: 2007-12-28 13:32+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <en@li.org>\n"
@@ -19,25 +19,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:146 gdk-pixbuf/gdk-pixbuf-io.c:1065
-#: gdk-pixbuf/gdk-pixbuf-io.c:1331
+#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1064
+#: gdk-pixbuf/gdk-pixbuf-io.c:1330
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "'%s' ගොනුව විවෘත කිරීම අපහසුවිය: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:159 gdk-pixbuf/gdk-pixbuf-io.c:1077
+#: gdk-pixbuf/gdk-pixbuf-animation.c:173 gdk-pixbuf/gdk-pixbuf-io.c:1076
 #, c-format
 msgid "Image file '%s' contains no data"
 msgstr "%s පිළිඹිබු ගොනුව තුළ දත්ත නැත"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:201 gdk-pixbuf/gdk-pixbuf-io.c:1113
-#: gdk-pixbuf/gdk-pixbuf-io.c:1383
-#, c-format
-msgid ""
-"Failed to load image '%s': reason not known, probably a corrupt image file"
-msgstr "'%s'පිළිඹිබුව පූරණය දෝෂසහිතයි: හේතුව නොදන්නා අතර සමහරවිට දූෂිත පිළිඹිබු ගොනුවක් විය හැක"
-
-#: gdk-pixbuf/gdk-pixbuf-animation.c:232
+#: gdk-pixbuf/gdk-pixbuf-animation.c:212
 #, c-format
 msgid ""
 "Failed to load animation '%s': reason not known, probably a corrupt "
@@ -45,76 +38,83 @@ msgid ""
 msgstr ""
 "'%s සජීවීකරණය පූරණය දෝෂසහිතයි: හේතුව නොදන්නා අතර සමහරවිට දූෂිත සජීවීකරණ ගොනුවක් විය හැක"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:791
+#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-io.c:1382
+#, c-format
+msgid ""
+"Failed to load image '%s': reason not known, probably a corrupt image file"
+msgstr "'%s'පිළිඹිබුව පූරණය දෝෂසහිතයි: හේතුව නොදන්නා අතර සමහරවිට දූෂිත පිළිඹිබු ගොනුවක් විය හැක"
+
+#: gdk-pixbuf/gdk-pixbuf-io.c:790
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "පිළිඹිබු පූරණ අංගය පූරණය කළ නොහැක: %s: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:806
+#: gdk-pixbuf/gdk-pixbuf-io.c:805
 #, fuzzy, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
 "from a different gdk-pixbuf version?"
 msgstr "%s පිළිඹිබු පූරණ අංගය නියමිත අතුරු මුහුණත; සමහරවිට එය වෙනස් GTK වෙළුමකින් වියහැක?"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:815 gdk-pixbuf/gdk-pixbuf-io.c:866
+#: gdk-pixbuf/gdk-pixbuf-io.c:814 gdk-pixbuf/gdk-pixbuf-io.c:865
 #, c-format
 msgid "Image type '%s' is not supported"
 msgstr "'%s' පිළිඹිබු වර්‍ගය සහාය නොදක්වයි"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:951
+#: gdk-pixbuf/gdk-pixbuf-io.c:950
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
 msgstr "'%s' ගොනුව සඳහා පිළිඹිබු සංයුතිය හදුනාගත නොහැක"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:959
+#: gdk-pixbuf/gdk-pixbuf-io.c:958
 msgid "Unrecognized image file format"
 msgstr "හදුනා නොගත් පිළිඹිබු සංයුතියක්"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1122
+#: gdk-pixbuf/gdk-pixbuf-io.c:1121
 #, c-format
 msgid "Failed to load image '%s': %s"
 msgstr "'%s' පිළිඹිබුවට පූරණය දෝෂ සහිතයි: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2005 gdk-pixbuf/io-gdip-utils.c:887
+#: gdk-pixbuf/gdk-pixbuf-io.c:2015 gdk-pixbuf/io-gdip-utils.c:837
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "පිළිඹිබුවට ලිවීම දෝෂ සහිතයි : %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2047 gdk-pixbuf/gdk-pixbuf-io.c:2168
+#: gdk-pixbuf/gdk-pixbuf-io.c:2057 gdk-pixbuf/gdk-pixbuf-io.c:2178
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr "gdk-pixbuf ගොඩ නැගීම පිළිඹිබු සංයුතිය සුරකීමට සහාය නොදක්වයි: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2078
+#: gdk-pixbuf/gdk-pixbuf-io.c:2088
 msgid "Insufficient memory to save image to callback"
 msgstr "callback වෙත පිළිඹිබුව සුරකීමට ප්‍රමාණවත් මතකයක් නැත"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2091
+#: gdk-pixbuf/gdk-pixbuf-io.c:2101
 msgid "Failed to open temporary file"
 msgstr "තාවකාලික ගොනුව විවෘත කිරීම අසමත්විය"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2114
+#: gdk-pixbuf/gdk-pixbuf-io.c:2124
 msgid "Failed to read from temporary file"
 msgstr "තාවකාලික ගොනුවකිවීම අසමත්විය"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2362
+#: gdk-pixbuf/gdk-pixbuf-io.c:2372
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
 msgstr "ලිවීම සඳහා '%s' විවෘත කිරීම අසමත්විය: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2388
+#: gdk-pixbuf/gdk-pixbuf-io.c:2398
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
 "%s"
 msgstr "පිළිඹිබුව ලිවීම අතරතුරේදිා '%s'වසා දැමීමරීම අසමත්, සියළුම දත්ත සුරක්‍ෂි නොවුනි: %sවිය"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2609 gdk-pixbuf/gdk-pixbuf-io.c:2661
+#: gdk-pixbuf/gdk-pixbuf-io.c:2619 gdk-pixbuf/gdk-pixbuf-io.c:2671
 msgid "Insufficient memory to save image into a buffer"
 msgstr "ස්වාරක්‍ෂක භාරයක් තුළට සුරකීමට ප්‍රමාණවත් මතකයක් නොමැත"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2707
+#: gdk-pixbuf/gdk-pixbuf-io.c:2717
 #, fuzzy
 msgid "Error writing to image stream"
 msgstr "පිළිඹිබුවට ලිවීම දෝෂ සහිතයි : %s"
@@ -170,7 +170,7 @@ msgstr "සජීවීකරණය පූරණයට ප්‍රමාණව�
 msgid "Malformed chunk in animation"
 msgstr "සජීවීකරණය තුළ විකෘත විශාල ප්‍රමාණයක් ඇත"
 
-#: gdk-pixbuf/io-ani.c:705
+#: gdk-pixbuf/io-ani.c:660
 msgid "The ANI image format"
 msgstr "ANI පිළිඹිබු සංයුතිය"
 
@@ -268,12 +268,12 @@ msgstr "ගොනු නාමය පරිවර්තනය කළ නොහ�
 msgid "Couldn't load metafile"
 msgstr "ගොනු නාමය පරිවර්තනය කළ නොහැකි විය"
 
-#: gdk-pixbuf/io-gdip-utils.c:932
+#: gdk-pixbuf/io-gdip-utils.c:878
 #, fuzzy
 msgid "Unsupported image format for GDI+"
 msgstr "සහාය නොදක්වන RAS පිළිඹිබු විචලනය"
 
-#: gdk-pixbuf/io-gdip-utils.c:939
+#: gdk-pixbuf/io-gdip-utils.c:885
 #, fuzzy
 msgid "Couldn't save"
 msgstr "ඉතිරිය සුරකීය නොහැක"
@@ -477,8 +477,7 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "පරිණාමිත JPEG ගොනුවේ උස හෝ පළල ශුන්‍ය වේ."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, c-format
-msgid "Color profile has invalid length '%d'."
+msgid "Color profile has invalid length '%"
 msgstr ""
 
 #: gdk-pixbuf/io-pcx.c:186

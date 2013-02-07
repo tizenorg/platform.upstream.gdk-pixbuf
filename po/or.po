@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-01-10 07:53-0500\n"
+"POT-Creation-Date: 2013-02-02 01:06-0500\n"
 "PO-Revision-Date: 2012-04-05 17:16+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -38,27 +38,18 @@ msgstr ""
 "\n"
 "X-Generator: Lokalize 1.2\n"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:146 gdk-pixbuf/gdk-pixbuf-io.c:1065
-#: gdk-pixbuf/gdk-pixbuf-io.c:1331
+#: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1064
+#: gdk-pixbuf/gdk-pixbuf-io.c:1330
 #, c-format
 msgid "Failed to open file '%s': %s"
 msgstr "'%s' ଫାଇଲକୁ ଖୋଲିବାରେ ଅସଫଳ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:159 gdk-pixbuf/gdk-pixbuf-io.c:1077
+#: gdk-pixbuf/gdk-pixbuf-animation.c:173 gdk-pixbuf/gdk-pixbuf-io.c:1076
 #, c-format
 msgid "Image file '%s' contains no data"
 msgstr "'%s' ଚିତ୍ର ଫାଇଲରେ କୌଣସି ତଥ୍ଯ ନାହିଁ"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:201 gdk-pixbuf/gdk-pixbuf-io.c:1113
-#: gdk-pixbuf/gdk-pixbuf-io.c:1383
-#, c-format
-msgid ""
-"Failed to load image '%s': reason not known, probably a corrupt image file"
-msgstr ""
-"'%s' ଚିତ୍ର ଫାଇଲ ଧାରଣ କରିବାରେ ଅସଫଳ: କାରଣ ଜଣା ନାହିଁ, ସମ୍ଭବତଃ ଏହା ଗୋଟିଏ ତୃଟିଯୁକ୍ତ ଚିତ୍ର ଫାଇଲ "
-"ଅଟେ"
-
-#: gdk-pixbuf/gdk-pixbuf-animation.c:232
+#: gdk-pixbuf/gdk-pixbuf-animation.c:212
 #, c-format
 msgid ""
 "Failed to load animation '%s': reason not known, probably a corrupt "
@@ -67,12 +58,21 @@ msgstr ""
 "'%s' ଜୀବନାୟନ ଫାଇଲ ଧାରଣ କରିବାରେ ଅସଫଳ: କାରଣ ଜଣା ନାହିଁ, ସମ୍ଭବତଃ ଏହା ଗୋଟିଏ ତୃଟିଯୁକ୍ତ "
 "ଜୀବନାୟନ ଫାଇଲ ଅଟେ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:791
+#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-io.c:1382
+#, c-format
+msgid ""
+"Failed to load image '%s': reason not known, probably a corrupt image file"
+msgstr ""
+"'%s' ଚିତ୍ର ଫାଇଲ ଧାରଣ କରିବାରେ ଅସଫଳ: କାରଣ ଜଣା ନାହିଁ, ସମ୍ଭବତଃ ଏହା ଗୋଟିଏ ତୃଟିଯୁକ୍ତ ଚିତ୍ର ଫାଇଲ "
+"ଅଟେ"
+
+#: gdk-pixbuf/gdk-pixbuf-io.c:790
 #, c-format
 msgid "Unable to load image-loading module: %s: %s"
 msgstr "ଚିତ୍ର-ଧାରଣ ଏକକାଂଶ ଧାରଣ କରିବାରେ ଅସଫଳ: %s: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:806
+#: gdk-pixbuf/gdk-pixbuf-io.c:805
 #, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
@@ -81,53 +81,53 @@ msgstr ""
 "%s ଚିତ୍ର-ଧାରଣ ଏକକାଂଶ ଠିକ ଅନ୍ତରାପୃଷ୍ଠ ରପ୍ତାନି କରେ ନାହିଁ; ବୋଧହୁଏ ଏହା ଗୋଟିଏ ଅଲଗା gdk-"
 "pixbufସଂସ୍କରଣରୁ ପ୍ରାପ୍ତ?"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:815 gdk-pixbuf/gdk-pixbuf-io.c:866
+#: gdk-pixbuf/gdk-pixbuf-io.c:814 gdk-pixbuf/gdk-pixbuf-io.c:865
 #, c-format
 msgid "Image type '%s' is not supported"
 msgstr "'%s' ଚିତ୍ର ପ୍ରକାର ଅସହାୟକ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:951
+#: gdk-pixbuf/gdk-pixbuf-io.c:950
 #, c-format
 msgid "Couldn't recognize the image file format for file '%s'"
 msgstr "'%s' ଚିତ୍ର ଫାଇଲ ଶୈଳୀ ଚିହ୍ନିପାରିଲା ନାହିଁ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:959
+#: gdk-pixbuf/gdk-pixbuf-io.c:958
 msgid "Unrecognized image file format"
 msgstr "ଅଚିହ୍ନିତ ଚିତ୍ର ଫାଇଲ ଶୈଳୀ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:1122
+#: gdk-pixbuf/gdk-pixbuf-io.c:1121
 #, c-format
 msgid "Failed to load image '%s': %s"
 msgstr "'%s' ଚିତ୍ର ଧାରଣ କରିବାରେ ଅସଫଳ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2005 gdk-pixbuf/io-gdip-utils.c:887
+#: gdk-pixbuf/gdk-pixbuf-io.c:2015 gdk-pixbuf/io-gdip-utils.c:837
 #, c-format
 msgid "Error writing to image file: %s"
 msgstr "ଚିତ୍ର ଫାଇଲକୁ ଲେଖିବାରେ ତୃଟି: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2047 gdk-pixbuf/gdk-pixbuf-io.c:2168
+#: gdk-pixbuf/gdk-pixbuf-io.c:2057 gdk-pixbuf/gdk-pixbuf-io.c:2178
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr "ଜି.ଡି.କେ.-ପିକ୍ସବଫର ଏହି ସଂସ୍କରଣ ଚିତ୍ର ଶୈଳୀ ସଂରକ୍ଷଣକୁ ସମର୍ଥନ କରୁନାହିଁ:%s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2078
+#: gdk-pixbuf/gdk-pixbuf-io.c:2088
 msgid "Insufficient memory to save image to callback"
 msgstr "ଚିତ୍ରକୁ କଲବ୍ଯାକରେ ସଂରକ୍ଷିତ କରିବା ପାଇଁ ଯଥେଷ୍ଟ ସ୍ମୃତି ନାହିଁ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2091
+#: gdk-pixbuf/gdk-pixbuf-io.c:2101
 msgid "Failed to open temporary file"
 msgstr "ଅସ୍ଥାୟୀ ଫାଇଲ ଖୋଲିବାରେ ଅସଫଳ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2114
+#: gdk-pixbuf/gdk-pixbuf-io.c:2124
 msgid "Failed to read from temporary file"
 msgstr "ଅସ୍ଥାୟୀ ଫାଇଲରୁ ପଢ଼ିବାରେ ଅସଫଳ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2362
+#: gdk-pixbuf/gdk-pixbuf-io.c:2372
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
 msgstr "'%s'କୁ ଲେଖିବା ପ୍ରତି ଖୋଲିବାରେ ଅସଫଳ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2388
+#: gdk-pixbuf/gdk-pixbuf-io.c:2398
 #, c-format
 msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
@@ -135,11 +135,11 @@ msgid ""
 msgstr ""
 "ଚିତ୍ର ଲେଖିବା ସମୟରେ '%s'କୁ ବନ୍ଦ କରିବାରେ ଅସଫଳ, ସମ୍ପୂର୍ଣ ତଥ୍ଯ ସଂରକ୍ଷିତ ନ ହୋଇଥାଇପାରେ: %s"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2609 gdk-pixbuf/gdk-pixbuf-io.c:2661
+#: gdk-pixbuf/gdk-pixbuf-io.c:2619 gdk-pixbuf/gdk-pixbuf-io.c:2671
 msgid "Insufficient memory to save image into a buffer"
 msgstr "ଚିତ୍ରକୁ ବଫରରେ ସଂରକ୍ଷିତ କରିବା ପାଇଁ ଯଥେଷ୍ଟ ସ୍ମୃତି ନାହିଁ"
 
-#: gdk-pixbuf/gdk-pixbuf-io.c:2707
+#: gdk-pixbuf/gdk-pixbuf-io.c:2717
 msgid "Error writing to image stream"
 msgstr "ଚିତ୍ର ଧାରାକୁ ଲେଖିବାରେ ତୃଟି"
 
@@ -194,7 +194,7 @@ msgstr "ଜୀବନୟାନ ଧାରଣ କରିବା ପାଇଂ ଯଥ�
 msgid "Malformed chunk in animation"
 msgstr "ଜୀବନୟାନରେ ବିକୃତ ଖଣ୍ଡ"
 
-#: gdk-pixbuf/io-ani.c:705
+#: gdk-pixbuf/io-ani.c:660
 msgid "The ANI image format"
 msgstr "ANI ଚିତ୍ର ଶୈଳୀ"
 
@@ -289,11 +289,11 @@ msgstr "bitmapକୁ ଧାରଣ କରିହେଲା ନାହିଁ"
 msgid "Couldn't load metafile"
 msgstr "metafileକୁ ଧାରଣ କରିହେଲା ନାହିଁ"
 
-#: gdk-pixbuf/io-gdip-utils.c:932
+#: gdk-pixbuf/io-gdip-utils.c:878
 msgid "Unsupported image format for GDI+"
 msgstr "GDI+ ପାଇଁ ଅସମର୍ଥିତ ଚିତ୍ରଶୈଳୀ"
 
-#: gdk-pixbuf/io-gdip-utils.c:939
+#: gdk-pixbuf/io-gdip-utils.c:885
 msgid "Couldn't save"
 msgstr "ସଂରକ୍ଷଣ କରିପାରିଲା ନାହିଁ"
 
@@ -483,8 +483,8 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "ପରିବର୍ତ୍ତିତ JPEG ର ଓସାର ବା ଉଚ୍ଚତା ଶୂନ୍ଯ."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy, c-format
-msgid "Color profile has invalid length '%d'."
+#, fuzzy
+msgid "Color profile has invalid length '%"
 msgstr "ରଙ୍ଗ ରୂପରେଖାରେ ଅବୈଧ ଲମ୍ବ %d."
 
 #: gdk-pixbuf/io-pcx.c:186

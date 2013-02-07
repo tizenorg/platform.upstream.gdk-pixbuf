@@ -128,6 +128,10 @@
     <keyword type="struct" name="struct GdkPixbufAnimation" link="gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct"/>
     <keyword type="struct" name="struct GdkPixbufAnimationIter" link="gdk-pixbuf-Animations.html#GdkPixbufAnimationIter-struct"/>
     <keyword type="function" name="gdk_pixbuf_animation_new_from_file ()" link="gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-file"/>
+    <keyword type="function" name="gdk_pixbuf_animation_new_from_resource ()" link="gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-resource" since="2.28"/>
+    <keyword type="function" name="gdk_pixbuf_animation_new_from_stream ()" link="gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-stream" since="2.28"/>
+    <keyword type="function" name="gdk_pixbuf_animation_new_from_stream_async ()" link="gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-stream-async" since="2.28"/>
+    <keyword type="function" name="gdk_pixbuf_animation_new_from_stream_finish ()" link="gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-stream-finish" since="2.28"/>
     <keyword type="function" name="gdk_pixbuf_animation_ref ()" link="gdk-pixbuf-Animations.html#gdk-pixbuf-animation-ref" deprecated="2.0: Use g_object_ref()."/>
     <keyword type="function" name="gdk_pixbuf_animation_unref ()" link="gdk-pixbuf-Animations.html#gdk-pixbuf-animation-unref" deprecated="2.0: Use g_object_unref()."/>
     <keyword type="function" name="gdk_pixbuf_animation_get_width ()" link="gdk-pixbuf-Animations.html#gdk-pixbuf-animation-get-width"/>
@@ -145,7 +149,7 @@
     <keyword type="function" name="gdk_pixbuf_simple_anim_set_loop ()" link="gdk-pixbuf-Animations.html#gdk-pixbuf-simple-anim-set-loop" since="2.18"/>
     <keyword type="function" name="gdk_pixbuf_simple_anim_get_loop ()" link="gdk-pixbuf-Animations.html#gdk-pixbuf-simple-anim-get-loop" since="2.18"/>
     <keyword type="property" name="The &quot;loop&quot; property" link="gdk-pixbuf-Animations.html#GdkPixbufSimpleAnim--loop"/>
-    <keyword type="" name="Loading an animation" link="GdkPixbufLoader.html#idm47653350484864"/>
+    <keyword type="" name="Loading an animation" link="GdkPixbufLoader.html#idm140658569765472"/>
     <keyword type="struct" name="struct GdkPixbufLoader" link="GdkPixbufLoader.html#GdkPixbufLoader-struct"/>
     <keyword type="function" name="gdk_pixbuf_loader_new ()" link="GdkPixbufLoader.html#gdk-pixbuf-loader-new"/>
     <keyword type="function" name="gdk_pixbuf_loader_new_with_type ()" link="GdkPixbufLoader.html#gdk-pixbuf-loader-new-with-type"/>
