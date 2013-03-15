@@ -38,7 +38,7 @@ msgstr ""
 "Project-Id-Version: gtk+\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
 "PO-Revision-Date: 2012-09-16 01:16+0200\n"
 "Last-Translator: Kenneth Nielsen <k.nielsen81@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -68,7 +68,7 @@ msgstr ""
 "Kunne ikke indlæse animationen \"%s\": årsag ukendt, formentlig en ødelagt "
 "animationsfil"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -502,8 +502,8 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Transformeret JPEG har bredde eller højde på nul."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy
-msgid "Color profile has invalid length '%"
+#, fuzzy, c-format
+msgid "Color profile has invalid length '%u'."
 msgstr "Farveprofil har ugyldig længde \"%d\"."
 
 #: gdk-pixbuf/io-pcx.c:186

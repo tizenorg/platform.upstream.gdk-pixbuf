@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: gtk+.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
 "PO-Revision-Date: 2010-05-24 22:57+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -45,7 +45,7 @@ msgstr ""
 "فشل تحميل الرسوم المتحرّكة '%s': السبب مجهول، ربما يكون ملف الرسوم المتحرّكة "
 "تالفًا"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -470,8 +470,8 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "صورة JPEG المُحوّلة ذات عرض أو ارتفاع صفري."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy
-msgid "Color profile has invalid length '%"
+#, fuzzy, c-format
+msgid "Color profile has invalid length '%u'."
 msgstr "طول لاحة %d اللون غير سليم. "
 
 #: gdk-pixbuf/io-pcx.c:186

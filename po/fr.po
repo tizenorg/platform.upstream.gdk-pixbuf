@@ -19,8 +19,8 @@ msgstr ""
 "Project-Id-Version: gdk-pixbuf master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
-"PO-Revision-Date: 2012-09-06 17:26+0200\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
+"PO-Revision-Date: 2013-02-12 16:45+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -49,7 +49,7 @@ msgstr ""
 "Impossible de charger l'animation « %s » : raison inconnue, probablement un "
 "fichier d'animation corrompu"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -487,9 +487,9 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Le PNG transformé a une largeur ou une hauteur nulle."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy
-msgid "Color profile has invalid length '%"
-msgstr "La longueur « %d » du profil de couleur n'est pas valable."
+#, c-format
+msgid "Color profile has invalid length '%u'."
+msgstr "La longueur « %u » du profil de couleur n'est pas valable."
 
 #: gdk-pixbuf/io-pcx.c:186
 msgid "Couldn't allocate memory for header"

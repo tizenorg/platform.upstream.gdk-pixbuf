@@ -5,14 +5,14 @@
 # Reviewed on 2004-02-19 by: Данило Шеган <dsegan@gmx.net>
 # Reviewed on 2005-07-08 by: Данило Шеган <dsegan@gmx.net>
 # Милош Поповић <gpopac@gmai, 2010.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011, 2012.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: transmission\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
-"PO-Revision-Date: 2012-09-06 22:25+0200\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
+"PO-Revision-Date: 2013-02-18 10:39+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -44,7 +44,7 @@ msgstr ""
 "неисправан запис"
 
 # ово има највише смисла
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -488,9 +488,9 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Преиначени ЈПЕГ има висину или ширину нула."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy
-msgid "Color profile has invalid length '%"
-msgstr "Профил боја је неисправне дужине „%d“."
+#, c-format
+msgid "Color profile has invalid length '%u'."
+msgstr "Профил боја није исправне дужине „%u“."
 
 #: gdk-pixbuf/io-pcx.c:186
 msgid "Couldn't allocate memory for header"
@@ -973,7 +973,3 @@ msgstr "Нисам успео да упишем у привремену дато
 #: gdk-pixbuf/io-xpm.c:817
 msgid "The XPM image format"
 msgstr "ИксПМ запис слике"
-
-# да ли је ово нешто нарочито за TIFF, или се и то може превести?
-#~ msgid "TIFFClose operation failed"
-#~ msgstr "Није успела радња затварања ТИФФ-а"

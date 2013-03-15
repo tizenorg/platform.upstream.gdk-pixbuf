@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: gtk+\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
 "PO-Revision-Date: 2010-11-22 20:20+0300\n"
 "Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
@@ -42,7 +42,7 @@ msgstr ""
 "Nu s-a putut încărca animația „%s” dintr-un motiv necunoscut, probabil un "
 "fișier animație corupt"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -479,8 +479,8 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Fișierul JPEG transformat are lățimea sau înălțimea zero."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy
-msgid "Color profile has invalid length '%"
+#, fuzzy, c-format
+msgid "Color profile has invalid length '%u'."
 msgstr "Profilul de culoare are lungime nevalidă %d."
 
 #: gdk-pixbuf/io-pcx.c:186

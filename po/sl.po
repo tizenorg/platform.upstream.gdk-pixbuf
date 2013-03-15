@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gdk-pixbuf master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
-"PO-Revision-Date: 2012-09-06 19:35+0100\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
+"PO-Revision-Date: 2013-02-16 22:50+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl\n"
@@ -22,15 +22,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-Language: Slovenian\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1064
 #: gdk-pixbuf/gdk-pixbuf-io.c:1330
 #, c-format
 msgid "Failed to open file '%s': %s"
-msgstr "Datoteke '%s' ni mogoče odpreti: %s"
+msgstr "Odpiranje datoteke '%s' je spodletelo: %s"
 
 #: gdk-pixbuf/gdk-pixbuf-animation.c:173 gdk-pixbuf/gdk-pixbuf-io.c:1076
 #, c-format
@@ -43,17 +42,17 @@ msgid ""
 "Failed to load animation '%s': reason not known, probably a corrupt "
 "animation file"
 msgstr ""
-"Animacije '%s' ni mogoče naložiti: razlog ni znan, verjetno pokvarjena "
-"datoteka"
+"Animacije '%s' ni mogoče naložiti: razlog ni znan, najverjetneje je datoteka "
+"okvarjena"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
 "Failed to load image '%s': reason not known, probably a corrupt image file"
 msgstr ""
-"Slike '%s' ni mogoče naložiti: vzrok ni znan, najverjetneje je datoteka "
-"pokvarjena"
+"Nalaganje slike '%s' je spodletelo: vzrok ni znan, najverjetneje je datoteka "
+"okvarjena"
 
 #: gdk-pixbuf/gdk-pixbuf-io.c:790
 #, c-format
@@ -86,7 +85,7 @@ msgstr "Neprepoznana vrsta slikovne datoteke"
 #: gdk-pixbuf/gdk-pixbuf-io.c:1121
 #, c-format
 msgid "Failed to load image '%s': %s"
-msgstr "Slike '%s' ni mogoče naložiti: %s"
+msgstr "Nalaganje slike '%s' je spodletelo: %s"
 
 #: gdk-pixbuf/gdk-pixbuf-io.c:2015 gdk-pixbuf/io-gdip-utils.c:837
 #, c-format
@@ -97,11 +96,11 @@ msgstr "Napaka med pisanjem v slikovno datoteko: %s"
 #, c-format
 msgid "This build of gdk-pixbuf does not support saving the image format: %s"
 msgstr ""
-"Ta izgradnja programa gdk-pixbuf ne podpira shranjevanja vrste slik: %s"
+"Ta izgradnja programa gdk-pixbuf ne podpira shranjevanja slik vrste: %s"
 
 #: gdk-pixbuf/gdk-pixbuf-io.c:2088
 msgid "Insufficient memory to save image to callback"
-msgstr "Za shranitev slike v povratni klic ni dovolj pomnilnika"
+msgstr "Za shranjevanje slike v povratni klic ni dovolj pomnilnika"
 
 #: gdk-pixbuf/gdk-pixbuf-io.c:2101
 msgid "Failed to open temporary file"
@@ -114,7 +113,7 @@ msgstr "Branje iz začasne datoteke je spodletelo"
 #: gdk-pixbuf/gdk-pixbuf-io.c:2372
 #, c-format
 msgid "Failed to open '%s' for writing: %s"
-msgstr "Datoteke '%s' ni mogoče odpreti za pisanje: %s"
+msgstr "Odpiranje datoteke '%s' za pisanje je spodletelo: %s"
 
 #: gdk-pixbuf/gdk-pixbuf-io.c:2398
 #, c-format
@@ -122,12 +121,12 @@ msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
 "%s"
 msgstr ""
-"Zapiranje datoteke '%s' med pisanjem slike je spodletelo; vseh podatkov ni "
-"bilo mogoče shraniti: %s"
+"Zapiranje datoteke '%s' med pisanjem slike je spodletelo: vseh podatkov ni "
+"mogoče shraniti: %s"
 
 #: gdk-pixbuf/gdk-pixbuf-io.c:2619 gdk-pixbuf/gdk-pixbuf-io.c:2671
 msgid "Insufficient memory to save image into a buffer"
-msgstr "Za shranitev slike v medpomnilnik ni dovolj pomnilnika"
+msgstr "Za shranjevanje slike v medpomnilnik ni dovolj pomnilnika"
 
 #: gdk-pixbuf/gdk-pixbuf-io.c:2717
 msgid "Error writing to image stream"
@@ -139,8 +138,8 @@ msgid ""
 "Internal error: Image loader module '%s' failed to complete an operation, "
 "but didn't give a reason for the failure"
 msgstr ""
-"Notranja napaka: modul nalagalnika slik '%s' ni uspel končati opravila, "
-"vendar ni podal razloga za neuspeh"
+"Notranja napaka: opravilo modula nalagalnika slik '%s' je spodletelo, vendar "
+"ni podanega razloga za neuspeh"
 
 #: gdk-pixbuf/gdk-pixbuf-loader.c:435
 #, c-format
@@ -149,24 +148,24 @@ msgstr "Postopno nalaganje vrste slik '%s' ni podprto"
 
 #: gdk-pixbuf/gdk-pixdata.c:160
 msgid "Image header corrupt"
-msgstr "Glava slike je pokvarjena"
+msgstr "Glava slike je okvarjena"
 
 #: gdk-pixbuf/gdk-pixdata.c:165
 msgid "Image format unknown"
-msgstr "Vrsta slike je neznana"
+msgstr "Vrsta slike ni znana"
 
 #: gdk-pixbuf/gdk-pixdata.c:170 gdk-pixbuf/gdk-pixdata.c:502
 msgid "Image pixel data corrupt"
-msgstr "Podatki o slikovnih točkav slike so pokvarjeni"
+msgstr "Podatki o slikovnih točkah slike so okvarjeni"
 
 #: gdk-pixbuf/gdk-pixdata.c:446
 #, c-format
 msgid "failed to allocate image buffer of %u byte"
 msgid_plural "failed to allocate image buffer of %u bytes"
-msgstr[0] "slikovnega medpomnilnika velikosti %u bajtov ni mogoče dodeliti"
-msgstr[1] "slikovnega medpomnilnika velikosti %u bajta ni mogoče dodeliti"
-msgstr[2] "slikovnega medpomnilnika velikosti %u bajtov ni mogoče dodeliti"
-msgstr[3] "slikovnega medpomnilnika velikosti %u bajtov ni mogoče dodeliti"
+msgstr[0] "ni mogoče dodeliti slikovnega medpomnilnika velikosti %u bajtov"
+msgstr[1] "ni mogoče dodeliti slikovnega medpomnilnika velikosti %u bajta"
+msgstr[2] "ni mogoče dodeliti slikovnega medpomnilnika velikosti %u bajtov"
+msgstr[3] "ni mogoče dodeliti slikovnega medpomnilnika velikosti %u bajtov"
 
 #: gdk-pixbuf/io-ani.c:244
 msgid "Unexpected icon chunk in animation"
@@ -180,11 +179,11 @@ msgstr "Neveljavna glava animacije"
 #: gdk-pixbuf/io-ani.c:352 gdk-pixbuf/io-ani.c:374 gdk-pixbuf/io-ani.c:458
 #: gdk-pixbuf/io-ani.c:485 gdk-pixbuf/io-ani.c:536 gdk-pixbuf/io-ani.c:608
 msgid "Not enough memory to load animation"
-msgstr "Za naložitev animacije ni dovolj pomnilnika"
+msgstr "Za nalaganje animacije ni dovolj pomnilnika"
 
 #: gdk-pixbuf/io-ani.c:392 gdk-pixbuf/io-ani.c:418 gdk-pixbuf/io-ani.c:437
 msgid "Malformed chunk in animation"
-msgstr "Izmaličen del v animaciji"
+msgstr "Nepravilno oblikovan del v animaciji"
 
 #: gdk-pixbuf/io-ani.c:660
 msgid "The ANI image format"
@@ -193,15 +192,15 @@ msgstr "Vrsta zapisa slike ANI"
 #: gdk-pixbuf/io-bmp.c:229 gdk-pixbuf/io-bmp.c:266 gdk-pixbuf/io-bmp.c:337
 #: gdk-pixbuf/io-bmp.c:369 gdk-pixbuf/io-bmp.c:392 gdk-pixbuf/io-bmp.c:495
 msgid "BMP image has bogus header data"
-msgstr "Slika BMP ima lažne podatke glave"
+msgstr "Slika BMP ima neveljavne podatke glave"
 
 #: gdk-pixbuf/io-bmp.c:240 gdk-pixbuf/io-bmp.c:432
 msgid "Not enough memory to load bitmap image"
-msgstr "Za naložitev bitne slike ni dovolj pomnilnika"
+msgstr "Za nalaganje bitne slike ni dovolj pomnilnika"
 
 #: gdk-pixbuf/io-bmp.c:318
 msgid "BMP image has unsupported header size"
-msgstr "Slika BMP ima nepodprto velikost glave"
+msgstr "Slika BMP ima nepodprto velikost podatkov glave"
 
 #: gdk-pixbuf/io-bmp.c:356
 msgid "Topdown BMP images cannot be compressed"
@@ -209,11 +208,11 @@ msgstr "Slik BMP ni mogoče stisniti"
 
 #: gdk-pixbuf/io-bmp.c:716 gdk-pixbuf/io-pnm.c:707
 msgid "Premature end-of-file encountered"
-msgstr "Zaznan je bil predčasni konec datoteke"
+msgstr "Zaznan je predčasni konec datoteke"
 
 #: gdk-pixbuf/io-bmp.c:1328
 msgid "Couldn't allocate memory for saving BMP file"
-msgstr "Pomnilnika za shranitev datoteke BMP ni mogoče dodeliti"
+msgstr "Pomnilnika za shranjevanje datoteke BMP ni mogoče dodeliti"
 
 #: gdk-pixbuf/io-bmp.c:1369
 msgid "Couldn't write to BMP file"
@@ -330,7 +329,7 @@ msgstr "Krožni vnos razpredelnice v datoteki GIF"
 #: gdk-pixbuf/io-gif.c:866 gdk-pixbuf/io-gif.c:1488 gdk-pixbuf/io-gif.c:1541
 #: gdk-pixbuf/io-gif.c:1657
 msgid "Not enough memory to load GIF file"
-msgstr "Za naložitev slike GIF ni dovolj pomnilnika"
+msgstr "Za nalaganje slike GIF ni dovolj pomnilnika"
 
 #: gdk-pixbuf/io-gif.c:960
 msgid "Not enough memory to composite a frame in GIF file"
@@ -463,7 +462,7 @@ msgid ""
 "Insufficient memory to load image, try exiting some applications to free "
 "memory"
 msgstr ""
-"Za naložitev slike ni dovolj pomnilnika. Za sprostitev pomnilnika zaprite "
+"Za nalaganje slike ni dovolj pomnilnika. Za sprostitev pomnilnika zaprite "
 "nekaj programov."
 
 #: gdk-pixbuf/io-jpeg.c:651 gdk-pixbuf/io-jpeg.c:865
@@ -474,16 +473,16 @@ msgstr "Nepodprt barvni prostor JPEG (%s)"
 #: gdk-pixbuf/io-jpeg.c:764 gdk-pixbuf/io-jpeg.c:1044
 #: gdk-pixbuf/io-jpeg.c:1308 gdk-pixbuf/io-jpeg.c:1318
 msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "Pomnilnika za naložitev datoteke JPEG ni mogoče dodeliti"
+msgstr "Pomnilnika za nalaganje datoteke JPEG ni mogoče dodeliti"
 
 #: gdk-pixbuf/io-jpeg.c:1018
 msgid "Transformed JPEG has zero width or height."
 msgstr "Preoblikovana slika JPEG ima ničelno višino ali širino."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy
-msgid "Color profile has invalid length '%"
-msgstr "Barvni profil je neveljavne dolžine '%d'."
+#, c-format
+msgid "Color profile has invalid length '%u'."
+msgstr "Barvni profil je neveljavne dolžine '%u'."
 
 #: gdk-pixbuf/io-pcx.c:186
 msgid "Couldn't allocate memory for header"
@@ -567,7 +566,7 @@ msgstr "Usodna napaka v datoteki slike PNG: %s"
 
 #: gdk-pixbuf/io-png.c:315
 msgid "Insufficient memory to load PNG file"
-msgstr "Za naložitev datoteke PNG ni dovolj pomnilnika"
+msgstr "Za nalaganje datoteke PNG ni dovolj pomnilnika"
 
 #: gdk-pixbuf/io-png.c:656
 #, c-format
@@ -575,8 +574,8 @@ msgid ""
 "Insufficient memory to store a %lu by %lu image; try exiting some "
 "applications to reduce memory usage"
 msgstr ""
-"Za shranitev slike velikosti %lu x %lu ni dovolj pomnilnika. Za sprostitev "
-"pomnilnika je treba zapreti nekaj programov."
+"Za shranjevanje slike velikosti %lu x %lu ni dovolj pomnilnika. Za "
+"sprostitev pomnilnika je treba zapreti nekaj programov."
 
 #: gdk-pixbuf/io-png.c:719
 msgid "Fatal error reading PNG image file"
@@ -673,11 +672,11 @@ msgstr ""
 
 #: gdk-pixbuf/io-pnm.c:766
 msgid "Cannot allocate memory for loading PNM image"
-msgstr "Pomnilnika za naložitev slike PNM ni mogoče dodeliti"
+msgstr "Pomnilnika za nalaganje slike PNM ni mogoče dodeliti"
 
 #: gdk-pixbuf/io-pnm.c:816
 msgid "Insufficient memory to load PNM context struct"
-msgstr "Za naložitev zgradbe vsebine PNM ni dovolj pomnilnika"
+msgstr "Za nalaganje zgradbe vsebine PNM ni dovolj pomnilnika"
 
 #: gdk-pixbuf/io-pnm.c:867
 msgid "Unexpected end of PNM image data"
@@ -685,7 +684,7 @@ msgstr "Nepričakovan konec podatkov slike PNM"
 
 #: gdk-pixbuf/io-pnm.c:995
 msgid "Insufficient memory to load PNM file"
-msgstr "Za naložitev datoteke PNM ni dovolj pomnilnika"
+msgstr "Za nalaganje datoteke PNM ni dovolj pomnilnika"
 
 #: gdk-pixbuf/io-pnm.c:1079
 msgid "The PNM/PBM/PGM/PPM image format family"
@@ -761,7 +760,7 @@ msgstr "Nepodprta različica slike RAS"
 
 #: gdk-pixbuf/io-ras.c:170 gdk-pixbuf/io-ras.c:199
 msgid "Not enough memory to load RAS image"
-msgstr "Za naložitev slike RAS ni dovolj pomnilnika"
+msgstr "Za nalaganje slike RAS ni dovolj pomnilnika"
 
 #: gdk-pixbuf/io-ras.c:544
 msgid "The Sun raster image format"
@@ -890,7 +889,7 @@ msgstr "Slika ima ničelno višino"
 
 #: gdk-pixbuf/io-wbmp.c:274
 msgid "Not enough memory to load image"
-msgstr "Za naložitev datoteke ni dovolj pomnilnika"
+msgstr "Za nalaganje datoteke ni dovolj pomnilnika"
 
 #: gdk-pixbuf/io-wbmp.c:333
 msgid "Couldn't save the rest"
@@ -906,7 +905,7 @@ msgstr "Neveljavna datoteka XBM"
 
 #: gdk-pixbuf/io-xbm.c:314
 msgid "Insufficient memory to load XBM image file"
-msgstr "Za naložitev slikovne datoteke XBM ni dovolj pomnilnika"
+msgstr "Za nalaganje slikovne datoteke XBM ni dovolj pomnilnika"
 
 #: gdk-pixbuf/io-xbm.c:462
 msgid "Failed to write to temporary file when loading XBM image"
@@ -942,7 +941,7 @@ msgstr "Datoteka XPM ima neveljavno število barv"
 
 #: gdk-pixbuf/io-xpm.c:523 gdk-pixbuf/io-xpm.c:532 gdk-pixbuf/io-xpm.c:584
 msgid "Cannot allocate memory for loading XPM image"
-msgstr "Pomnilnika za naložitev slike XPM ni mogoče dodeliti"
+msgstr "Pomnilnika za nalaganje slike XPM ni mogoče dodeliti"
 
 #: gdk-pixbuf/io-xpm.c:546
 msgid "Cannot read XPM colormap"

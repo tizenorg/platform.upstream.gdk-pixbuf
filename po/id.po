@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gdk-pixbuf master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
 "PO-Revision-Date: 2012-09-04 17:55+0700\n"
 "Last-Translator: Dirgita <dirgitadevina@yahoo.co.id>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
@@ -42,7 +42,7 @@ msgstr ""
 "Gagal memuat animasi '%s': alasan tak diketahui, mungkin berkas animasi yang "
 "rusak"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -473,8 +473,8 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "JPEG yang telah ditransformasi memiliki lebar atau tinggi 0."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy
-msgid "Color profile has invalid length '%"
+#, fuzzy, c-format
+msgid "Color profile has invalid length '%u'."
 msgstr "Panjang profil warna '%d' tidak sah."
 
 #: gdk-pixbuf/io-pcx.c:186

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gdk-pixbuf.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
 "PO-Revision-Date: 2012-02-15 11:52+0700\n"
 "Last-Translator: Seng Sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <supprot@khmeros.info>\n"
@@ -38,7 +38,7 @@ msgid ""
 "animation file"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ផ្ទុក​ចលនា '%s' ៖ មិន​ដឹង​ហេតុផល ប្រហែល​ជា​ឯកសារ​​របស់​ចលនា​ខូច"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -465,8 +465,8 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "បាន​បម្លែង JPEG មាន​កម្ពស់ ឬ​ទទឹង ០ ។"
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy
-msgid "Color profile has invalid length '%"
+#, fuzzy, c-format
+msgid "Color profile has invalid length '%u'."
 msgstr "ទម្រង់​ពណ៌​មាន​ប្រវែង​មិន​ត្រឹមត្រូវ %d ។"
 
 #: gdk-pixbuf/io-pcx.c:186

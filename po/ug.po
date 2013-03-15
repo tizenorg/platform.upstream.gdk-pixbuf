@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: gdk-pixbuf\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
-"PO-Revision-Date: 2011-11-09 16:10+0900\n"
-"Last-Translator: Sahran <sahran@live.com>\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
+"PO-Revision-Date: 2013-02-22 22:21+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr ""
 "‹%s› جانلاندۇرۇمنى يۈكلىيەلمىدى: سەۋەبى ئېنىق ئەمەس ياكى جانلاندۇرۇم ھۆججەت "
 "بۇزۇلۇپ كەتكەن بولۇشى مۇمكىن"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -404,7 +404,7 @@ msgstr "سۈرەت بەك چوڭ،  ICO شەكلىدە ساقلىغىلى بول
 
 #: gdk-pixbuf/io-ico.c:1013
 msgid "Cursor hotspot outside image"
-msgstr "نۇر بەلگە ئورنى سۈرەت سىرتىدا"
+msgstr "نۇربەلگە ئورنى سۈرەت سىرتىدا"
 
 #: gdk-pixbuf/io-ico.c:1036
 #, c-format
@@ -471,9 +471,9 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "ئايلاندۇرۇلغان JPEG نىڭ كەڭلىكى ياكى ئۇزۇنلۇقى نۆل"
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy
-msgid "Color profile has invalid length '%"
-msgstr "رەڭ سەپلىمە ھۆججىتىنىڭ ئۇزۇنلۇقى ‹%d› ئىناۋەتسىز."
+#, c-format
+msgid "Color profile has invalid length '%u'."
+msgstr "رەڭ سەپلىمە ھۆججىتىنىڭ ئۇزۇنلۇقى ‹%u› ئىناۋەتسىز."
 
 #: gdk-pixbuf/io-pcx.c:186
 msgid "Couldn't allocate memory for header"

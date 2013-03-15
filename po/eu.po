@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
 "PO-Revision-Date: 2012-03-03 11:51+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr ""
 "Ezin izan da '%s' animazioa kargatu: arrazoia ez dakigu, beharbada "
 "hondatutako animazio-fitxategia izango da"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -475,8 +475,8 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Bihurtutako JPEGren zabalera edo altuera zero da."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy
-msgid "Color profile has invalid length '%"
+#, fuzzy, c-format
+msgid "Color profile has invalid length '%u'."
 msgstr "Kolore-profilak luzera baliogabea du: %d."
 
 #: gdk-pixbuf/io-pcx.c:186

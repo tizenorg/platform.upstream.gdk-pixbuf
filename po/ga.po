@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gtk+.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-02-02 01:06-0500\n"
+"POT-Creation-Date: 2013-03-02 10:33-0500\n"
 "PO-Revision-Date: 2010-06-08 12:30-0600\n"
 "Last-Translator: Seán de Búrca <leftmostcat@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -42,7 +42,7 @@ msgstr ""
 "Theip ar luchtú beochan '%s': fáth anaithnid, is dócha comhad beochana "
 "truaillithe"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:272 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -480,7 +480,8 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Tá leithead nó airde nialais ag JPEG trasfhoirmithe."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-msgid "Color profile has invalid length '%"
+#, c-format
+msgid "Color profile has invalid length '%u'."
 msgstr ""
 
 #: gdk-pixbuf/io-pcx.c:186
