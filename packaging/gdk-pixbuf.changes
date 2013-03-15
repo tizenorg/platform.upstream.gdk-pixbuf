@@ -1,3 +1,6 @@
+* Fri Mar 15 2013 Anas Nashif <anas.nashif@intel.com> upstream/2.27.2@57ddd43
+- Update to 2.27.2
+
 * Fri Feb 08 2013 Patrick McCarty <patrick.mccarty@linux.intel.com> 8f08a7d
 - Update package name in baselibs.conf
 
