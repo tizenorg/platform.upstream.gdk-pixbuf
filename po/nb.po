@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gdk-pixbuf 2.25.x\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-03-02 10:33-0500\n"
+"POT-Creation-Date: 2013-03-18 17:16-0400\n"
 "PO-Revision-Date: 2013-02-25 17:10+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -38,7 +38,7 @@ msgstr ""
 "Feil under lasting av animasjon «%s»: årsak ikke kjent, sannsynligvis "
 "korrupt animasjonsfil"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:280 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""

@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: gtk+.master.te\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-03-02 10:33-0500\n"
+"POT-Creation-Date: 2013-03-18 17:16-0400\n"
 "PO-Revision-Date: 2012-09-19 00:18+0530\n"
 "Last-Translator: Krishnababu Krothapalli <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <Fedora-trans-te@redhat.com>\n"
@@ -44,7 +44,7 @@ msgid ""
 msgstr ""
 "'%s': సచేతనాన్ని నింపుటలో విఫలమైంది. కారణం తెలియదు . బహుశా  సచేతన దస్త్రము చెడిపోయి  వుండవచ్చు."
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:280 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""

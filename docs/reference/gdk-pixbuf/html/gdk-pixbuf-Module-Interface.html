@@ -8,7 +8,7 @@
 <link rel="up" href="rn01.html" title="API Reference">
 <link rel="prev" href="GdkPixbufLoader.html" title="GdkPixbufLoader">
 <link rel="next" href="gdk-pixbuf-gdk-pixbuf-Xlib-initialization.html" title="gdk-pixbuf Xlib initialization">
-<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -319,7 +319,7 @@ Returns the mime types supported by the format.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>-terminated array of mime types which must be freed with
+<td>a <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of mime types which must be freed with
 <code class="function">g_strfreev()</code> when it is no longer needed. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
 </td>
 </tr>
@@ -348,7 +348,7 @@ given format.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>a <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>-terminated array of filename extensions which must be
+<td>a <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of filename extensions which must be
 freed with <code class="function">g_strfreev()</code> when it is no longer needed. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
 </td>
 </tr>
@@ -543,11 +543,11 @@ use the <code class="function">gdk_pixbuf_format_*</code> functions.
 </tr>
 <tr>
 <td><p><span class="term"><span class="type">gchar</span> **<em class="structfield"><code><a name="GdkPixbufFormat.mime-types"></a>mime_types</code></em>;</span></p></td>
-<td>a <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>-terminated array of MIME types for the image format.</td>
+<td>a <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of MIME types for the image format.</td>
 </tr>
 <tr>
 <td><p><span class="term"><span class="type">gchar</span> **<em class="structfield"><code><a name="GdkPixbufFormat.extensions"></a>extensions</code></em>;</span></p></td>
-<td>a <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>-terminated array of typical filename extensions for the
+<td>a <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of typical filename extensions for the
 image format.</td>
 </tr>
 <tr>
@@ -618,7 +618,7 @@ operations.
 <p>
 The signature of a module is a set of prefixes. Prefixes are encoded as
 pairs of ordinary strings, where the second string, called the mask, if 
-not <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>, must be of the same length as the first one and may contain 
+not <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>, must be of the same length as the first one and may contain 
 ' ', '!', 'x', 'z', and 'n' to indicate bytes that must be matched, 
 not matched, "don't-care"-bytes, zeros and non-zeros. 
 Each prefix has an associated integer that describes the relevance of 
@@ -633,7 +633,7 @@ like an 'x'.
 <p>
 The signature of a module is stored as an array of 
 <a class="link" href="gdk-pixbuf-Module-Interface.html#GdkPixbufModulePattern" title="struct GdkPixbufModulePattern"><span class="type">GdkPixbufModulePattern</span></a>s. The array is terminated by a pattern
-where the <em class="parameter"><code>prefix</code></em> is <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>.
+where the <em class="parameter"><code>prefix</code></em> is <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>.
 </p>
 <p>
 </p>
@@ -784,7 +784,7 @@ signal.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>anim</code></em> :</span></p></td>
-<td>if an animation is being loaded, the <a class="link" href="gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="type">GdkPixbufAnimation</span></a>, else <a href="/home/mclasen/gnome/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>.</td>
+<td>if an animation is being loaded, the <a class="link" href="gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="type">GdkPixbufAnimation</span></a>, else <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
@@ -1071,6 +1071,6 @@ current frame.</td>
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.18.1</div>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

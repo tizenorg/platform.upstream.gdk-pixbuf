@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: gtk+.master.mai\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-03-02 10:33-0500\n"
+"POT-Creation-Date: 2013-03-18 17:16-0400\n"
 "PO-Revision-Date: 2009-09-20 11:07+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Hindi <hindi.sf.net>\n"
@@ -44,7 +44,7 @@ msgid ""
 "animation file"
 msgstr "संजीवन '%s' केँ लोड करबामे असफल, कारण अज्ञात, साइत अधलाह संजीवन फाइल."
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:280 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""

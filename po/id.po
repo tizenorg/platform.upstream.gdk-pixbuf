@@ -4,23 +4,23 @@
 #
 # Ahmad Riza H Nst  <rizahnst@gnome.org>, 2006.
 # Mohammad DAMT <mdamt@bisnisweb.com>, 2003.
-# Andika Triwidada <andika@gmail.com>, 2010, 2012.
+# Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gdk-pixbuf master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-03-02 10:33-0500\n"
-"PO-Revision-Date: 2012-09-04 17:55+0700\n"
-"Last-Translator: Dirgita <dirgitadevina@yahoo.co.id>\n"
-"Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
+"POT-Creation-Date: 2013-03-18 17:16-0400\n"
+"PO-Revision-Date: 2013-02-18 08:18+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1064
 #: gdk-pixbuf/gdk-pixbuf-io.c:1330
@@ -42,7 +42,7 @@ msgstr ""
 "Gagal memuat animasi '%s': alasan tak diketahui, mungkin berkas animasi yang "
 "rusak"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:280 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -473,9 +473,9 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "JPEG yang telah ditransformasi memiliki lebar atau tinggi 0."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy, c-format
+#, c-format
 msgid "Color profile has invalid length '%u'."
-msgstr "Panjang profil warna '%d' tidak sah."
+msgstr "Panjang profil warna '%u' tidak sah."
 
 #: gdk-pixbuf/io-pcx.c:186
 msgid "Couldn't allocate memory for header"
@@ -941,6 +941,3 @@ msgstr "Saat membuka gambar XPM ini, ada kegagalan menulis ke berkas sementara"
 #: gdk-pixbuf/io-xpm.c:817
 msgid "The XPM image format"
 msgstr "Format gambar XPM"
-
-#~ msgid "TIFFClose operation failed"
-#~ msgstr "Operasi TIFFClose gagal"

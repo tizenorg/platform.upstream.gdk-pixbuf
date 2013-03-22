@@ -11,16 +11,16 @@
 # Hendrik Brandt <heb@gnome-de.org>, 2004-2005.
 # Andre Klapper <ak-47@gmx.net>, 2008.
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2009-2012.
-# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009, 2010.
 # Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
+# Christian Kirbach <christian.kirbach@gmail.com>, 2009, 2010, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gdk-pixbuf master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-03-02 10:33-0500\n"
-"PO-Revision-Date: 2013-02-01 21:20+0100\n"
+"POT-Creation-Date: 2013-03-18 17:16-0400\n"
+"PO-Revision-Date: 2013-03-04 00:27+0100\n"
 "Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
-"X-Generator: Gtranslator 2.91.5\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1064
 #: gdk-pixbuf/gdk-pixbuf-io.c:1330
@@ -52,7 +52,7 @@ msgstr ""
 "Animation »%s« konnte nicht geladen werden: Grund unbekannt, vermutlich eine "
 "defekte Animationsdatei"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:280 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -489,9 +489,9 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Höhe oder Breite des transformierten JPEGs beträgt null."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy, c-format
+#, c-format
 msgid "Color profile has invalid length '%u'."
-msgstr "Farbprofil hat die ungültige Länge »%d«."
+msgstr "Farbprofil hat die ungültige Länge »%u«."
 
 #: gdk-pixbuf/io-pcx.c:186
 msgid "Couldn't allocate memory for header"

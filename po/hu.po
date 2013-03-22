@@ -6,21 +6,22 @@
 # Andras Timar <timar at gnome dot hu>, 2002.
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2004, 2005.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2004, 2005, 2007, 2008, 2009, 2010, 2012, 2013.
+# Balázs Úr <urbalazs at gmail dot com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gtk+ master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-03-02 10:33-0500\n"
-"PO-Revision-Date: 2013-01-24 23:46+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"POT-Creation-Date: 2013-03-18 17:16-0400\n"
+"PO-Revision-Date: 2013-03-15 11:36+0100\n"
+"Last-Translator: Balázs Úr <urbalazs at gmail dot com>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.2\n"
 
 #: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1064
 #: gdk-pixbuf/gdk-pixbuf-io.c:1330
@@ -42,7 +43,7 @@ msgstr ""
 "Nem sikerült betölteni a(z) „%s” animációt: ok ismeretlen, valószínűleg "
 "sérült az animációfájl"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:280 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -476,9 +477,9 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Az átalakított JPEG szélessége vagy magassága nulla."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy, c-format
+#, c-format
 msgid "Color profile has invalid length '%u'."
-msgstr "A színprofil hossza (%d) érvénytelen."
+msgstr "A színprofil hossza („%u”) érvénytelen."
 
 #: gdk-pixbuf/io-pcx.c:186
 msgid "Couldn't allocate memory for header"

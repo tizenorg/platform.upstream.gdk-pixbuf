@@ -354,7 +354,7 @@ GTESTER = gtester		# in $PATH for non-GLIB packages
 GTESTER_REPORT = gtester-report		# in $PATH for non-GLIB packages
 
 # initialize variables for unconditional += appending
-EXTRA_DIST = 
+EXTRA_DIST = gengir_gdkpixbuf.bat gen-file-list-gdkpixbuf.py
 TEST_PROGS = 
 
 ### testing rules

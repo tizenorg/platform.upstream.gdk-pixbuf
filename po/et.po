@@ -9,15 +9,15 @@
 # Tõivo Leedjärv <toivo linux ee>, 2002-2004.
 # Priit Laes <amd tt ee>, 2004, 2005.
 # Ivar Smolin <okul linux ee>, 2005-2010.
-# Mattias Põldaru <mahfiaz@gmail.com>, 2009-2010, 2012.
+# Mattias Põldaru <mahfiaz@gmail.com>, 2009-2010, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gdk-pixbuf MASTER\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-03-02 10:33-0500\n"
-"PO-Revision-Date: 2012-10-21 21:09+0300\n"
+"POT-Creation-Date: 2013-03-18 17:16-0400\n"
+"PO-Revision-Date: 2013-03-12 22:43+0300\n"
 "Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
 "Language-Team: Estonian <>\n"
 "Language: et\n"
@@ -46,7 +46,7 @@ msgstr ""
 "Tõrge animatsiooni '%s' laadimisel: põhjus teadmata, arvatavasti on "
 "animatsioonifail rikutud"
 
-#: gdk-pixbuf/gdk-pixbuf-animation.c:277 gdk-pixbuf/gdk-pixbuf-io.c:1112
+#: gdk-pixbuf/gdk-pixbuf-animation.c:280 gdk-pixbuf/gdk-pixbuf-io.c:1112
 #: gdk-pixbuf/gdk-pixbuf-io.c:1382
 #, c-format
 msgid ""
@@ -475,9 +475,9 @@ msgid "Transformed JPEG has zero width or height."
 msgstr "Transformeeritud JPEG laius või kõrgus on null."
 
 #: gdk-pixbuf/io-jpeg.c:1279
-#, fuzzy, c-format
+#, c-format
 msgid "Color profile has invalid length '%u'."
-msgstr "Värvusprofiilil on vigane pikkus %d."
+msgstr "Värvusprofiilil pikkus '%u' on vigane."
 
 #: gdk-pixbuf/io-pcx.c:186
 msgid "Couldn't allocate memory for header"
