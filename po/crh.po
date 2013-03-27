@@ -1,23 +1,23 @@
 # Translation of gtk+ to Qırımtatarca.
 # This file is distributed under the same license as the gtk+ package.
+# Reşat SABIQ <tilde.birlik@gmail.com>, 2009, 2010, 2013.
 #
-# Reşat SABIQ <tilde.birlik@gmail.com>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gtk+ TRUNK\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-"
 "pixbuf\n"
-"POT-Creation-Date: 2013-03-18 17:16-0400\n"
-"PO-Revision-Date: 2010-05-02 14:03-0500\n"
+"POT-Creation-Date: 2013-03-25 22:06-0400\n"
+"PO-Revision-Date: 2013-03-24 20:24-0500\n"
 "Last-Translator: Reşat SABIQ <tilde.birlik@gmail.com>\n"
-"Language-Team: QIRIMTATARCA (Qırım Türkçesi) <tilde-birlik-tercime@lists."
+"Language-Team: QIRIMTATARCA (Qırım Türkçesi) <tilde-birlik-meydan@lists."
 "sourceforge.net>\n"
 "Language: crh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: UTF-8\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 # gdk-pixbuf/gdk-pixbuf-animation.c:144 gdk-pixbuf/gdk-pixbuf-io.c:516
 #: gdk-pixbuf/gdk-pixbuf-animation.c:160 gdk-pixbuf/gdk-pixbuf-io.c:1064
@@ -30,7 +30,7 @@ msgstr "'%s' dosyesi açılamadı: %s"
 #: gdk-pixbuf/gdk-pixbuf-animation.c:173 gdk-pixbuf/gdk-pixbuf-io.c:1076
 #, c-format
 msgid "Image file '%s' contains no data"
-msgstr "Suret dosyesi '%s' iç bir veri ihtiva etmey"
+msgstr "Suret dosyesi '%s' hiç bir veri ihtiva etmey"
 
 # gdk-pixbuf/gdk-pixbuf-animation.c:233
 #: gdk-pixbuf/gdk-pixbuf-animation.c:212
@@ -58,13 +58,13 @@ msgstr "Suret-yükleme modülini yükleyamayım: %s: %s"
 
 # gdk-pixbuf/gdk-pixbuf-io.c:314
 #: gdk-pixbuf/gdk-pixbuf-io.c:805
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Image-loading module %s does not export the proper interface; perhaps it's "
 "from a different gdk-pixbuf version?"
 msgstr ""
-"Suret-yükleme modüli %s uyğun arayüzni ihraç etmey; yoqsa o farqlı bir GTK "
-"sürümindenmidir?"
+"Suret-yükleme modüli %s uyğun arayüzni ihrac etmey; yoqsa o farqlı bir gdk-"
+"pixbuf sürümindenmidir?"
 
 # gdk-pixbuf/gdk-pixbuf-io.c:425 gdk-pixbuf/gdk-pixbuf-io.c:451
 #: gdk-pixbuf/gdk-pixbuf-io.c:814 gdk-pixbuf/gdk-pixbuf-io.c:865
@@ -129,7 +129,7 @@ msgid ""
 "Failed to close '%s' while writing image, all data may not have been saved: "
 "%s"
 msgstr ""
-"Suretni yazğanda '%s' qapatılamadı, verilerniñ episi saqlanmağan ola bilir: "
+"Suretni yazğanda '%s' qapatılamadı, verilerniñ hepsi saqlanmağan ola bilir: "
 "%s"
 
 # tüklü
@@ -397,9 +397,8 @@ msgid "Version %s of the GIF file format is not supported"
 msgstr "GIF dosye formatınıñ %s sürümi desteklenmey"
 
 #: gdk-pixbuf/io-gif.c:1241
-#, fuzzy
 msgid "Resulting GIF image has zero size"
-msgstr "Suret kenişligi sıfırdır"
+msgstr "Neticedeki GIF suretiniñ ölçüsi sıfırdır"
 
 # gdk-pixbuf/io-gif.c:1178
 #: gdk-pixbuf/io-gif.c:1320
@@ -495,7 +494,7 @@ msgstr "Dönüştirilgen JPEG2000 kenişligi ve yüksekligi sıfırdır."
 # gdk-pixbuf/gdk-pixbuf-io.c:425 gdk-pixbuf/gdk-pixbuf-io.c:451
 #: gdk-pixbuf/io-jasper.c:136
 msgid "Image type currently not supported"
-msgstr "Suret türü al-azırda desteklenmey"
+msgstr "Suret türü hal-hazırda desteklenmey"
 
 # gdk-pixbuf/io-jpeg.c:529
 #: gdk-pixbuf/io-jasper.c:148 gdk-pixbuf/io-jasper.c:156
@@ -549,7 +548,7 @@ msgstr "Dönüştirilgen JPEG kenişligi yaki yüksekligi sıfırdır."
 #: gdk-pixbuf/io-jpeg.c:1279
 #, c-format
 msgid "Color profile has invalid length '%u'."
-msgstr ""
+msgstr "Tüs profiliniñ uzunlığı keçersiz: '%u'."
 
 # gdk-pixbuf/io-xpm.c:1321
 #: gdk-pixbuf/io-pcx.c:186
@@ -568,7 +567,7 @@ msgstr "Suret keçersiz kenişlikke ve/yaki yükseklikke malik"
 # gdk-pixbuf/io-bmp.c:255
 #: gdk-pixbuf/io-pcx.c:612 gdk-pixbuf/io-pcx.c:673
 msgid "Image has unsupported bpp"
-msgstr "Suret desteklenmegen Piksel-Başına Bit qıymetine saip"
+msgstr "Suret desteklenmegen Piksel-Başına Bit qıymetine sahip"
 
 # tüklü
 # gdk-pixbuf/io-bmp.c:255
@@ -588,9 +587,8 @@ msgstr "Satır verileri içün hafiza tahsis etilamadı"
 
 # gdk-pixbuf/io-xpm.c:1321
 #: gdk-pixbuf/io-pcx.c:656
-#, fuzzy
 msgid "Couldn't allocate memory for PCX image"
-msgstr "Başlıq içün hafiza tahsis etilamadı"
+msgstr "PCX sureti içün hafiza tahsis etilamadı"
 
 #: gdk-pixbuf/io-pcx.c:703
 msgid "Didn't get all lines of PCX image"
@@ -598,22 +596,21 @@ msgstr "PCX suretiniñ bütün satırları alınmadı"
 
 #: gdk-pixbuf/io-pcx.c:710
 msgid "No palette found at end of PCX data"
-msgstr "PCX verileriniñ soñunda iç bir palet tapılmadı"
+msgstr "PCX verileriniñ soñunda hiç bir palet tapılmadı"
 
 #: gdk-pixbuf/io-pcx.c:755
 msgid "The PCX image format"
 msgstr "PCX suret formatı"
 
 #: gdk-pixbuf/io-pixdata.c:148
-#, fuzzy
 msgid "Transformed pixbuf has zero width or height."
-msgstr "Dönüştirilgen PNG suretiniñ kenişligi yaki yüksekligi sıfırdır."
+msgstr ""
+"Dönüştirilgen piksel buferi (pixbuf) kenişligi yaki yüksekligi sıfırdır."
 
 # gdk-pixbuf/gdk-pixdata.c:150
 #: gdk-pixbuf/io-pixdata.c:186
-#, fuzzy
 msgid "The GdkPixdata format"
-msgstr "GIF suret formatı"
+msgstr "GdkPixdata formatı"
 
 # gdk-pixbuf/io-pnm.c:423 gdk-pixbuf/io-pnm.c:451 gdk-pixbuf/io-pnm.c:483
 #: gdk-pixbuf/io-png.c:54
@@ -649,12 +646,12 @@ msgstr "PNG dosyesini yüklemek içün yetersiz hafiza"
 
 # gdk-pixbuf/io-png.c:536
 #: gdk-pixbuf/io-png.c:656
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Insufficient memory to store a %lu by %lu image; try exiting some "
 "applications to reduce memory usage"
 msgstr ""
-"%ld x %ld suretini mağazlamaq içün yetersiz hafiza; hafiza qullanımını "
+"%lu x %lu suretini mağazlamaq içün yetersiz hafiza; hafiza qullanımını "
 "azlaştırmaq içün bazı uyğulamalardan çıquvnı deñeñiz"
 
 # gdk-pixbuf/io-png.c:610
@@ -682,7 +679,7 @@ msgstr "PNG metin tomarları içün anahtarlar ASCII remizleri olmalı."
 #: gdk-pixbuf/io-png.c:881 gdk-pixbuf/io-tiff.c:667
 #, c-format
 msgid "Color profile has invalid length %d."
-msgstr ""
+msgstr "Tüs profiliniñ uzunlığı keçersiz: %d."
 
 # gdk-pixbuf/io-jpeg.c:655
 #: gdk-pixbuf/io-png.c:894
@@ -762,7 +759,7 @@ msgstr "PNM suret yükleyicisi bu PNM alt-formatını desteklemey"
 #: gdk-pixbuf/io-pnm.c:739 gdk-pixbuf/io-pnm.c:966
 msgid "Raw PNM formats require exactly one whitespace before sample data"
 msgstr ""
-"Çiy PNM formatları nümüneviy verilerden evel tam olaraq bir aq-boşluq "
+"Çiy PNM formatları nümuneviy verilerden evvel tam olaraq bir aq-boşluq "
 "kerektirir"
 
 # gdk-pixbuf/io-xpm.c:1321
@@ -789,9 +786,10 @@ msgstr "PNM dosyesini yüklemek içün yetersiz hafiza"
 msgid "The PNM/PBM/PGM/PPM image format family"
 msgstr "PNM/PBM/PGM/PPM suret formatı ailesi"
 
+# tüklü
 #: gdk-pixbuf/io-qtif.c:128
 msgid "Input file descriptor is NULL."
-msgstr ""
+msgstr "Kirdi dosyesi tasvircisi SIFIRDIR (NULL)."
 
 # tüklü
 # gdk-pixbuf/io-tiff.c:264
@@ -803,32 +801,31 @@ msgstr "QTIF başlığı oqulamadı"
 #, c-format
 msgid "QTIF atom size too large (%d byte)"
 msgid_plural "QTIF atom size too large (%d bytes)"
-msgstr[0] ""
+msgstr[0] "QTIF atom ölçüsi fazla balaban (%d bayt)"
 
 # gdk-pixbuf/gdk-pixdata.c:378
 #: gdk-pixbuf/io-qtif.c:175
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to allocate %d byte for file read buffer"
 msgid_plural "Failed to allocate %d bytes for file read buffer"
-msgstr[0] "%d baytlıq suret oquv buferi tahsis etilamadı"
+msgstr[0] "Dosye oquv buferi içün %d bayt tahsis etilamadı"
 
 # gdk-pixbuf/io-gif.c:218
 #: gdk-pixbuf/io-qtif.c:206
-#, fuzzy, c-format
+#, c-format
 msgid "File error when reading QTIF atom: %s"
-msgstr "GIF oqulamadı: %s"
+msgstr "QTIF atomı oqulğanda dosye hatası: %s"
 
 #: gdk-pixbuf/io-qtif.c:243
 #, c-format
 msgid "Failed to skip the next %d byte with seek()."
 msgid_plural "Failed to skip the next %d bytes with seek()."
-msgstr[0] ""
+msgstr[0] "seek() ile soñraki %d bayt atlanamadı."
 
 # gdk-pixbuf/io-xpm.c:1321
 #: gdk-pixbuf/io-qtif.c:270
-#, fuzzy
 msgid "Failed to allocate QTIF context structure."
-msgstr "TGA kontekst yapısı içün hafiza tahsis etilamay"
+msgstr "QTIF kontekst yapısı tahsis etilamadı"
 
 # gdk-pixbuf/io-xbm.c:429
 #: gdk-pixbuf/io-qtif.c:330
@@ -837,9 +834,8 @@ msgstr "GdkPixbufLoader nesnesi icat etilamadı."
 
 # gdk-pixbuf/io-tiff.c:264
 #: gdk-pixbuf/io-qtif.c:434
-#, fuzzy
 msgid "Failed to find an image data atom."
-msgstr "TIFF sureti açılamadı"
+msgstr "Sureti veri atomı tapılamadı"
 
 #: gdk-pixbuf/io-qtif.c:618
 msgid "The QTIF image format"
@@ -848,12 +844,12 @@ msgstr "QTIF suret formatı"
 # gdk-pixbuf/io-bmp.c:278 gdk-pixbuf/io-bmp.c:300
 #: gdk-pixbuf/io-ras.c:125
 msgid "RAS image has bogus header data"
-msgstr "RAS sureti sahte başlıq verilerine saip"
+msgstr "RAS sureti sahte başlıq verilerine sahip"
 
 # gdk-pixbuf/gdk-pixdata.c:150
 #: gdk-pixbuf/io-ras.c:147
 msgid "RAS image has unknown type"
-msgstr "RAS sureti bilinmegen türge saip"
+msgstr "RAS sureti bilinmegen türge sahip"
 
 #: gdk-pixbuf/io-ras.c:155
 msgid "unsupported RAS image variation"
@@ -894,9 +890,8 @@ msgstr "Yañı piksel buferi (pixbuf) tahsis etilamay"
 
 # gdk-pixbuf/io-gif.c:1407
 #: gdk-pixbuf/io-tga.c:685
-#, fuzzy
 msgid "Image is corrupted or truncated"
-msgstr "GIF sureti ya pıtalğan ya da tamamlanmağan."
+msgstr "Sureti ya ifsat etilgen ya da pıtalğandır."
 
 #: gdk-pixbuf/io-tga.c:692
 msgid "Cannot allocate colormap structure"
@@ -918,7 +913,7 @@ msgstr "TGA başlığı hafizası tahsis etilamay"
 # tüklü
 #: gdk-pixbuf/io-tga.c:772
 msgid "TGA image has invalid dimensions"
-msgstr "TGA sureti keçersiz boyutlarğa saip"
+msgstr "TGA sureti keçersiz boyutlarğa sahip"
 
 # gdk-pixbuf/gdk-pixbuf-io.c:425 gdk-pixbuf/gdk-pixbuf-io.c:451
 #: gdk-pixbuf/io-tga.c:778 gdk-pixbuf/io-tga.c:787 gdk-pixbuf/io-tga.c:797
@@ -985,7 +980,7 @@ msgstr "TIFF sureti saqlanamadı"
 
 #: gdk-pixbuf/io-tiff.c:656
 msgid "TIFF compression doesn't refer to a valid codec."
-msgstr ""
+msgstr "TIFF sıqıştırması keçerli bir kodekke sıltamay."
 
 # gdk-pixbuf/io-tiff.c:264
 #: gdk-pixbuf/io-tiff.c:696
@@ -1064,7 +1059,7 @@ msgstr "XPM dosyesiniñ suret yüksekligi <= 0"
 # gdk-pixbuf/io-xpm.c:1265
 #: gdk-pixbuf/io-xpm.c:502
 msgid "XPM has invalid number of chars per pixel"
-msgstr "XPM keçersiz sayıda piksel başına remizge saip"
+msgstr "XPM keçersiz sayıda piksel başına remizge sahip"
 
 #: gdk-pixbuf/io-xpm.c:511
 msgid "XPM file has invalid number of colors"

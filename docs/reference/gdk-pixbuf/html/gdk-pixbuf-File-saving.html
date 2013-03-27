@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>File saving</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="GDK-PixBuf Reference Manual">
 <link rel="up" href="rn01.html" title="API Reference">
 <link rel="prev" href="gdk-pixbuf-File-Loading.html" title="File Loading">
 <link rel="next" href="gdk-pixbuf-Image-Data-in-Memory.html" title="Image Data in Memory">
-<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -143,7 +143,7 @@ See <a class="link" href="gdk-pixbuf-File-saving.html#gdk-pixbuf-save" title="gd
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>option_keys</code></em> :</span></p></td>
-<td>name of options to set, <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span>
+<td>name of options to set, <code class="literal">NULL</code>-terminated. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span>
 </td>
 </tr>
 <tr>
@@ -153,7 +153,7 @@ See <a class="link" href="gdk-pixbuf-File-saving.html#gdk-pixbuf-save" title="gd
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
-<td>return location for error, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>return location for error, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -200,7 +200,7 @@ following way:
 <span class="cbracket">}</span>
 
 <span class="usertype">GSList</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">formats </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="gdk-pixbuf-Module-Interface.html#gdk-pixbuf-get-formats">gdk_pixbuf_get_formats</a></span><span class="normal"> </span><span class="symbol">();</span>
-<span class="usertype">GSList</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">writable_formats </span><span class="symbol">=</span><span class="normal"> <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS">NULL</a></span><span class="symbol">;</span>
+<span class="usertype">GSList</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">writable_formats </span><span class="symbol">=</span><span class="normal"> NULL</span><span class="symbol">;</span>
 <span class="function">g_slist_foreach</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">formats</span><span class="symbol">,</span><span class="normal"> add_if_writable</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">writable_formats</span><span class="symbol">);</span>
 <span class="function">g_slist_free</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">formats</span><span class="symbol">);</span></pre></td>
       </tr>
@@ -215,7 +215,7 @@ If <em class="parameter"><code>error</code></em> is set, <code class="literal">F
 those in the <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Structure.html#GDK-PIXBUF-ERROR:CAPS" title="GDK_PIXBUF_ERROR"><span class="type">GDK_PIXBUF_ERROR</span></a> domain and those in the <span class="type">G_FILE_ERROR</span> domain.
 </p>
 <p>
-The variable argument list should be <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated; if not empty,
+The variable argument list should be <code class="literal">NULL</code>-terminated; if not empty,
 it should contain pairs of strings that modify the save
 parameters. For example:
 </p>
@@ -226,7 +226,7 @@ parameters. For example:
         <td class="listing_lines" align="right"><pre>1
 2</pre></td>
         <td class="listing_code"><pre class="programlisting"><span class="function"><a href="gdk-pixbuf-File-saving.html#gdk-pixbuf-save">gdk_pixbuf_save</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pixbuf</span><span class="symbol">,</span><span class="normal"> handle</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"jpeg"</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">error</span><span class="symbol">,</span>
-<span class="normal">                 </span><span class="string">"quality"</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"100"</span><span class="symbol">,</span><span class="normal"> <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span></pre></td>
+<span class="normal">                 </span><span class="string">"quality"</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"100"</span><span class="symbol">,</span><span class="normal"> NULL</span><span class="symbol">);</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -267,11 +267,11 @@ into base64.
         <td class="listing_code"><pre class="programlisting"><span class="usertype">gchar</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">contents</span><span class="symbol">;</span>
 <span class="usertype">gchar</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">contents_encode</span><span class="symbol">;</span>
 <span class="usertype">gsize</span><span class="normal"> length</span><span class="symbol">;</span>
-<span class="function">g_file_get_contents</span><span class="normal"> </span><span class="symbol">(</span><span class="string">"/home/hughsie/.color/icc/L225W.icm"</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">contents</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">length</span><span class="symbol">,</span><span class="normal"> <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
+<span class="function">g_file_get_contents</span><span class="normal"> </span><span class="symbol">(</span><span class="string">"/home/hughsie/.color/icc/L225W.icm"</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">contents</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">length</span><span class="symbol">,</span><span class="normal"> NULL</span><span class="symbol">);</span>
 <span class="normal">contents_encode </span><span class="symbol">=</span><span class="normal"> </span><span class="function">g_base64_encode</span><span class="normal"> </span><span class="symbol">((</span><span class="keyword">const</span><span class="normal"> guchar </span><span class="symbol">*)</span><span class="normal"> contents</span><span class="symbol">,</span><span class="normal"> length</span><span class="symbol">);</span>
 <span class="function"><a href="gdk-pixbuf-File-saving.html#gdk-pixbuf-save">gdk_pixbuf_save</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pixbuf</span><span class="symbol">,</span><span class="normal"> handle</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"png"</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">error</span><span class="symbol">,</span>
 <span class="normal">                 </span><span class="string">"icc-profile"</span><span class="symbol">,</span><span class="normal"> contents_encode</span><span class="symbol">,</span>
-<span class="normal">                 <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span></pre></td>
+<span class="normal">                 NULL</span><span class="symbol">);</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -309,12 +309,12 @@ it produces a CUR instead of an ICO.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
-<td>return location for error, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>return location for error, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
-<td>list of key-value save options, followed by <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>
+<td>list of key-value save options, followed by <code class="literal">NULL</code>
 </td>
 </tr>
 <tr>
@@ -419,7 +419,7 @@ the save routine generates. <span class="annotation">[<acronym title="The callba
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
-<td>return location for error, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>return location for error, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -476,7 +476,7 @@ the save routine generates. <span class="annotation">[<acronym title="The callba
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>option_keys</code></em> :</span></p></td>
-<td>name of options to set, <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
+<td>name of options to set, <code class="literal">NULL</code>-terminated. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
 </td>
 </tr>
 <tr>
@@ -486,7 +486,7 @@ the save routine generates. <span class="annotation">[<acronym title="The callba
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
-<td>return location for error, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>return location for error, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -512,7 +512,7 @@ Saves pixbuf to a new buffer in format <em class="parameter"><code>type</code></
 <a class="link" href="gdk-pixbuf-File-saving.html#gdk-pixbuf-save-to-callback" title="gdk_pixbuf_save_to_callback ()"><code class="function">gdk_pixbuf_save_to_callback()</code></a> to do the real work. Note that the buffer 
 is not nul-terminated and may contain embedded  nuls.
 If <em class="parameter"><code>error</code></em> is set, <code class="literal">FALSE</code> will be returned and <em class="parameter"><code>buffer</code></em> will be set to
-<a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. Possible errors include those in the <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Structure.html#GDK-PIXBUF-ERROR:CAPS" title="GDK_PIXBUF_ERROR"><span class="type">GDK_PIXBUF_ERROR</span></a>
+<code class="literal">NULL</code>. Possible errors include those in the <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Structure.html#GDK-PIXBUF-ERROR:CAPS" title="GDK_PIXBUF_ERROR"><span class="type">GDK_PIXBUF_ERROR</span></a>
 domain.
 </p>
 <p>
@@ -544,7 +544,7 @@ to the new buffer. <span class="annotation">[<acronym title="Parameter points to
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
-<td>return location for error, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>return location for error, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -599,7 +599,7 @@ for more details.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>option_keys</code></em> :</span></p></td>
-<td>name of options to set, <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span>
+<td>name of options to set, <code class="literal">NULL</code>-terminated. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span>
 </td>
 </tr>
 <tr>
@@ -609,7 +609,7 @@ for more details.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
-<td>return location for error, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>return location for error, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -666,12 +666,12 @@ The stream is not closed.
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
-<td>optional <span class="type">GCancellable</span> object, <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>optional <span class="type">GCancellable</span> object, <code class="literal">NULL</code> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
-<td>return location for error, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>return location for error, or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -730,7 +730,7 @@ You can then call <a class="link" href="gdk-pixbuf-File-saving.html#gdk-pixbuf-s
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
-<td>optional <span class="type">GCancellable</span> object, <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+<td>optional <span class="type">GCancellable</span> object, <code class="literal">NULL</code> to ignore. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
 </td>
 </tr>
 <tr>
@@ -771,7 +771,7 @@ Finishes an asynchronous pixbuf save operation started with
 </tr>
 <tr>
 <td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
-<td>a <span class="type">GError</span>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>
+<td>a <span class="type">GError</span>, or <code class="literal">NULL</code>
 </td>
 </tr>
 <tr>
@@ -787,6 +787,6 @@ Finishes an asynchronous pixbuf save operation started with
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.18</div>
+          Generated by GTK-Doc V1.18.1</div>
 </body>
 </html>
