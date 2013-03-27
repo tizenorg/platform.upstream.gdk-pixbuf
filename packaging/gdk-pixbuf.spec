@@ -1,11 +1,11 @@
 %define gdk_pixbuf_binary_version 2.10.0
 %bcond_with introspection
 Name:           gdk-pixbuf
-Version:        2.27.3
+Version:        2.28.0
 Release:        0
 Summary:        An image loading library
 License:        LGPL-2.1+
-Group:          System/Libraries
+Group:          Multimedia/Image Library
 Source:         http://download.gnome.org/sources/gdk-pixbuf/2.27/%{name}-%{version}.tar.xz
 Source1:        macros.gdk-pixbuf
 Source98:       baselibs.conf
@@ -29,7 +29,7 @@ Clutter.
 
 %package -n typelib-GdkPixbuf
 Summary:        An image loading library -- Introspection bindings
-Group:          System/Libraries
+Group:          Multimedia/Image Library
 
 %description -n typelib-GdkPixbuf
 gdk-pixbuf is an image loading library that can be extended by loadable
@@ -40,7 +40,7 @@ This package provides the GObject Introspection bindings for gdk-pixbuf.
 
 %package query-loaders
 Summary:        An image loading library - Utility to create loaders cache
-Group:          System/Libraries
+Group:          Multimedia/Image Library
 
 %description query-loaders
 gdk-pixbuf is an image loading library that can be extended by loadable
