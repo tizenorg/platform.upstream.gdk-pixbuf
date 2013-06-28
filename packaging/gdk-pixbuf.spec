@@ -9,6 +9,7 @@ Group:          Multimedia/Image Library
 Source:         http://download.gnome.org/sources/gdk-pixbuf/2.27/%{name}-%{version}.tar.xz
 Source1:        macros.gdk-pixbuf
 Source98:       baselibs.conf
+Source1001: 	gdk-pixbuf.manifest
 BuildRequires:  gettext-tools
 Url:            http://developer.gnome.org/
 BuildRequires:  libjasper-devel
@@ -67,6 +68,7 @@ This package contains development files for gdk-pixbuf.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 export CFLAGS=`echo $RPM_OPT_FLAGS |sed -e 's/atom/i686/g'`
@@ -122,6 +124,7 @@ fi
 %postun -n gdk-pixbuf -p /sbin/ldconfig
 
 %files -n gdk-pixbuf
+%manifest %{name}.manifest
 %defattr(-, root, root)
 %license COPYING
 %{_libdir}/libgdk_pixbuf-2.0.so.0*
@@ -134,16 +137,19 @@ fi
 
 %if %{with introspection}
 %files -n typelib-GdkPixbuf
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_libdir}/girepository-1.0/GdkPixbuf-2.0.typelib
 %endif
 
 %files query-loaders
+%manifest %{name}.manifest
 %defattr(-, root, root)
 %{_bindir}/gdk-pixbuf-query-loaders*
 %{_mandir}/man1/gdk-pixbuf-query-loaders*.1*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-, root, root)
 %{_bindir}/gdk-pixbuf-csource
 %{_bindir}/gdk-pixbuf-pixdata
