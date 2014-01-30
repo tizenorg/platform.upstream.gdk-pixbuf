@@ -1,5 +1,7 @@
 %define gdk_pixbuf_binary_version 2.10.0
 %bcond_with introspection
+%bcond_with x
+
 Name:           gdk-pixbuf
 Version:        2.28.1
 Release:        0
@@ -20,7 +22,9 @@ BuildRequires:  pkgconfig(glib-2.0) >= 2.31.0
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 %endif
 BuildRequires:  pkgconfig(libpng)
+%if %{with x}
 BuildRequires:  pkgconfig(x11)
+%endif
 Requires(post): gdk-pixbuf-query-loaders
 
 %description
@@ -78,7 +82,10 @@ export CFLAGS=`echo $RPM_OPT_FLAGS |sed -e 's/atom/i686/g'`
         --enable-introspection \
 %endif
         --with-libjasper \
+%if %{with x}
         --with-x11
+%endif
+
 %{__make} %{?_smp_mflags}
 
 %install
@@ -128,7 +135,9 @@ fi
 %defattr(-, root, root)
 %license COPYING
 %{_libdir}/libgdk_pixbuf-2.0.so.0*
+%if %{with x}
 %{_libdir}/libgdk_pixbuf_xlib-2.0.so.0*
+%endif
 %dir %{_libdir}/gdk-pixbuf-2.0
 %dir %{_libdir}/gdk-pixbuf-2.0/%{gdk_pixbuf_binary_version}
 %dir %{_libdir}/gdk-pixbuf-2.0/%{gdk_pixbuf_binary_version}/loaders
