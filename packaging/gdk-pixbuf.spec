@@ -3,7 +3,7 @@
 %bcond_with x
 
 Name:           gdk-pixbuf
-Version:        2.28.1
+Version:        2.30.8
 Release:        0
 Summary:        An image loading library
 License:        LGPL-2.1+
