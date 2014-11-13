@@ -19,9 +19,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 
@@ -196,10 +194,7 @@ static GdkPixbuf *gdk_pixbuf__qtif_image_load (FILE *f, GError **error)
                 /* Read atom data. */
                 while(hdr.length != 0u)
                 {
-                    rd = (hdr.length > READ_BUFFER_SIZE) ? READ_BUFFER_SIZE : hdr.length;
-
-                    rd = fread(buf, 1, rd, f);
-                    if(rd < 0)
+                    if(fread(buf, 1, rd, f) != rd)
                     {
                         g_set_error(error, GDK_PIXBUF_ERROR,
                                     GDK_PIXBUF_ERROR_CORRUPT_IMAGE,
@@ -597,27 +592,27 @@ MODULE_ENTRY (fill_vtable) (GdkPixbufModule *module)
 
 MODULE_ENTRY (fill_info) (GdkPixbufFormat *info)
 {
-    static GdkPixbufModulePattern signature[] = {
+    static const GdkPixbufModulePattern signature[] = {
         { "abcdidsc", "xxxx    ", 100 },
         { "abcdidat", "xxxx    ", 100 },
         { NULL, NULL, 0 }
     };
-    static gchar * mime_types[] = {
+    static const gchar *mime_types[] = {
         "image/x-quicktime",
         "image/qtif",
         NULL
     };
-    static gchar * extensions[] = {
+    static const gchar *extensions[] = {
         "qtif",
         "qif",
         NULL
     };
 
     info->name = "qtif";
-    info->signature = signature;
+    info->signature = (GdkPixbufModulePattern *) signature;
     info->description = N_("The QTIF image format");
-    info->mime_types = mime_types;
-    info->extensions = extensions;
+    info->mime_types = (gchar **) mime_types;
+    info->extensions = (gchar **) extensions;
     info->flags = GDK_PIXBUF_FORMAT_THREADSAFE;
     info->license = "LGPL";
 }

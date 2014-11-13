@@ -15,9 +15,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "config.h"
@@ -54,7 +52,7 @@
  * with the Sun mediaLib library, these functions are instead accelerated
  * using mediaLib, which provides hardware acceleration on Intel, AMD,
  * and Sparc chipsets.  If desired, mediaLib support can be turned off by
- * setting the GDK_DISABLE_MEDIALIB environment variable.  
+ * setting the `GDK_DISABLE_MEDIALIB` environment variable.  
  * 
  * 
  * The following example demonstrates handling an expose event by
@@ -66,11 +64,9 @@
  * gdk_pixbuf_composite_color() function has exactly the same effect
  * as calling gdk_pixbuf_scale().
  * 
- * 
- * <example>
- * <title>Handling an expose event.</title>
- * <para>
- * <programlisting>
+ * ## Handling an expose event
+ *
+ * |[
  * gboolean
  * expose_cb (GtkWidget *widget, GdkEventExpose *event, gpointer data)
  * {
@@ -95,9 +91,7 @@
  *   
  *   return TRUE;
  * }
- * </programlisting>
- * </para>
- * </example>
+ * ]|
  */
 
 
@@ -183,11 +177,8 @@ gdk_pixbuf_scale (const GdkPixbuf *src,
  * image, the data at the edges of the source image is replicated
  * to infinity. 
  *
- * <figure id="pixbuf-composite-diagram">
- *   <title>Compositing of pixbufs</title>
- *   <graphic fileref="composite.png" format="PNG"/>
- * </figure>
- **/
+ * ![](composite.png)
+ */
 void
 gdk_pixbuf_composite (const GdkPixbuf *src,
 		      GdkPixbuf       *dest,
@@ -392,8 +383,8 @@ gdk_pixbuf_composite_color_simple (const GdkPixbuf *src,
  * Rotates a pixbuf by a multiple of 90 degrees, and returns the
  * result in a new pixbuf.
  *
- * Returns: (transfer full): the new #GdkPixbuf, or %NULL if not enough memory could be
- * allocated for it.
+ * Returns: (nullable) (transfer full): the new #GdkPixbuf, or %NULL
+ * if not enough memory could be allocated for it.
  *
  * Since: 2.6
  */
@@ -485,8 +476,8 @@ gdk_pixbuf_rotate_simple (const GdkPixbuf   *src,
  * Flips a pixbuf horizontally or vertically and returns the
  * result in a new pixbuf.
  *
- * Returns: (transfer full): the new #GdkPixbuf, or %NULL if not enough memory could be
- * allocated for it.
+ * Returns: (nullable) (transfer full): the new #GdkPixbuf, or %NULL
+ * if not enough memory could be allocated for it.
  *
  * Since: 2.6
  */

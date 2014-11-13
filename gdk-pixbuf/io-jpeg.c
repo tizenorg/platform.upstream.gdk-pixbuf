@@ -21,9 +21,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 
@@ -512,10 +510,7 @@ jpeg_parse_exif (JpegExifContext *context, j_decompress_ptr cinfo)
 static void
 jpeg_destroy_exif_context (JpegExifContext *context)
 {
-	if (context == NULL)
-		return;
 	g_free (context->icc_profile);
-	g_free (context);
 }
 
 /* Shared library entry point */
@@ -536,7 +531,7 @@ gdk_pixbuf__jpeg_image_load (FILE *f, GError **error)
 	struct error_handler_data jerr;
 	stdio_src_ptr src;
 	gchar *icc_profile_base64;
-	JpegExifContext *exif_context;
+	JpegExifContext exif_context = { 0, };
 
 	/* setup error handler */
 	cinfo.err = jpeg_std_error (&jerr.pub);
@@ -550,6 +545,7 @@ gdk_pixbuf__jpeg_image_load (FILE *f, GError **error)
 			g_object_unref (pixbuf);
 
 		jpeg_destroy_decompress (&cinfo);
+		jpeg_destroy_exif_context (&exif_context);
 
 		/* error should have been set by fatal_error_handler () */
 		return NULL;
@@ -580,8 +576,7 @@ gdk_pixbuf__jpeg_image_load (FILE *f, GError **error)
 	jpeg_read_header (&cinfo, TRUE);
 
 	/* parse exif data */
-	exif_context = g_new0 (JpegExifContext, 1);
-	jpeg_parse_exif (exif_context, &cinfo);
+	jpeg_parse_exif (&exif_context, &cinfo);
 	
 	jpeg_start_decompress (&cinfo);
 	cinfo.do_fancy_upsampling = FALSE;
@@ -592,8 +587,6 @@ gdk_pixbuf__jpeg_image_load (FILE *f, GError **error)
 				 8, cinfo.output_width, cinfo.output_height);
 	      
 	if (!pixbuf) {
-		jpeg_destroy_decompress (&cinfo);
-
                 /* broken check for *error == NULL for robustness against
                  * crappy JPEG library
                  */
@@ -603,19 +596,19 @@ gdk_pixbuf__jpeg_image_load (FILE *f, GError **error)
                                              GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,
                                              _("Insufficient memory to load image, try exiting some applications to free memory"));
                 }
-                
-		return NULL;
+               
+		goto out; 
 	}
 
 	/* if orientation tag was found */
-	if (exif_context->orientation != 0) {
-		g_snprintf (otag_str, sizeof (otag_str), "%d", exif_context->orientation);
+	if (exif_context.orientation != 0) {
+		g_snprintf (otag_str, sizeof (otag_str), "%d", exif_context.orientation);
 		gdk_pixbuf_set_option (pixbuf, "orientation", otag_str);
 	}
 
 	/* if icc profile was found */
-	if (exif_context->icc_profile != NULL) {
-		icc_profile_base64 = g_base64_encode ((const guchar *) exif_context->icc_profile, exif_context->icc_profile_size);
+	if (exif_context.icc_profile != NULL) {
+		icc_profile_base64 = g_base64_encode ((const guchar *) exif_context.icc_profile, exif_context.icc_profile_size);
 		gdk_pixbuf_set_option (pixbuf, "icc-profile", icc_profile_base64);
 		g_free (icc_profile_base64);
 	}
@@ -644,6 +637,7 @@ gdk_pixbuf__jpeg_image_load (FILE *f, GError **error)
 		      break;
 		    default:
 		      g_object_unref (pixbuf);
+		      pixbuf = NULL;
 		      if (error && *error == NULL) {
                         g_set_error (error,
                                      GDK_PIXBUF_ERROR,
@@ -651,15 +645,14 @@ gdk_pixbuf__jpeg_image_load (FILE *f, GError **error)
 				     _("Unsupported JPEG color space (%s)"),
 				     colorspace_name (cinfo.out_color_space)); 
 		      }
-                
-		      jpeg_destroy_decompress (&cinfo);
-		      return NULL;
+               	      goto out; 
 		}
 	}
 
+out:
 	jpeg_finish_decompress (&cinfo);
 	jpeg_destroy_decompress (&cinfo);
-	jpeg_destroy_exif_context (exif_context);
+	jpeg_destroy_exif_context (&exif_context);
 
 	return pixbuf;
 }
@@ -907,7 +900,8 @@ gdk_pixbuf__jpeg_image_load_increment (gpointer data,
 	const guchar    *bufhd;
 	gint             width, height;
 	char             otag_str[5];
-	JpegExifContext *exif_context = NULL;
+	gchar 		*icc_profile_base64;
+	JpegExifContext  exif_context = { 0, };
 	gboolean	 retval;
 
 	g_return_val_if_fail (context != NULL, FALSE);
@@ -946,8 +940,6 @@ gdk_pixbuf__jpeg_image_load_increment (gpointer data,
 		retval = TRUE;
 		goto out;
 	}
-	/* collect exif data */
-	exif_context = g_new0 (JpegExifContext, 1);
 
 	last_num_left = num_left;
 	last_bytes_left = 0;
@@ -996,6 +988,7 @@ gdk_pixbuf__jpeg_image_load_increment (gpointer data,
 			int rc;
 		
 			jpeg_save_markers (cinfo, JPEG_APP0+1, 0xffff);
+			jpeg_save_markers (cinfo, JPEG_APP0+2, 0xffff);
 			rc = jpeg_read_header (cinfo, TRUE);
 			context->src_initialized = TRUE;
 			
@@ -1005,7 +998,7 @@ gdk_pixbuf__jpeg_image_load_increment (gpointer data,
 			context->got_header = TRUE;
 
 			/* parse exif data */
-			jpeg_parse_exif (exif_context, cinfo);
+			jpeg_parse_exif (&exif_context, cinfo);
 		
 			width = cinfo->image_width;
 			height = cinfo->image_height;
@@ -1047,10 +1040,17 @@ gdk_pixbuf__jpeg_image_load_increment (gpointer data,
 			}
 		
 		        /* if orientation tag was found set an option to remember its value */
-			if (exif_context->orientation != 0) {
-				g_snprintf (otag_str, sizeof (otag_str), "%d", exif_context->orientation);
+			if (exif_context.orientation != 0) {
+				g_snprintf (otag_str, sizeof (otag_str), "%d", exif_context.orientation);
 		                gdk_pixbuf_set_option (context->pixbuf, "orientation", otag_str);
 		        }
+			/* if icc profile was found */
+			if (exif_context.icc_profile != NULL) {
+				icc_profile_base64 = g_base64_encode ((const guchar *) exif_context.icc_profile, exif_context.icc_profile_size);
+				gdk_pixbuf_set_option (context->pixbuf, "icc-profile", icc_profile_base64);
+				g_free (icc_profile_base64);
+			}
+
 
 			/* Use pixbuf buffer to store decompressed data */
 			context->dptr = context->pixbuf->pixels;
@@ -1127,7 +1127,7 @@ gdk_pixbuf__jpeg_image_load_increment (gpointer data,
 		}
 	}
 out:
-	jpeg_destroy_exif_context (exif_context);
+	jpeg_destroy_exif_context (&exif_context);
 	return retval;
 }
 
@@ -1458,15 +1458,15 @@ MODULE_ENTRY (fill_vtable) (GdkPixbufModule *module)
 
 MODULE_ENTRY (fill_info) (GdkPixbufFormat *info)
 {
-	static GdkPixbufModulePattern signature[] = {
+	static const GdkPixbufModulePattern signature[] = {
 		{ "\xff\xd8", NULL, 100 },
 		{ NULL, NULL, 0 }
 	};
-	static gchar * mime_types[] = {
+	static const gchar *mime_types[] = {
 		"image/jpeg",
 		NULL
 	};
-	static gchar * extensions[] = {
+	static const gchar *extensions[] = {
 		"jpeg",
 		"jpe",
 		"jpg",
@@ -1474,10 +1474,10 @@ MODULE_ENTRY (fill_info) (GdkPixbufFormat *info)
 	};
 
 	info->name = "jpeg";
-	info->signature = signature;
+	info->signature = (GdkPixbufModulePattern *) signature;
 	info->description = N_("The JPEG image format");
-	info->mime_types = mime_types;
-	info->extensions = extensions;
+	info->mime_types = (gchar **) mime_types;
+	info->extensions = (gchar **) extensions;
 	info->flags = GDK_PIXBUF_FORMAT_WRITABLE | GDK_PIXBUF_FORMAT_THREADSAFE;
 	info->license = "LGPL";
 }

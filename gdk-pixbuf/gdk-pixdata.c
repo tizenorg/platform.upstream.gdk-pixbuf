@@ -12,9 +12,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 #include "config.h"
 
@@ -321,8 +319,9 @@ free_buffer (guchar *pixels, gpointer data)
  * pixel data is run-length encoded into newly-allocated memory and a 
  * pointer to that memory is returned. 
  *
- * Returns: If @ure_rle is %TRUE, a pointer to the newly-allocated memory 
- *   for the run-length encoded pixel data, otherwise %NULL.
+ * Returns: (nullable): If @use_rle is %TRUE, a pointer to the
+ *   newly-allocated memory for the run-length encoded pixel data,
+ *   otherwise %NULL.
  **/
 gpointer
 gdk_pixdata_from_pixbuf (GdkPixdata      *pixdata,
@@ -437,7 +436,7 @@ gdk_pixbuf_from_pixdata (const GdkPixdata *pixdata,
     copy_pixels = TRUE;
   if (copy_pixels)
     {
-      data = g_try_malloc (pixdata->rowstride * pixdata->height);
+      data = g_try_malloc_n (pixdata->height, pixdata->rowstride);
       if (!data)
 	{
 	  g_set_error (error, GDK_PIXBUF_ERROR,
@@ -623,8 +622,9 @@ save_rle_decoder (GString     *gstring,
  * Generates C source code suitable for compiling images directly 
  * into programs. 
  *
- * gdk-pixbuf ships with a program called <command>gdk-pixbuf-csource</command> 
- * which offers a command line interface to this function.
+ * gdk-pixbuf ships with a program called
+ * [gdk-pixbuf-csource][gdk-pixbuf-csource], which offers a command
+ * line interface to this function.
  *
  * Returns: a newly-allocated string containing the C source form
  *   of @pixdata.
@@ -866,28 +866,27 @@ gdk_pixdata_to_csource (GdkPixdata        *pixdata,
  * ship a program with images, but don't want to depend on any
  * external files.
  *
- * gdk-pixbuf ships with a program called <command>gdk-pixbuf-csource</command> 
+ * gdk-pixbuf ships with a program called [gdk-pixbuf-csource][gdk-pixbuf-csource],
  * which allows for conversion of #GdkPixbufs into such a inline representation.
- * In almost all cases, you should pass the <option>--raw</option> flag to
- * <command>gdk-pixbuf-csource</command>. A sample invocation would be:
+ * In almost all cases, you should pass the `--raw` option to
+ * `gdk-pixbuf-csource`. A sample invocation would be:
  *
- * <informalexample><programlisting>
+ * |[
  *  gdk-pixbuf-csource --raw --name=myimage_inline myimage.png
- * </programlisting></informalexample>
+ * ]|
  * 
  * For the typical case where the inline pixbuf is read-only static data,
  * you don't need to copy the pixel data unless you intend to write to
- * it, so you can pass %FALSE for @copy_pixels.  (If you pass 
- * <option>--rle</option> to <command>gdk-pixbuf-csource</command>, a copy 
- * will be made even if @copy_pixels is %FALSE, so using this option is 
- * generally a bad idea.)
+ * it, so you can pass %FALSE for @copy_pixels.  (If you pass `--rle` to
+ * `gdk-pixbuf-csource`, a copy will be made even if @copy_pixels is %FALSE,
+ * so using this option is generally a bad idea.)
  *
  * If you create a pixbuf from const inline data compiled into your
  * program, it's probably safe to ignore errors and disable length checks, 
  * since things will always succeed:
- * <informalexample><programlisting>
+ * |[
  * pixbuf = gdk_pixbuf_new_from_inline (-1, myimage_inline, FALSE, NULL);
- * </programlisting></informalexample>
+ * ]|
  *
  * For non-const inline data, you could get out of memory. For untrusted 
  * inline data located at runtime, you could have corrupt inline data in 

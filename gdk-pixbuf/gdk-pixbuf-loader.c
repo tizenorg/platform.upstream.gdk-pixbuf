@@ -19,9 +19,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "config.h"
@@ -50,49 +48,38 @@
  * loading an extremely large file.
  * 
  * 
- * To use #GdkPixbufLoader to load an image, just create a new one,
- * and call gdk_pixbuf_loader_write() to send the data to it.  When
- * done, gdk_pixbuf_loader_close() should be called to end the stream
- * and finalize everything.  The loader will emit three important
- * signals throughout the process.  The first, "<link
- * linkend="GdkPixbufLoader-size-prepared">size_prepared</link>",
- * will be called as soon as the image has enough information to
+ * To use #GdkPixbufLoader to load an image, just create a new one, and
+ * call gdk_pixbuf_loader_write() to send the data to it.  When done,
+ * gdk_pixbuf_loader_close() should be called to end the stream and
+ * finalize everything. The loader will emit three important signals
+ * throughout the process. The first, #GdkPixbufLoader::size-prepared,
+ * will be emitted as soon as the image has enough information to
  * determine the size of the image to be used. If you want to scale
  * the image while loading it, you can call gdk_pixbuf_loader_set_size()
  * in response to this signal.
  * 
  * 
- * The second signal, "<link
- * linkend="GdkPixbufLoader-area-prepared">area_prepared</link>",
- * will be called as soon as the pixbuf of the desired has been 
- * allocated.  You can obtain it by calling gdk_pixbuf_loader_get_pixbuf(). 
- * If you want to use it, simply ref it.  
- * In addition, no actual information will be passed in yet, so the
- * pixbuf can be safely filled with any temporary graphics (or an
- * initial color) as needed.  You can also call
- * gdk_pixbuf_loader_get_pixbuf() later and get the same pixbuf.
+ * The second signal, #GdkPixbufLoader::area-prepared, will be emitted as
+ * soon as the pixbuf of the desired has been allocated. You can obtain it
+ * by calling gdk_pixbuf_loader_get_pixbuf(). If you want to use it, simply
+ * ref it.  In addition, no actual information will be passed in yet, so the
+ * pixbuf can be safely filled with any temporary graphics (or an initial
+ * color) as needed.  You can also call gdk_pixbuf_loader_get_pixbuf() later
+ * and get the same pixbuf.
  * 
+ * The last signal, #GdkPixbufLoader::area-updated, gets emitted every time
+ * a region is updated. This way you can update a partially completed image.
+ * Note that you do not know anything about the completeness of an image
+ * from the updated area. For example, in an interlaced image, you need to
+ * make several passes before the image is done loading.
  * 
- * The last signal, "<link
- * linkend="GdkPixbufLoader-area-updated">area_updated</link>" gets
- * called every time a region is updated.  This way you can update a
- * partially completed image.  Note that you do not know anything
- * about the completeness of an image from the area updated.  For
- * example, in an interlaced image, you need to make several passes
- * before the image is done loading.
- * 
- * 
- * <refsect2>
- * <title>Loading an animation</title>
- * <para>
- * Loading an animation is almost as easy as loading an
- * image. Once the first "<link
- * linkend="GdkPixbufLoader-area-prepared">area_prepared</link>" signal
- * has been emitted, you can call gdk_pixbuf_loader_get_animation()
- * to get the #GdkPixbufAnimation struct and gdk_pixbuf_animation_get_iter()
- * to get an #GdkPixbufAnimationIter for displaying it. 
- * </para>
- * </refsect2>
+ * # Loading an animation 
+ *
+ * Loading an animation is almost as easy as loading an image. Once the first
+ * #GdkPixbufLoader::area-prepared signal has been emitted, you can call
+ * gdk_pixbuf_loader_get_animation() to get the #GdkPixbufAnimation struct
+ * and gdk_pixbuf_animation_get_iter() to get a #GdkPixbufAnimationIter for
+ * displaying it. 
  */
 
 
@@ -111,13 +98,11 @@ static guint    pixbuf_loader_signals[LAST_SIGNAL] = { 0 };
 
 /* Internal data */
 
-#define LOADER_HEADER_SIZE 1024
-
 typedef struct
 {
         GdkPixbufAnimation *animation;
         gboolean closed;
-        guchar header_buf[LOADER_HEADER_SIZE];
+        guchar header_buf[SNIFF_BUFFER_SIZE];
         gint header_buf_offset;
         GdkPixbufModule *image_module;
         gpointer context;
@@ -125,9 +110,11 @@ typedef struct
         gint height;
         gboolean size_fixed;
         gboolean needs_scale;
+	gchar *filename;
 } GdkPixbufLoaderPrivate;
 
 G_DEFINE_TYPE (GdkPixbufLoader, gdk_pixbuf_loader, G_TYPE_OBJECT)
+
 
 static void
 gdk_pixbuf_loader_class_init (GdkPixbufLoaderClass *class)
@@ -252,6 +239,8 @@ gdk_pixbuf_loader_finalize (GObject *object)
         if (priv->animation)
                 g_object_unref (priv->animation);
   
+	g_free (priv->filename);
+
         g_free (priv);
   
         G_OBJECT_CLASS (gdk_pixbuf_loader_parent_class)->finalize (object);
@@ -327,8 +316,10 @@ gdk_pixbuf_loader_prepare (GdkPixbuf          *pixbuf,
 
         if (!priv->size_fixed) 
                 {
+			gint w = width;
+			gint h = height;
                         /* Defend against lazy loaders which don't call size_func */
-                        gdk_pixbuf_loader_size_func (&width, &height, loader);
+                        gdk_pixbuf_loader_size_func (&w, &h, loader);
                 }
 
         priv->needs_scale = FALSE;
@@ -412,7 +403,7 @@ gdk_pixbuf_loader_load_module (GdkPixbufLoader *loader,
                 {
                         priv->image_module = _gdk_pixbuf_get_module (priv->header_buf,
                                                                      priv->header_buf_offset,
-                                                                     NULL,
+                                                                     priv->filename,
                                                                      error);
                 }
   
@@ -466,12 +457,12 @@ gdk_pixbuf_loader_eat_header_write (GdkPixbufLoader *loader,
         gint n_bytes;
         GdkPixbufLoaderPrivate *priv = loader->priv;
   
-        n_bytes = MIN(LOADER_HEADER_SIZE - priv->header_buf_offset, count);
+        n_bytes = MIN(SNIFF_BUFFER_SIZE - priv->header_buf_offset, count);
         memcpy (priv->header_buf + priv->header_buf_offset, buf, n_bytes);
   
         priv->header_buf_offset += n_bytes;
   
-        if (priv->header_buf_offset >= LOADER_HEADER_SIZE)
+        if (priv->header_buf_offset >= SNIFF_BUFFER_SIZE)
                 {
                         if (gdk_pixbuf_loader_load_module (loader, NULL, error) == 0)
                                 return 0;
@@ -541,6 +532,42 @@ gdk_pixbuf_loader_write (GdkPixbufLoader *loader,
         gdk_pixbuf_loader_close (loader, NULL);
 
         return FALSE;
+}
+
+/**
+ * gdk_pixbuf_loader_write_bytes:
+ * @loader: A pixbuf loader.
+ * @buffer: The image data as a #GBytes
+ * @error: return location for errors
+ *
+ * This will cause a pixbuf loader to parse a buffer inside a #GBytes
+ * for an image.  It will return %TRUE if the data was loaded successfully,
+ * and %FALSE if an error occurred.  In the latter case, the loader
+ * will be closed, and will not accept further writes. If %FALSE is
+ * returned, @error will be set to an error from the #GDK_PIXBUF_ERROR
+ * or #G_FILE_ERROR domains.
+ *
+ * See also: gdk_pixbuf_loader_write()
+ *
+ * Return value: %TRUE if the write was successful, or %FALSE if the loader
+ * cannot parse the buffer.
+ *
+ * Since: 2.30
+ */
+gboolean
+gdk_pixbuf_loader_write_bytes (GdkPixbufLoader *loader,
+                               GBytes          *buffer,
+                               GError         **error)
+{
+        g_return_val_if_fail (GDK_IS_PIXBUF_LOADER (loader), FALSE);
+
+        g_return_val_if_fail (buffer != NULL, FALSE);
+        g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
+
+        return gdk_pixbuf_loader_write (loader,
+                                        g_bytes_get_data (buffer, NULL),
+                                        g_bytes_get_size (buffer),
+                                        error);
 }
 
 /**
@@ -666,6 +693,19 @@ gdk_pixbuf_loader_new_with_mime_type (const char *mime_type,
         return retval;
 }
 
+GdkPixbufLoader *
+_gdk_pixbuf_loader_new_with_filename (const char *filename)
+{
+	GdkPixbufLoader *retval;
+        GdkPixbufLoaderPrivate *priv;
+
+        retval = g_object_new (GDK_TYPE_PIXBUF_LOADER, NULL);
+	priv = retval->priv;
+	priv->filename = g_strdup (filename);
+
+	return retval;
+}
+
 /**
  * gdk_pixbuf_loader_get_pixbuf:
  * @loader: A pixbuf loader.
@@ -761,7 +801,7 @@ gdk_pixbuf_loader_close (GdkPixbufLoader *loader,
         if (priv->closed)
                 return TRUE;
   
-        /* We have less the LOADER_HEADER_SIZE bytes in the image.  
+        /* We have less than SNIFF_BUFFER_SIZE bytes in the image.  
          * Flush it, and keep going. 
          */
         if (priv->image_module == NULL)
@@ -817,8 +857,9 @@ gdk_pixbuf_loader_close (GdkPixbufLoader *loader,
  * Obtains the available information about the format of the 
  * currently loading image file.
  *
- * Returns: (transfer none): A #GdkPixbufFormat or %NULL. The return
- * value is owned by GdkPixbuf and should not be freed.
+ * Returns: (nullable) (transfer none): A #GdkPixbufFormat or
+ * %NULL. The return value is owned by GdkPixbuf and should not be
+ * freed.
  * 
  * Since: 2.2
  */

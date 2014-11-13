@@ -18,9 +18,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "config.h"
@@ -55,18 +53,15 @@
  * in %NULL as the destroy notification function so that the data
  * will not be freed.
  * 
- * 
  * The gdk_pixbuf_new() function can be used as a convenience to
  * create a pixbuf with an empty buffer.  This is equivalent to
- * allocating a data buffer using <function>malloc()</function> and 
- * then wrapping it with gdk_pixbuf_new_from_data(). The gdk_pixbuf_new() 
- * function will compute an optimal rowstride so that rendering can be 
- * performed with an efficient algorithm.
- * 
+ * allocating a data buffer using malloc() and then wrapping it with
+ * gdk_pixbuf_new_from_data(). The gdk_pixbuf_new() function will
+ * compute an optimal rowstride so that rendering can be performed
+ * with an efficient algorithm.
  * 
  * As a special case, you can use the gdk_pixbuf_new_from_xpm_data()
  * function to create a pixbuf from inline XPM image data.
- * 
  * 
  * You can also copy an existing pixbuf with the gdk_pixbuf_copy()
  * function.  This is not the same as just doing a g_object_ref()
@@ -89,14 +84,11 @@
  * its reference count drops to zero.  Newly-created #GdkPixbuf
  * structures start with a reference count of one.
  * 
+ * > As #GdkPixbuf is derived from #GObject now, gdk_pixbuf_ref() and
+ * > gdk_pixbuf_unref() are deprecated in favour of g_object_ref()
+ * > and g_object_unref() resp.
  * 
- * <note>
- * As #GdkPixbuf is derived from #GObject now, gdk_pixbuf_ref() and
- * gdk_pixbuf_unref() are deprecated in favour of g_object_ref()
- * and g_object_unref () resp.
- * </note>
- * 
- * <emphasis>Finalizing</emphasis> a pixbuf means to free its pixel
+ * Finalizing a pixbuf means to free its pixel
  * data and to free the #GdkPixbuf structure itself.  Most of the
  * library functions that create #GdkPixbuf structures create the
  * pixel data by themselves and define the way it should be freed;
@@ -135,10 +127,11 @@ enum
 };
 
 static void gdk_pixbuf_icon_iface_init (GIconIface *iface);
+static void gdk_pixbuf_loadable_icon_iface_init (GLoadableIconIface *iface);
 
 G_DEFINE_TYPE_WITH_CODE (GdkPixbuf, gdk_pixbuf, G_TYPE_OBJECT,
-                         G_IMPLEMENT_INTERFACE (G_TYPE_ICON,
-                                                gdk_pixbuf_icon_iface_init))
+                         G_IMPLEMENT_INTERFACE (G_TYPE_ICON, gdk_pixbuf_icon_iface_init)
+                         G_IMPLEMENT_INTERFACE (G_TYPE_LOADABLE_ICON, gdk_pixbuf_loadable_icon_iface_init))
 
 static void 
 gdk_pixbuf_init (GdkPixbuf *pixbuf)
@@ -292,11 +285,110 @@ gdk_pixbuf_unref (GdkPixbuf *pixbuf)
         g_object_unref (pixbuf);
 }
 
+static GBytes *
+gdk_pixbuf_make_bytes (GdkPixbuf  *pixbuf,
+                       GError    **error)
+{
+  gchar *buffer;
+  gsize size;
+
+  if (!gdk_pixbuf_save_to_buffer (pixbuf, &buffer, &size, "png", error, NULL))
+    return NULL;
+
+  return g_bytes_new_take (buffer, size);
+}
+
+static GVariant *
+gdk_pixbuf_serialize (GIcon *icon)
+{
+  GError *error = NULL;
+  GVariant *result;
+  GBytes *bytes;
+
+  bytes = gdk_pixbuf_make_bytes (GDK_PIXBUF (icon), &error);
+  if (!bytes)
+    {
+      g_critical ("Unable to serialise GdkPixbuf to png (via g_icon_serialize()): %s", error->message);
+      g_error_free (error);
+      return NULL;
+    }
+  result = g_variant_new_from_bytes (G_VARIANT_TYPE_BYTESTRING, bytes, TRUE);
+  g_bytes_unref (bytes);
+
+  return g_variant_new ("(sv)", "bytes", result);
+}
+
+static GInputStream *
+gdk_pixbuf_load (GLoadableIcon  *icon,
+                 int             size,
+                 char          **type,
+                 GCancellable   *cancellable,
+                 GError        **error)
+{
+  GInputStream *stream;
+  GBytes *bytes;
+
+  bytes = gdk_pixbuf_make_bytes (GDK_PIXBUF (icon), error);
+  if (!bytes)
+    return NULL;
+
+  stream = g_memory_input_stream_new_from_bytes (bytes);
+  g_bytes_unref (bytes);
+
+  if (type)
+    *type = g_strdup ("image/png");
+
+  return stream;
+}
+
+static void
+gdk_pixbuf_load_async (GLoadableIcon       *icon,
+                       int                  size,
+                       GCancellable        *cancellable,
+                       GAsyncReadyCallback  callback,
+                       gpointer             user_data)
+{
+  GTask *task;
+
+  task = g_task_new (icon, cancellable, callback, user_data);
+  g_task_return_pointer (task, icon, NULL);
+  g_object_unref (task);
+}
+
+static GInputStream *
+gdk_pixbuf_load_finish (GLoadableIcon  *icon,
+                        GAsyncResult   *res,
+                        char          **type,
+                        GError        **error)
+{
+  g_return_val_if_fail (g_task_is_valid (res, icon), NULL);
+
+  if (!g_task_propagate_pointer (G_TASK (res), error))
+    return NULL;
+
+  return gdk_pixbuf_load (icon, 0, type, NULL, error);
+}
+
+static void
+gdk_pixbuf_loadable_icon_iface_init (GLoadableIconIface *iface)
+{
+  iface->load = gdk_pixbuf_load;
+
+  /* In theory encoding a png could be time-consuming but we're talking
+   * about icons here, so assume it's probably going to be OK and handle
+   * the async variant of the call in-thread instead of having the
+   * default implementation dispatch it to a worker.
+   */
+  iface->load_async = gdk_pixbuf_load_async;
+  iface->load_finish = gdk_pixbuf_load_finish;
+}
+
 static void
 gdk_pixbuf_icon_iface_init (GIconIface *iface)
 {
         iface->hash = (guint (*) (GIcon *)) g_direct_hash;
         iface->equal = (gboolean (*) (GIcon *, GIcon *)) g_direct_equal;
+        iface->serialize = gdk_pixbuf_serialize;
 }
 
 /* Used as the destroy notification function for gdk_pixbuf_new() */
@@ -331,7 +423,6 @@ gdk_pixbuf_new (GdkColorspace colorspace,
 	guchar *buf;
 	int channels;
 	int rowstride;
-        gsize bytes;
 
 	g_return_val_if_fail (colorspace == GDK_COLORSPACE_RGB, NULL);
 	g_return_val_if_fail (bits_per_sample == 8, NULL);
@@ -346,11 +437,7 @@ gdk_pixbuf_new (GdkColorspace colorspace,
 	/* Always align rows to 32-bit boundaries */
 	rowstride = (rowstride + 3) & ~3;
 
-        bytes = height * rowstride;
-        if (bytes / rowstride !=  height) /* overflow */
-                return NULL;
-            
-	buf = g_try_malloc (bytes);
+	buf = g_try_malloc_n (height, rowstride);
 	if (!buf)
 		return NULL;
 
@@ -384,7 +471,7 @@ gdk_pixbuf_copy (const GdkPixbuf *pixbuf)
 
 	size = gdk_pixbuf_get_byte_length (pixbuf);
 
-	buf = g_try_malloc (size * sizeof (guchar));
+	buf = g_try_malloc (size);
 	if (!buf)
 		return NULL;
 
@@ -528,8 +615,8 @@ gdk_pixbuf_get_bits_per_sample (const GdkPixbuf *pixbuf)
  * Queries a pointer to the pixel data of a pixbuf.
  *
  * Return value: (array): A pointer to the pixbuf's pixel data.
- * Please see <xref linkend="image-data"/> for information about how
- * the pixel data is stored in memory.
+ * Please see the section on [image data](image-data) for information
+ * about how the pixel data is stored in memory.
  **/
 guchar *
 gdk_pixbuf_get_pixels (const GdkPixbuf *pixbuf)
@@ -547,9 +634,8 @@ gdk_pixbuf_get_pixels (const GdkPixbuf *pixbuf)
  * Queries a pointer to the pixel data of a pixbuf.
  *
  * Return value: (array length=length): A pointer to the pixbuf's
- * pixel data.  Please see <xref linkend="image-data"/>
- * for information about how the pixel data is stored in
- * memory.
+ * pixel data.  Please see the section on [image data](image-data)
+ * for information about how the pixel data is stored in memory.
  *
  * Rename to: gdk_pixbuf_get_pixels
  *
@@ -603,8 +689,8 @@ gdk_pixbuf_get_height (const GdkPixbuf *pixbuf)
  * gdk_pixbuf_get_rowstride:
  * @pixbuf: A pixbuf.
  *
- * Queries the rowstride of a pixbuf, which is the number of bytes between the start of a row
- * and the start of the next row.
+ * Queries the rowstride of a pixbuf, which is the number of bytes between
+ * the start of a row and the start of the next row.
  *
  * Return value: Distance between row starts.
  **/

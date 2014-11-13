@@ -14,9 +14,9 @@ AC_PREREQ([2.63])
 #   gdk_pixbuf_binary_age = 0;
 
 m4_define([gdk_pixbuf_major_version], [2])
-m4_define([gdk_pixbuf_minor_version], [28])
-m4_define([gdk_pixbuf_micro_version], [1])
-m4_define([gdk_pixbuf_interface_age], [1])
+m4_define([gdk_pixbuf_minor_version], [30])
+m4_define([gdk_pixbuf_micro_version], [8])
+m4_define([gdk_pixbuf_interface_age], [8])
 m4_define([gdk_pixbuf_binary_age],
           [m4_eval(100 * gdk_pixbuf_minor_version + gdk_pixbuf_micro_version)])
 m4_define([gdk_pixbuf_version],
@@ -26,7 +26,7 @@ m4_define([gdk_pixbuf_binary_version], [2.10.0])
 
 
 # required versions of other packages
-m4_define([glib_required_version], [2.34.0])
+m4_define([glib_required_version], [2.37.6])
 
 AC_INIT([gdk-pixbuf], [gdk_pixbuf_version],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gdk-pixbuf],
@@ -91,6 +91,7 @@ AC_PROG_CC_C_O
 AC_PROG_CC_STDC
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
+AC_PROG_AWK
 PKG_PROG_PKG_CONFIG
 
 AC_CANONICAL_HOST
@@ -424,9 +425,8 @@ LIBS="$LIBS $GLIB_LIBS"
 AC_CHECK_FUNCS(bind_textdomain_codeset)
 LIBS=$gtk_save_LIBS
 
-AC_CHECK_HEADERS(unistd.h,
-                 AC_DEFINE(HAVE_UNISTD_H, 1,
-                           [Define to 1 if unistd.h is available]))
+AC_CHECK_HEADERS(unistd.h sys/resource.h)
+AC_CHECK_FUNCS(setrlimit)
 
 saved_cflags="$CFLAGS"
 saved_ldflags="$LDFLAGS"
@@ -978,7 +978,7 @@ GOBJECT_INTROSPECTION_CHECK([0.9.3])
 # Checks for gtk-doc and docbook-tools
 ##################################################
 
-GTK_DOC_CHECK([1.11], [--flavour=no-tmpl])
+GTK_DOC_CHECK([1.20], [--flavour=no-tmpl])
 
 AC_CHECK_PROG(DB2HTML, db2html, true, false)
 AM_CONDITIONAL(HAVE_DOCBOOK, $DB2HTML)
@@ -1025,6 +1025,45 @@ fi
 
 AC_SUBST(GDK_PIXBUF_LINK_FLAGS)
 
+GLIB_TESTS
+
+AC_MSG_CHECKING([whether to build with gcov testing])
+AC_ARG_ENABLE([coverage],
+		AS_HELP_STRING([--enable-coverage],
+			[Whether to enable coverage testing ]),
+		[],
+		[enable_coverage=no])
+
+AC_MSG_RESULT([$enable_coverage])
+
+if test "$enable_coverage" = "yes"; then
+	if test "$GCC" != "yes"; then
+		AC_MSG_ERROR(Coverage testing requires GCC)
+	fi
+
+	AC_PATH_PROG(GCOV, gcov, no)
+	if test "$GCOV" = "no" ; then
+		AC_MSG_ERROR(gcov tool is not available)
+	fi
+
+	AC_PATH_PROG(LCOV, lcov, no)
+	if test "$LCOV" = "no" ; then
+		AC_MSG_ERROR(lcov tool is not installed)
+	fi
+
+	AC_PATH_PROG(GENHTML, genhtml, no)
+	if test "$GENHTML" = "no" ; then
+		AC_MSG_ERROR(lcov's genhtml tool is not installed)
+	fi
+
+	CFLAGS="$CFLAGS -O0 -g -fprofile-arcs -ftest-coverage"
+	LDFLAGS="$LDFLAGS -lgcov"
+fi
+
+AM_CONDITIONAL([WITH_COVERAGE], [test "$enable_coverage" = "yes"])
+AC_SUBST(LCOV)
+AC_SUBST(GCOV)
+AC_SUBST(GENHTML)
 
 ##################################################
 # Output commands

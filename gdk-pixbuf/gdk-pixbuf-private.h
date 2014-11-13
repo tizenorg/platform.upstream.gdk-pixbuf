@@ -19,9 +19,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #ifndef GDK_PIXBUF_PRIVATE_H
@@ -32,10 +30,12 @@
 #include <glib-object.h>
 
 #include "gdk-pixbuf-core.h"
+#include "gdk-pixbuf-loader.h"
 #include "gdk-pixbuf-io.h"
 #include "gdk-pixbuf-i18n.h"
 
 #define LOAD_BUFFER_SIZE 65536
+#define SNIFF_BUFFER_SIZE 4096
 
 
 
@@ -98,9 +98,11 @@ GdkPixbuf *_gdk_pixbuf_generic_image_load (GdkPixbufModule *image_module,
 
 GdkPixbufFormat *_gdk_pixbuf_get_format (GdkPixbufModule *image_module);
 
+
 #endif /* GDK_PIXBUF_ENABLE_BACKEND */
 
 GdkPixbuf * _gdk_pixbuf_new_from_resource_try_mmap (const char *resource_path);
+GdkPixbufLoader *_gdk_pixbuf_loader_new_with_filename (const char *filename);
 
 #endif /* GDK_PIXBUF_PRIVATE_H */
 

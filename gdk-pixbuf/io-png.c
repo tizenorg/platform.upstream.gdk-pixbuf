@@ -18,14 +18,13 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "config.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <png.h>
 #include "gdk-pixbuf-private.h"
 
@@ -851,7 +850,7 @@ static gboolean real_save_png (GdkPixbuf        *pixbuf,
                        if (strncmp (*kiter, "tEXt::", 6) == 0) {
                                gchar  *key = *kiter + 6;
                                int     len = strlen (key);
-                               if (len <= 1 || len > 79) {
+                               if (len < 1 || len > 79) {
                                        g_set_error_literal (error,
                                                             GDK_PIXBUF_ERROR,
                                                             GDK_PIXBUF_ERROR_BAD_OPTION,
@@ -1100,24 +1099,24 @@ MODULE_ENTRY (fill_vtable) (GdkPixbufModule *module)
 
 MODULE_ENTRY (fill_info) (GdkPixbufFormat *info)
 {
-        static GdkPixbufModulePattern signature[] = {
+        static const GdkPixbufModulePattern signature[] = {
                 { "\x89PNG\r\n\x1a\x0a", NULL, 100 },
                 { NULL, NULL, 0 }
         };
-	static gchar * mime_types[] = {
+	static const gchar *mime_types[] = {
 		"image/png",
 		NULL
 	};
-	static gchar * extensions[] = {
+	static const gchar *extensions[] = {
 		"png",
 		NULL
 	};
 
 	info->name = "png";
-        info->signature = signature;
+        info->signature = (GdkPixbufModulePattern *) signature;
 	info->description = N_("The PNG image format");
-	info->mime_types = mime_types;
-	info->extensions = extensions;
+	info->mime_types = (gchar **) mime_types;
+	info->extensions = (gchar **) extensions;
 	info->flags = GDK_PIXBUF_FORMAT_WRITABLE | GDK_PIXBUF_FORMAT_THREADSAFE;
 	info->license = "LGPL";
 }

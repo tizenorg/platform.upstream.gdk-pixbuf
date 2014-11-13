@@ -1,30 +1,106 @@
-include $(top_srcdir)/Makefile.decl
+include $(top_srcdir)/glib-tap.mk
 
-INCLUDES =				\
+AM_CPPFLAGS =				\
 	-I$(top_srcdir)			\
 	-I$(top_srcdir)/gdk-pixbuf	\
 	$(GDK_PIXBUF_DEBUG_FLAGS)	\
-	$(GDK_PIXBUF_DEP_CFLAGS)
+	$(GDK_PIXBUF_DEP_CFLAGS)	\
+	$(NULL)
 
 DEPS = \
 	$(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GDK_PIXBUF_API_VERSION).la
 
-LDADDS = \
-	$(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GDK_PIXBUF_API_VERSION).la \
-	$(GDK_PIXBUF_DEP_LIBS)
+LDADD = \
+	$(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GDK_PIXBUF_API_VERSION).la 	\
+	$(GDK_PIXBUF_DEP_LIBS) \
+	$(GLIB_LIBS) \
+	$(NULL)
 
-noinst_PROGRAMS = \
+noinst_PROGRAMS += 			\
 	pixbuf-read			\
 	pixbuf-lowmem			\
-	pixbuf-randomly-modified	\
 	pixbuf-random			\
-	pixbuf-threads
+	$(NULL)
 
-pixbuf_read_LDADD = $(LDADDS)
-pixbuf_lowmem_LDADD = $(LDADDS)
-pixbuf_randomly_modified_LDADD = $(LDADDS)
-pixbuf_random_LDADD = $(LDADDS)
-pixbuf_threads_LDADD = $(LDADDS) $(GLIB_LIBS)
+test_programs = 			\
+	animation			\
+	pixbuf-icon-serialize 		\
+	pixbuf-randomly-modified	\
+	pixbuf-threads			\
+	pixbuf-icc			\
+	pixbuf-stream			\
+	pixbuf-resource			\
+	pixbuf-scale			\
+	pixbuf-save			\
+	$(NULL)
 
+dist_installed_test_data =		\
+	test-image.png			\
+	test-animation.gif		\
+	test-animation.ani		\
+	icc-profile.jpeg		\
+	icc-profile.png			\
+	$(wildcard $(srcdir)/test-images/*)
+
+pixbuf_icc_SOURCES = 			\
+	pixbuf-icc.c			\
+	test-common.c			\
+	test-common.h			\
+	$(NULL)
+
+pixbuf_scale_SOURCES = 			\
+	pixbuf-scale.c			\
+	test-common.c			\
+	test-common.h			\
+	$(NULL)
+
+pixbuf_stream_SOURCES =			\
+	pixbuf-stream.c			\
+	test-common.c			\
+	test-common.h			\
+	$(NULL)
+
+pixbuf_threads_SOURCES =		\
+	pixbuf-threads.c		\
+	test-common.c			\
+	test-common.h			\
+	$(NULL)
+
+pixbuf_icon_serialize_SOURCES =		\
+	pixbuf-icon-serialize.c		\
+	test-common.c			\
+	test-common.h			\
+	$(NULL)
+
+pixbuf_save_SOURCES =			\
+	pixbuf-save.c			\
+	test-common.c			\
+	test-common.h			\
+	$(NULL)
+
+pixbuf_resource_SOURCES = 		\
+	pixbuf-resource.c		\
+	test-common.c			\
+	test-common.h			\
+	resources.h			\
+	resources.c			\
+	$(NULL)
+
+BUILT_SOURCES += resources.h resources.c
+DISTCLEANFILES += 			\
+	resources.h resources.c 	\
+	pixbuf-save-options		\
+	pixbuf-randomly-modified-image	\
+	pixbuf-save-roundtrip		\
+	$(NULL)
+	
+EXTRA_DIST += resources.gresource.xml
+TESTS_ENVIRONMENT += GDK_PIXBUF_MODULE_FILE=$(top_builddir)/gdk-pixbuf/loaders.cache
+
+resources.h: resources.gresource.xml
+	$(AM_V_GEN) GDK_PIXBUF_MODULE_FILE=$(top_builddir)/gdk-pixbuf/loaders.cache GDK_PIXBUF_PIXDATA=$(top_builddir)/gdk-pixbuf/gdk-pixbuf-pixdata $(GLIB_COMPILE_RESOURCES) $(srcdir)/resources.gresource.xml --target=$@ --sourcedir=$(srcdir) --generate-header
+
+resources.c: resources.gresource.xml
+	$(AM_V_GEN) GDK_PIXBUF_MODULE_FILE=$(top_builddir)/gdk-pixbuf/loaders.cache GDK_PIXBUF_PIXDATA=$(top_builddir)/gdk-pixbuf/gdk-pixbuf-pixdata $(GLIB_COMPILE_RESOURCES) $(srcdir)/resources.gresource.xml --target=$@ --sourcedir=$(srcdir) --generate-source
 
 -include $(top_srcdir)/git.mk

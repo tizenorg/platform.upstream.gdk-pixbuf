@@ -14,109 +14,93 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
+ * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "config.h"
 #include "gdk-pixbuf/gdk-pixbuf.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-static gboolean verbose = FALSE;
+#include "test-common.h"
 
 static void
-load_image (gpointer  data, 
+load_image (gpointer data, 
 	    gpointer user_data)
 {
   gchar *filename = data;
+  const gchar *path;
   FILE *file;
   int nbytes;
-  guchar buf[1024];
-  size_t bufsize = 1024;
+  guchar buffer[1024];
   GdkPixbufLoader *loader;
   GError *error = NULL;
-  GThread *self;
 
-  self = g_thread_self ();
   loader = gdk_pixbuf_loader_new ();
+  path = g_test_get_filename (G_TEST_DIST, "test-images", filename, NULL);
 
-  file = fopen (filename, "r");
-  g_assert (file);
+  g_test_message ("reading %s", path); 
+  file = fopen (path, "r");
+  g_assert (file != NULL);
 
-  if (verbose) g_print ("%p start image %s\n", self, filename);
   while (!feof (file)) 
     {
-      nbytes = fread (buf, 1, bufsize, file);
-      if (!gdk_pixbuf_loader_write (loader, buf, nbytes, &error)) 
-	{
-	  g_warning ("Error writing %s to loader: %s", filename, error->message);
-	  g_error_free (error);
-          error = NULL;
-	  break;
-	}
-      if (verbose) g_print ("%p read %d bytes\n", self, nbytes);
-
+      nbytes = fread (buffer, 1, sizeof (buffer), file);
+      gdk_pixbuf_loader_write (loader, buffer, nbytes, &error);
+      g_assert_no_error (error);
       g_thread_yield ();      
     }
 
   fclose (file);
 
-  if (verbose) g_print ("%p finish image %s\n", self, filename);
-
-  if (!gdk_pixbuf_loader_close (loader, &error)) 
-    {
-      g_warning ("Error closing loader for %s: %s", filename, error->message);
-      g_error_free (error);
-    }
+  gdk_pixbuf_loader_close (loader, &error);
+  g_assert_no_error (error);
 
   g_object_unref (loader);
 }
 
 static void
-usage (void)
+test_threads (void)
 {
-  g_print ("usage: pixbuf-threads [--verbose] <files>\n");
-  exit (EXIT_FAILURE);
+  GThreadPool *pool;
+  gint iterations;
+  gint i;
+
+  pool = g_thread_pool_new (load_image, NULL, 20, FALSE, NULL);
+
+  if (g_test_thorough ())
+    iterations = 100;
+  else
+    iterations = 1;
+
+  for (i = 0; i < iterations; i++)
+    {
+      if (format_supported ("jpeg"))
+        g_thread_pool_push (pool, "valid_jpeg_test", NULL);
+      if (format_supported ("png"))
+        g_thread_pool_push (pool, "valid_png_test", NULL);
+      if (format_supported ("gif"))
+        g_thread_pool_push (pool, "valid_gif_test", NULL);
+      if (format_supported ("bmp"))
+        g_thread_pool_push (pool, "valid_bmp_test", NULL);
+      if (format_supported ("jpeg"))
+        g_thread_pool_push (pool, "valid_jpeg_progressive_test", NULL);
+      if (format_supported ("xpm"))
+        g_thread_pool_push (pool, "valid_xpm_test", NULL);
+      if (format_supported ("ras"))
+        g_thread_pool_push (pool, "valid_ras_test", NULL);
+      if (format_supported ("tga"))
+        g_thread_pool_push (pool, "valid_tga_test", NULL);
+      if (format_supported ("tiff"))
+        g_thread_pool_push (pool, "valid_tiff1_test", NULL);
+    }
+
+  g_thread_pool_free (pool, FALSE, TRUE);
 }
 
 int
 main (int argc, char **argv)
 {
-  int i, start;
-  GThreadPool *pool;
+  g_test_init (&argc, &argv, NULL);
 
-#if !GLIB_CHECK_VERSION (2, 35, 3)
-  g_type_init ();
-#endif
+  g_test_add_func ("/pixbuf/threads", test_threads);
 
-#if !GLIB_CHECK_VERSION (2, 32, 0)
-  if (!g_thread_supported ())
-    g_thread_init (NULL);
-#endif
-
-  g_log_set_always_fatal (G_LOG_LEVEL_WARNING | G_LOG_LEVEL_ERROR | G_LOG_LEVEL_CRITICAL);
-
-  if (argc == 1)
-    usage();
-
-  start = 1;
-  if (strcmp (argv[1], "--verbose") == 0)
-    {
-      verbose = TRUE;
-      start = 2;
-    }
-  
-  pool = g_thread_pool_new (load_image, NULL, 20, FALSE, NULL);
-
-  i = start;
-  while (1) {
-    i++;
-    if (i == argc)
-      i = start;
-    g_thread_pool_push (pool, argv[i], NULL);
-  }
-  
-  return 0;
+  return g_test_run ();
 }

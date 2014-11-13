@@ -111,6 +111,7 @@ EXPORTS
 	gdk_pixbuf_loader_new_with_type
 	gdk_pixbuf_loader_set_size
 	gdk_pixbuf_loader_write
+	gdk_pixbuf_loader_write_bytes
 	gdk_colorspace_get_type 
 	gdk_interp_type_get_type 
 	gdk_pixbuf_alpha_mode_get_type 
